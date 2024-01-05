@@ -1,4 +1,4 @@
-package br.com.facilquinze.facilquinze;
+package br.com.quinze;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
