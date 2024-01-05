@@ -29,64 +29,63 @@ import br.com.quinze.regras.pares.RNP12;
 public class Principal {
 
 	public static void main(String[] args) throws URISyntaxException, IOException, LotoException {
-		
+
 		Principal principal = new Principal();
 		principal.resultadoParesImpares();
-		
+
 		// gerar resultado RNP02
 //		principal.resultadoRNP02();
 		principal.resultadoNumerosMenorQueDezRNP02();
-		
+
 		// gerar resultado RNP03
 //		principal.resultadoRNP03();
 		principal.resultadoNumerosMenorQueDezRNP03();
-		
+
 		// gerar resultado RNP04
 //		principal.resultadoRNP04();
 		principal.resultadoNumerosMenorQueDezRNP04();
-		
+
 		// gerar resultado RNP05
 //		principal.resultadoRNP05();
 		principal.resultadoNumerosMenorQueDezRNP05();
-		
+
 		// gerar resultado RNP06
 //		principal.resultadoRNP06();
 		principal.resultadoNumerosMenorQueDezRNP06();
-		
+
 		// gerar resultado RNP07
 //		principal.resultadoRNP07();
 		principal.resultadoNumerosMenorQueDezRNP07();
-		
+
 		// gerar resultado RNP08
 //		principal.resultadoRNP08();
 		principal.resultadoNumerosMenorQueDezRNP08();
-		
+
 		// gerar resultado RNP09
 //		principal.resultadoRNP09();
 		principal.resultadoNumerosMenorQueDezRNP09();
-		
+
 		// gerar resultado RNP10
 //		principal.resultadoRNP10();
 		principal.resultadoNumerosMenorQueDezRNP10();
-		
+
 		// gerar resultado RNP11
 //		principal.resultadoRNP11();
 		principal.resultadoNumerosMenorQueDezRNP11();
-		
+
 		// gerar resultado RNP12
 //		principal.resultadoRNP12();
 		principal.resultadoNumerosMenorQueDezRNP12();
-		
+
 		// gerar resultado numeros menor que dez
 		principal.resultadoNumerosMenorQueDez();
-		
 
 		System.out.println("PRINCIPAL - FIM");
 	}
-	
+
 	@SuppressWarnings("deprecation")
-	public void resultadoParesImpares() throws URISyntaxException, IOException, LotoException  {
-		
+	public void resultadoParesImpares() throws URISyntaxException, IOException, LotoException {
+
 		URL resultadoOrdenado = Principal.class.getClassLoader().getResource("resultado.csv");
 		int contTotalLinhaArquivo = 0;
 		RNP02 rnp02 = new RNP02();
@@ -112,7 +111,7 @@ public class Principal {
 		int cont10 = 0;
 		int cont11 = 0;
 		int cont12 = 0;
-		
+
 		int rnp05contlinha = 0;
 		int rnp05zero = 0;
 		int rnp05um = 0;
@@ -136,7 +135,7 @@ public class Principal {
 				for (int i = 0; i < linha15.length; i++) {
 					linha[i] = Integer.parseInt(String.valueOf(linha15[i]));
 				}
-				
+
 				if (rnp02.aplicar(linha)) {
 					cont02++;
 				} else if (rnp03.aplicar(linha)) {
@@ -190,24 +189,24 @@ public class Principal {
 					System.out.println("#### FUDEU... ####");
 				}
 			}
-			
+
 			System.out.println("TOTAL DE LINHAS NO ARQUIVO-3268760: " + contTotalLinhaArquivo);
 			System.out.println("TOTAL RNP02-66: " + cont02);
 			System.out.println("TOTAL RNP03-2860: " + cont03);
 			System.out.println("TOTAL RNP04-38610: " + cont04);
 			System.out.println("TOTAL RNP05-226512: " + cont05);
-//			System.out.println("ZERO: " + rnp05zero);
-//			System.out.println("UM: " + rnp05um);
-//			System.out.println("DOIS: " + rnp05dois);
-//			System.out.println("TRES: " + rnp05tres);
-//			System.out.println("QUATRO: " + rnp05quatro);
-//			System.out.println("CINCO: " + rnp05cinco);
-//			System.out.println("SEIS: " + rnp05seis);
-//			System.out.println("SETE: " + rnp05sete);
-//			System.out.println("OITO: " + rnp05oito);
-//			System.out.println("NOVE: " + rnp05nove);
-//			System.out.println();
-//			System.out.println();
+			System.out.println("ZERO: " + rnp05zero);
+			System.out.println("UM: " + rnp05um);
+			System.out.println("DOIS: " + rnp05dois);
+			System.out.println("TRES: " + rnp05tres);
+			System.out.println("QUATRO: " + rnp05quatro);
+			System.out.println("CINCO: " + rnp05cinco);
+			System.out.println("SEIS: " + rnp05seis);
+			System.out.println("SETE: " + rnp05sete);
+			System.out.println("OITO: " + rnp05oito);
+			System.out.println("NOVE: " + rnp05nove);
+			System.out.println();
+			System.out.println();
 			System.out.println("TOTAL RNP06-660660: " + cont06);
 			System.out.println("TOTAL RNP07-1019304: " + cont07);
 			System.out.println("TOTAL RNP08-849420: " + cont08);
@@ -215,20 +214,21 @@ public class Principal {
 			System.out.println("TOTAL RNP10-84942: " + cont10);
 			System.out.println("TOTAL RNP11-8580: " + cont11);
 			System.out.println("TOTAL RNP12-286: " + cont12);
-			Double total = (double) (contTotalLinhaArquivo * 100)/3268760;
+			Double total = (double) (contTotalLinhaArquivo * 100) / 3268760;
 			System.out.println("TOTAL %: " + total);
-			
+
 		} else {
 			System.out.println("#### [resultadoParesImpares] - Arquivo nao encontrado... ####");
 		}
-		
+
 	}
-	
+
 	@SuppressWarnings({ "deprecation", "unused" })
 	public void resultadoRNP02() throws URISyntaxException, IOException, LotoException {
-		
+
 		int cont = 0;
-		FileWriter arquivo = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP02.csv");
+		FileWriter arquivo = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP02.csv");
 		PrintWriter gravarArquivo = new PrintWriter(arquivo);
 		RNP02 rnp02 = new RNP02();
 		URL resultado = Principal.class.getClassLoader().getResource("resultado.csv");
@@ -242,7 +242,7 @@ public class Principal {
 				for (int i = 0; i < linha.length; i++) {
 					saida[i] = Integer.parseInt(String.valueOf(linha[i]));
 				}
-				
+
 				if (rnp02.aplicar(saida)) {
 					lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + ","
 							+ saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + ","
@@ -258,12 +258,13 @@ public class Principal {
 			System.out.println("### [resultadoRNP02] - Arquivo nao encontrado... ###");
 		}
 	}
-	
+
 	@SuppressWarnings({ "deprecation", "unused" })
 	public void resultadoRNP03() throws URISyntaxException, IOException, LotoException {
-		
+
 		int cont = 0;
-		FileWriter arquivo = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP03.csv");
+		FileWriter arquivo = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP03.csv");
 		PrintWriter gravarArquivo = new PrintWriter(arquivo);
 		RNP03 rnp03 = new RNP03();
 		URL resultado = Principal.class.getClassLoader().getResource("resultado.csv");
@@ -277,7 +278,7 @@ public class Principal {
 				for (int i = 0; i < linha.length; i++) {
 					saida[i] = Integer.parseInt(String.valueOf(linha[i]));
 				}
-				
+
 				if (rnp03.aplicar(saida)) {
 					lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + ","
 							+ saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + ","
@@ -293,12 +294,13 @@ public class Principal {
 			System.out.println("### [resultadoRNP03] - Arquivo nao encontrado... ###");
 		}
 	}
-	
+
 	@SuppressWarnings({ "deprecation", "unused" })
 	public void resultadoRNP04() throws URISyntaxException, IOException, LotoException {
-		
+
 		int cont = 0;
-		FileWriter arquivo = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP04.csv");
+		FileWriter arquivo = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP04.csv");
 		PrintWriter gravarArquivo = new PrintWriter(arquivo);
 		RNP04 rnp04 = new RNP04();
 		URL resultado = Principal.class.getClassLoader().getResource("resultado.csv");
@@ -312,7 +314,7 @@ public class Principal {
 				for (int i = 0; i < linha.length; i++) {
 					saida[i] = Integer.parseInt(String.valueOf(linha[i]));
 				}
-				
+
 				if (rnp04.aplicar(saida)) {
 					lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + ","
 							+ saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + ","
@@ -328,12 +330,13 @@ public class Principal {
 			System.out.println("### [resultadoRNP04] - Arquivo nao encontrado... ###");
 		}
 	}
-	
+
 	@SuppressWarnings({ "deprecation", "unused" })
 	public void resultadoRNP05() throws URISyntaxException, IOException, LotoException {
-		
+
 		int cont = 0;
-		FileWriter arquivo = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP05.csv");
+		FileWriter arquivo = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP05.csv");
 		PrintWriter gravarArquivo = new PrintWriter(arquivo);
 		RNP05 rnp05 = new RNP05();
 		URL resultado = Principal.class.getClassLoader().getResource("resultado.csv");
@@ -347,7 +350,7 @@ public class Principal {
 				for (int i = 0; i < linha.length; i++) {
 					saida[i] = Integer.parseInt(String.valueOf(linha[i]));
 				}
-				
+
 				if (rnp05.aplicar(saida)) {
 					lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + ","
 							+ saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + ","
@@ -363,12 +366,13 @@ public class Principal {
 			System.out.println("### [resultadoRNP05] - Arquivo nao encontrado... ###");
 		}
 	}
-	
+
 	@SuppressWarnings({ "deprecation", "unused" })
 	public void resultadoRNP06() throws URISyntaxException, IOException, LotoException {
-		
+
 		int cont = 0;
-		FileWriter arquivo = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP06.csv");
+		FileWriter arquivo = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP06.csv");
 		PrintWriter gravarArquivo = new PrintWriter(arquivo);
 		RNP06 rnp06 = new RNP06();
 		URL resultado = Principal.class.getClassLoader().getResource("resultado.csv");
@@ -382,7 +386,7 @@ public class Principal {
 				for (int i = 0; i < linha.length; i++) {
 					saida[i] = Integer.parseInt(String.valueOf(linha[i]));
 				}
-				
+
 				if (rnp06.aplicar(saida)) {
 					lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + ","
 							+ saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + ","
@@ -398,12 +402,13 @@ public class Principal {
 			System.out.println("### [resultadoRNP06] - Arquivo nao encontrado... ###");
 		}
 	}
-	
+
 	@SuppressWarnings({ "deprecation", "unused" })
 	public void resultadoRNP07() throws URISyntaxException, IOException, LotoException {
-		
+
 		int cont = 0;
-		FileWriter arquivo = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP07.csv");
+		FileWriter arquivo = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP07.csv");
 		PrintWriter gravarArquivo = new PrintWriter(arquivo);
 		RNP07 rnp07 = new RNP07();
 		URL resultado = Principal.class.getClassLoader().getResource("resultado.csv");
@@ -417,7 +422,7 @@ public class Principal {
 				for (int i = 0; i < linha.length; i++) {
 					saida[i] = Integer.parseInt(String.valueOf(linha[i]));
 				}
-				
+
 				if (rnp07.aplicar(saida)) {
 					lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + ","
 							+ saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + ","
@@ -433,12 +438,13 @@ public class Principal {
 			System.out.println("### [resultadoRNP07] - Arquivo nao encontrado... ###");
 		}
 	}
-	
+
 	@SuppressWarnings({ "deprecation", "unused" })
 	public void resultadoRNP08() throws URISyntaxException, IOException, LotoException {
-		
+
 		int cont = 0;
-		FileWriter arquivo = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP08.csv");
+		FileWriter arquivo = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP08.csv");
 		PrintWriter gravarArquivo = new PrintWriter(arquivo);
 		RNP08 rnp08 = new RNP08();
 		URL resultado = Principal.class.getClassLoader().getResource("resultado.csv");
@@ -452,7 +458,7 @@ public class Principal {
 				for (int i = 0; i < linha.length; i++) {
 					saida[i] = Integer.parseInt(String.valueOf(linha[i]));
 				}
-				
+
 				if (rnp08.aplicar(saida)) {
 					lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + ","
 							+ saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + ","
@@ -468,12 +474,13 @@ public class Principal {
 			System.out.println("### [resultadoRNP08] - Arquivo nao encontrado... ###");
 		}
 	}
-	
+
 	@SuppressWarnings({ "deprecation", "unused" })
 	public void resultadoRNP09() throws URISyntaxException, IOException, LotoException {
-		
+
 		int cont = 0;
-		FileWriter arquivo = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP09.csv");
+		FileWriter arquivo = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP09.csv");
 		PrintWriter gravarArquivo = new PrintWriter(arquivo);
 		RNP09 rnp09 = new RNP09();
 		URL resultado = Principal.class.getClassLoader().getResource("resultado.csv");
@@ -487,7 +494,7 @@ public class Principal {
 				for (int i = 0; i < linha.length; i++) {
 					saida[i] = Integer.parseInt(String.valueOf(linha[i]));
 				}
-				
+
 				if (rnp09.aplicar(saida)) {
 					lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + ","
 							+ saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + ","
@@ -503,12 +510,13 @@ public class Principal {
 			System.out.println("### [resultadoRNP09] - Arquivo nao encontrado... ###");
 		}
 	}
-	
+
 	@SuppressWarnings({ "deprecation", "unused" })
 	public void resultadoRNP10() throws URISyntaxException, IOException, LotoException {
-		
+
 		int cont = 0;
-		FileWriter arquivo = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP10.csv");
+		FileWriter arquivo = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP10.csv");
 		PrintWriter gravarArquivo = new PrintWriter(arquivo);
 		RNP10 rnp10 = new RNP10();
 		URL resultado = Principal.class.getClassLoader().getResource("resultado.csv");
@@ -522,7 +530,7 @@ public class Principal {
 				for (int i = 0; i < linha.length; i++) {
 					saida[i] = Integer.parseInt(String.valueOf(linha[i]));
 				}
-				
+
 				if (rnp10.aplicar(saida)) {
 					lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + ","
 							+ saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + ","
@@ -538,12 +546,13 @@ public class Principal {
 			System.out.println("### [resultadoRNP10] - Arquivo nao encontrado... ###");
 		}
 	}
-	
+
 	@SuppressWarnings({ "deprecation", "unused" })
 	public void resultadoRNP11() throws URISyntaxException, IOException, LotoException {
-		
+
 		int cont = 0;
-		FileWriter arquivo = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP11.csv");
+		FileWriter arquivo = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP11.csv");
 		PrintWriter gravarArquivo = new PrintWriter(arquivo);
 		RNP11 rnp11 = new RNP11();
 		URL resultado = Principal.class.getClassLoader().getResource("resultado.csv");
@@ -557,7 +566,7 @@ public class Principal {
 				for (int i = 0; i < linha.length; i++) {
 					saida[i] = Integer.parseInt(String.valueOf(linha[i]));
 				}
-				
+
 				if (rnp11.aplicar(saida)) {
 					lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + ","
 							+ saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + ","
@@ -573,12 +582,13 @@ public class Principal {
 			System.out.println("### [resultadoRNP11] - Arquivo nao encontrado... ###");
 		}
 	}
-	
+
 	@SuppressWarnings({ "deprecation", "unused" })
 	public void resultadoRNP12() throws URISyntaxException, IOException, LotoException {
-		
+
 		int cont = 0;
-		FileWriter arquivo = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP12.csv");
+		FileWriter arquivo = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP12.csv");
 		PrintWriter gravarArquivo = new PrintWriter(arquivo);
 		RNP12 rnp12 = new RNP12();
 		URL resultado = Principal.class.getClassLoader().getResource("resultado.csv");
@@ -592,7 +602,7 @@ public class Principal {
 				for (int i = 0; i < linha.length; i++) {
 					saida[i] = Integer.parseInt(String.valueOf(linha[i]));
 				}
-				
+
 				if (rnp12.aplicar(saida)) {
 					lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + ","
 							+ saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + ","
@@ -608,31 +618,41 @@ public class Principal {
 			System.out.println("### [resultadoRNP12] - Arquivo nao encontrado... ###");
 		}
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public void resultadoNumerosMenorQueDez() throws URISyntaxException, IOException, LotoException {
-		
-		FileWriter arquivoZERO = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosMenorQueDez_ZERO.csv");
+
+		FileWriter arquivoZERO = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosMenorQueDez_ZERO.csv");
 		PrintWriter gravarArquivoZERO = new PrintWriter(arquivoZERO);
-		FileWriter arquivoUM = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosMenorQueDez_UM.csv");
+		FileWriter arquivoUM = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosMenorQueDez_UM.csv");
 		PrintWriter gravarArquivoUM = new PrintWriter(arquivoUM);
-		FileWriter arquivoDOIS = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosMenorQueDez_DOIS.csv");
+		FileWriter arquivoDOIS = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosMenorQueDez_DOIS.csv");
 		PrintWriter gravarArquivoDOIS = new PrintWriter(arquivoDOIS);
-		FileWriter arquivoTRES = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosMenorQueDez_TRES.csv");
+		FileWriter arquivoTRES = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosMenorQueDez_TRES.csv");
 		PrintWriter gravarArquivoTRES = new PrintWriter(arquivoTRES);
-		FileWriter arquivoQUATRO = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosMenorQueDez_QUATRO.csv");
+		FileWriter arquivoQUATRO = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosMenorQueDez_QUATRO.csv");
 		PrintWriter gravarArquivoQUATRO = new PrintWriter(arquivoQUATRO);
-		FileWriter arquivoCINCO = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosMenorQueDez_CINCO.csv");
+		FileWriter arquivoCINCO = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosMenorQueDez_CINCO.csv");
 		PrintWriter gravarArquivoCINCO = new PrintWriter(arquivoCINCO);
-		FileWriter arquivoSEIS = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosMenorQueDez_SEIS.csv");
+		FileWriter arquivoSEIS = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosMenorQueDez_SEIS.csv");
 		PrintWriter gravarArquivoSEIS = new PrintWriter(arquivoSEIS);
-		FileWriter arquivoSETE = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosMenorQueDez_SETE.csv");
+		FileWriter arquivoSETE = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosMenorQueDez_SETE.csv");
 		PrintWriter gravarArquivoSETE = new PrintWriter(arquivoSETE);
-		FileWriter arquivoOITO = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosMenorQueDez_OITO.csv");
+		FileWriter arquivoOITO = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosMenorQueDez_OITO.csv");
 		PrintWriter gravarArquivoOITO = new PrintWriter(arquivoOITO);
-		FileWriter arquivoNOVE = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosMenorQueDez_NOVE.csv");
+		FileWriter arquivoNOVE = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosMenorQueDez_NOVE.csv");
 		PrintWriter gravarArquivoNOVE = new PrintWriter(arquivoNOVE);
-		
+
 		int cont = 0;
 		int contlinha = 0;
 		int zero = 0;
@@ -668,98 +688,88 @@ public class Principal {
 
 				if (contlinha == NumeroEnum.ZERO.getValor()) {
 					String lista = null;
-					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + ","
-							+ linha1525[3] + "," + linha1525[4] + "," + linha1525[5] + ","
-							+ linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
-							+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
+					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + ","
+							+ linha1525[4] + "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + ","
+							+ linha1525[8] + "," + linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
 							+ linha1525[12] + "," + linha1525[13] + "," + linha1525[14];
 					gravarArquivoZERO.printf("%s%n", lista);
 					zero++;
 				} else if (contlinha == NumeroEnum.UM.getValor()) {
 					String lista = null;
-					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + ","
-							+ linha1525[3] + "," + linha1525[4] + "," + linha1525[5] + ","
-							+ linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
-							+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
+					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + ","
+							+ linha1525[4] + "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + ","
+							+ linha1525[8] + "," + linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
 							+ linha1525[12] + "," + linha1525[13] + "," + linha1525[14];
 					gravarArquivoUM.printf("%s%n", lista);
 					um++;
 				} else if (contlinha == NumeroEnum.DOIS.getValor()) {
 					String lista = null;
-					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + ","
-							+ linha1525[3] + "," + linha1525[4] + "," + linha1525[5] + ","
-							+ linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
-							+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
+					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + ","
+							+ linha1525[4] + "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + ","
+							+ linha1525[8] + "," + linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
 							+ linha1525[12] + "," + linha1525[13] + "," + linha1525[14];
 					gravarArquivoDOIS.printf("%s%n", lista);
 					dois++;
 				} else if (contlinha == NumeroEnum.TRES.getValor()) {
 					String lista = null;
-					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + ","
-							+ linha1525[3] + "," + linha1525[4] + "," + linha1525[5] + ","
-							+ linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
-							+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
+					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + ","
+							+ linha1525[4] + "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + ","
+							+ linha1525[8] + "," + linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
 							+ linha1525[12] + "," + linha1525[13] + "," + linha1525[14];
 					gravarArquivoTRES.printf("%s%n", lista);
 					tres++;
 				} else if (contlinha == NumeroEnum.QUATRO.getValor()) {
 					String lista = null;
-					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + ","
-							+ linha1525[3] + "," + linha1525[4] + "," + linha1525[5] + ","
-							+ linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
-							+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
+					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + ","
+							+ linha1525[4] + "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + ","
+							+ linha1525[8] + "," + linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
 							+ linha1525[12] + "," + linha1525[13] + "," + linha1525[14];
 					gravarArquivoQUATRO.printf("%s%n", lista);
 					quatro++;
 				} else if (contlinha == NumeroEnum.CINCO.getValor()) {
 					String lista = null;
-					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + ","
-							+ linha1525[3] + "," + linha1525[4] + "," + linha1525[5] + ","
-							+ linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
-							+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
+					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + ","
+							+ linha1525[4] + "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + ","
+							+ linha1525[8] + "," + linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
 							+ linha1525[12] + "," + linha1525[13] + "," + linha1525[14];
 					gravarArquivoCINCO.printf("%s%n", lista);
 					cinco++;
 				} else if (contlinha == NumeroEnum.SEIS.getValor()) {
 					String lista = null;
-					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + ","
-							+ linha1525[3] + "," + linha1525[4] + "," + linha1525[5] + ","
-							+ linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
-							+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
+					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + ","
+							+ linha1525[4] + "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + ","
+							+ linha1525[8] + "," + linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
 							+ linha1525[12] + "," + linha1525[13] + "," + linha1525[14];
 					gravarArquivoSEIS.printf("%s%n", lista);
 					seis++;
 				} else if (contlinha == NumeroEnum.SETE.getValor()) {
 					String lista = null;
-					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + ","
-							+ linha1525[3] + "," + linha1525[4] + "," + linha1525[5] + ","
-							+ linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
-							+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
+					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + ","
+							+ linha1525[4] + "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + ","
+							+ linha1525[8] + "," + linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
 							+ linha1525[12] + "," + linha1525[13] + "," + linha1525[14];
 					gravarArquivoSETE.printf("%s%n", lista);
 					sete++;
 				} else if (contlinha == NumeroEnum.OITO.getValor()) {
 					String lista = null;
-					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + ","
-							+ linha1525[3] + "," + linha1525[4] + "," + linha1525[5] + ","
-							+ linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
-							+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
+					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + ","
+							+ linha1525[4] + "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + ","
+							+ linha1525[8] + "," + linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
 							+ linha1525[12] + "," + linha1525[13] + "," + linha1525[14];
 					gravarArquivoOITO.printf("%s%n", lista);
 					oito++;
 				} else if (contlinha == NumeroEnum.NOVE.getValor()) {
 					String lista = null;
-					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + ","
-							+ linha1525[3] + "," + linha1525[4] + "," + linha1525[5] + ","
-							+ linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
-							+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
+					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + ","
+							+ linha1525[4] + "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + ","
+							+ linha1525[8] + "," + linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
 							+ linha1525[12] + "," + linha1525[13] + "," + linha1525[14];
 					gravarArquivoNOVE.printf("%s%n", lista);
 					nove++;
 				}
 
 			}
-			
+
 			arquivoZERO.close();
 			gravarArquivoZERO.close();
 			arquivoUM.close();
@@ -797,12 +807,12 @@ public class Principal {
 		System.out.println("SETE: " + sete);
 		System.out.println("OITO: " + oito);
 		System.out.println("NOVE: " + nove);
-		
+
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public void resultadoNumerosMenorQueDezRNP02() throws URISyntaxException, IOException, LotoException {
-		
+
 		int cont = 0;
 		int contlinha = 0;
 		int cinco = 0;
@@ -847,14 +857,14 @@ public class Principal {
 		System.out.println("CINCO: " + cinco);
 		System.out.println("SEIS: " + seis);
 		System.out.println("SETE: " + sete);
-		Double total = (double) (cont * 100)/66;
+		Double total = (double) (cont * 100) / 66;
 		System.out.println("TOTAL %: " + total);
-		
+
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public void resultadoNumerosMenorQueDezRNP03() throws URISyntaxException, IOException, LotoException {
-		
+
 		int cont = 0;
 		int contlinha = 0;
 		int quatro = 0;
@@ -907,14 +917,14 @@ public class Principal {
 		System.out.println("SEIS: " + seis);
 		System.out.println("SETE: " + sete);
 		System.out.println("OITO: " + oito);
-		Double total = (double) (cont * 100)/2860;
+		Double total = (double) (cont * 100) / 2860;
 		System.out.println("TOTAL %: " + total);
-		
+
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public void resultadoNumerosMenorQueDezRNP04() throws URISyntaxException, IOException, LotoException {
-		
+
 		int cont = 0;
 		int contlinha = 0;
 		int tres = 0;
@@ -975,14 +985,14 @@ public class Principal {
 		System.out.println("SETE: " + sete);
 		System.out.println("OITO: " + oito);
 		System.out.println("NOVE: " + nove);
-		Double total = (double) (cont * 100)/38610;
+		Double total = (double) (cont * 100) / 38610;
 		System.out.println("TOTAL %: " + total);
-		
+
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public void resultadoNumerosMenorQueDezRNP05() throws URISyntaxException, IOException, LotoException {
-		
+
 		int cont = 0;
 		int contlinha = 0;
 		int dois = 0;
@@ -1047,14 +1057,14 @@ public class Principal {
 		System.out.println("SETE: " + sete);
 		System.out.println("OITO: " + oito);
 		System.out.println("NOVE: " + nove);
-		Double total = (double) (cont * 100)/226512;
+		Double total = (double) (cont * 100) / 226512;
 		System.out.println("TOTAL %: " + total);
-		
+
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public void resultadoNumerosMenorQueDezRNP06() throws URISyntaxException, IOException, LotoException {
-		
+
 		int cont = 0;
 		int contlinha = 0;
 		int um = 0;
@@ -1123,14 +1133,14 @@ public class Principal {
 		System.out.println("SETE: " + sete);
 		System.out.println("OITO: " + oito);
 		System.out.println("NOVE: " + nove);
-		Double total = (double) (cont * 100)/660660;
+		Double total = (double) (cont * 100) / 660660;
 		System.out.println("TOTAL %: " + total);
-		
+
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public void resultadoNumerosMenorQueDezRNP07() throws URISyntaxException, IOException, LotoException {
-		
+
 		int cont = 0;
 		int contlinha = 0;
 		int zero = 0;
@@ -1203,14 +1213,14 @@ public class Principal {
 		System.out.println("SETE: " + sete);
 		System.out.println("OITO: " + oito);
 		System.out.println("NOVE: " + nove);
-		Double total = (double) (cont * 100)/1019304;
+		Double total = (double) (cont * 100) / 1019304;
 		System.out.println("TOTAL %: " + total);
-		
+
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public void resultadoNumerosMenorQueDezRNP08() throws URISyntaxException, IOException, LotoException {
-		
+
 		int cont = 0;
 		int contlinha = 0;
 		int zero = 0;
@@ -1283,14 +1293,14 @@ public class Principal {
 		System.out.println("SETE: " + sete);
 		System.out.println("OITO: " + oito);
 		System.out.println("NOVE: " + nove);
-		Double total = (double) (cont * 100)/849420;
+		Double total = (double) (cont * 100) / 849420;
 		System.out.println("TOTAL %: " + total);
-		
+
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public void resultadoNumerosMenorQueDezRNP09() throws URISyntaxException, IOException, LotoException {
-		
+
 		int cont = 0;
 		int contlinha = 0;
 		int um = 0;
@@ -1359,14 +1369,14 @@ public class Principal {
 		System.out.println("SETE: " + sete);
 		System.out.println("OITO: " + oito);
 		System.out.println("NOVE: " + nove);
-		Double total = (double) (cont * 100)/377520;
+		Double total = (double) (cont * 100) / 377520;
 		System.out.println("TOTAL %: " + total);
-		
+
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public void resultadoNumerosMenorQueDezRNP10() throws URISyntaxException, IOException, LotoException {
-		
+
 		int cont = 0;
 		int contlinha = 0;
 		int dois = 0;
@@ -1431,14 +1441,14 @@ public class Principal {
 		System.out.println("SETE: " + sete);
 		System.out.println("OITO: " + oito);
 		System.out.println("NOVE: " + nove);
-		Double total = (double) (cont * 100)/84942;
+		Double total = (double) (cont * 100) / 84942;
 		System.out.println("TOTAL %: " + total);
-		
+
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public void resultadoNumerosMenorQueDezRNP11() throws URISyntaxException, IOException, LotoException {
-		
+
 		int cont = 0;
 		int contlinha = 0;
 		int tres = 0;
@@ -1495,14 +1505,14 @@ public class Principal {
 		System.out.println("SEIS: " + seis);
 		System.out.println("SETE: " + sete);
 		System.out.println("OITO: " + oito);
-		Double total = (double) (cont * 100)/8580;
+		Double total = (double) (cont * 100) / 8580;
 		System.out.println("TOTAL %: " + total);
-		
+
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public void resultadoNumerosMenorQueDezRNP12() throws URISyntaxException, IOException, LotoException {
-		
+
 		int cont = 0;
 		int contlinha = 0;
 		int quatro = 0;
@@ -1551,14 +1561,14 @@ public class Principal {
 		System.out.println("CINCO: " + cinco);
 		System.out.println("SEIS: " + seis);
 		System.out.println("SETE: " + sete);
-		Double total = (double) (cont * 100)/286;
+		Double total = (double) (cont * 100) / 286;
 		System.out.println("TOTAL %: " + total);
-		
+
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public void jaSaiu(int[] jogo, PrintWriter gravarArquivo) throws URISyntaxException, IOException, LotoException {
-		
+
 		int contonze = 0;
 		int contdoze = 0;
 		int conttreze = 0;
@@ -1590,18 +1600,18 @@ public class Principal {
 					contquinze++;
 				}
 			}
-			
+
 			String lista = null;
-			lista = jogo[0]+","+jogo[1]+","+jogo[2]+","+jogo[3]+","+jogo[4]+","+
-								jogo[5]+","+jogo[6]+","+jogo[7]+","+jogo[8]+","+jogo[9]+","+
-								jogo[10]+","+jogo[11]+","+jogo[12]+","+jogo[13]+","+jogo[14]+","+
-								contonze+","+contdoze+","+conttreze+","+contquatorze+","+contquinze;
+			lista = jogo[0] + "," + jogo[1] + "," + jogo[2] + "," + jogo[3] + "," + jogo[4] + "," + jogo[5] + ","
+					+ jogo[6] + "," + jogo[7] + "," + jogo[8] + "," + jogo[9] + "," + jogo[10] + "," + jogo[11] + ","
+					+ jogo[12] + "," + jogo[13] + "," + jogo[14] + "," + contonze + "," + contdoze + "," + conttreze
+					+ "," + contquatorze + "," + contquinze;
 			gravarArquivo.printf("%s%n", lista);
 		} else {
 			System.out.println("### [jaSaiu] - Arquivo nao encontrado... ###");
 		}
 	}
-	
+
 	public static int comparaNumeros(String[] linhaCombinacoes, int[] jogo) {
 
 		int retorno = 0;
@@ -1641,7 +1651,7 @@ public class Principal {
 
 		return retorno;
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public void gerarArquivoARFF() throws URISyntaxException, IOException, LotoException {
 		FileWriter arqSaiu = new FileWriter("D:\\projetos_github\\lotofacil\\18_25\\facil-core\\src\\main\\resources"
@@ -1672,9 +1682,10 @@ public class Principal {
 			gravarArq.close();
 		}
 	}
-	
+
 	@SuppressWarnings("deprecation")
-	public void compararArquivoARFF(int[] linha, PrintWriter gravarArq) throws URISyntaxException, IOException, LotoException {
+	public void compararArquivoARFF(int[] linha, PrintWriter gravarArq)
+			throws URISyntaxException, IOException, LotoException {
 		int cont = 0;
 		int contJogo = 0;
 		StringBuilder lista = new StringBuilder();
@@ -1691,7 +1702,7 @@ public class Principal {
 				for (int i = 0; i < linhaFechamento.length; i++) {
 					linhaNova[i] = Integer.parseInt(String.valueOf(linhaFechamento[i]));
 				}
-				
+
 				for (int i = 0; i < linha.length; i++) {
 					for (int j = 0; j < linhaNova.length; j++) {
 						if (linha[i] == linhaNova[j]) {
@@ -1699,7 +1710,7 @@ public class Principal {
 						}
 					}
 				}
-				
+
 				if (contJogo == NumeroEnum.ONZE.getValor()) {
 //					listaSimNao.add("");
 					lista.append("1,");
@@ -1713,10 +1724,9 @@ public class Principal {
 		gravarArq.printf("%s%n", lista);
 		System.out.println("TOTAL DE LINHAS DO FECHAMENTO: " + cont);
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public void resultadofechamentoQUATORZE() throws URISyntaxException, IOException, LotoException {
-
 
 		int cont = 0;
 		int contonze = 0;
@@ -1727,7 +1737,8 @@ public class Principal {
 
 //		FileWriter arqSaiu = new FileWriter("D:\\projetos_loto\\18_25\\facil-core\\src\\main\\resources\\dezoito\\resultado\\hoje\\conc2140.csv");
 //		PrintWriter gravarArq = new PrintWriter(arqSaiu);
-		URL combinacoes = Principal.class.getClassLoader().getResource("combinacoes\\15_25\\15_25-RNP07\\15_25-RNP07_DOIS-FECHAMENTO11.csv");
+		URL combinacoes = Principal.class.getClassLoader()
+				.getResource("combinacoes\\15_25\\15_25-RNP07\\15_25-RNP07_DOIS-FECHAMENTO11.csv");
 		if (Objects.nonNull(combinacoes)) {
 			Path caminho = Paths.get(combinacoes.toURI());
 			CSVReader csvReader = new CSVReader(new FileReader(caminho.toFile()), ',');
@@ -1735,12 +1746,12 @@ public class Principal {
 			String[] linhaCombinacoes;
 			while (Objects.nonNull((linhaCombinacoes = csvReader.readNext()))) {
 				cont++;
-				
+
 				int[] linha = new int[linhaCombinacoes.length];
 				for (int i = 0; i < linhaCombinacoes.length; i++) {
 					linha[i] = Integer.parseInt(String.valueOf(linhaCombinacoes[i]));
 				}
-				
+
 				int retorno = comparaNumeros(linha);
 //				String lista = null;
 				if (retorno == NumeroEnum.ONZE.getValor()) {
@@ -1781,15 +1792,15 @@ public class Principal {
 		} else {
 			System.out.println("### Arquivo nao encontrado... ###");
 		}
-	
+
 	}
-	
+
 	public static int comparaNumeros(int[] linha) {
 
 		int retorno = 0;
 		int contJogo = 0;
-		int[] jogo = { 3,5,6,7,8,9,10,11,12,13,14,17,20,22,25 };
-		
+		int[] jogo = { 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 17, 20, 22, 25 };
+
 		for (int i = 0; i < jogo.length; i++) {
 			for (int j = 0; j < linha.length; j++) {
 				if (jogo[i] == linha[j]) {
@@ -1820,11 +1831,12 @@ public class Principal {
 
 		return retorno;
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public void analisarRepetidosNoConcurso() throws URISyntaxException, IOException, LotoException {
-		
-		FileWriter arqSaiu = new FileWriter("D:\\projetos_loto\\18_25\\facil-core\\src\\main\\resources\\dezoito\\resultado\\hoje\\conc2140_PRIMO.csv");
+
+		FileWriter arqSaiu = new FileWriter(
+				"D:\\projetos_loto\\18_25\\facil-core\\src\\main\\resources\\dezoito\\resultado\\hoje\\conc2140_PRIMO.csv");
 		PrintWriter gravarArq = new PrintWriter(arqSaiu);
 		URL comparaUM = Principal.class.getClassLoader().getResource("dezoito\\resultado\\hoje\\conc2140.csv");
 		if (Objects.nonNull(comparaUM)) {
@@ -1839,20 +1851,20 @@ public class Principal {
 				}
 
 //				if (combinacoes1825(linha)) {
-					if (ehPrimo(linha[0])) {
-						System.out.println(linha[0]);
-						gravarArq.printf("%s%n", linha[0]);
-					}
+				if (ehPrimo(linha[0])) {
+					System.out.println(linha[0]);
+					gravarArq.printf("%s%n", linha[0]);
+				}
 //				}
 			}
-			
+
 			arqSaiu.close();
 			gravarArq.close();
 		} else {
 			System.out.println("### Arquivo UM nao encontrado... ###");
 		}
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public static boolean combinacoes1825(int[] linha) throws URISyntaxException, NumberFormatException, IOException {
 
@@ -1884,8 +1896,7 @@ public class Principal {
 
 		return retorno;
 	}
-	
-	
+
 	@SuppressWarnings("deprecation")
 	public void analise15_25() throws URISyntaxException, IOException, LotoException {
 		int cont = 0;
@@ -1905,38 +1916,39 @@ public class Principal {
 				for (int i = 0; i < linhaCombinacoes.length; i++) {
 					linha[i] = Integer.parseInt(String.valueOf(linhaCombinacoes[i]));
 				}
-				
+
 				if (linha[0] > NumeroEnum.NOVE.getValor()) {
 					contLinha++;
 				}
-				
+
 				for (int i = 0; i < linha.length; i++) {
 					if (linha[i] < NumeroEnum.DEZ.getValor()) {
 						contMenorDez++;
 					}
 				}
-				
+
 				if (contMenorDez == NumeroEnum.UM.getValor()) {
 					totalMenorDez++;
 				}
 			}
 		}
-		
+
 		System.out.println("Total de Linhas: " + cont);
 		System.out.println("Linha > 9: " + contLinha);
 		System.out.println("Um Numero menor que DEZ: " + totalMenorDez);
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public void analiseResultadoGanhador() throws URISyntaxException, IOException, LotoException {
-		
+
 		int cont = 0;
 		int onze = 0;
 		int doze = 0;
 		int treze = 0;
 		int quatorze = 0;
 		int quinze = 0;
-		FileWriter arqSaiu = new FileWriter("D:\\projetos_github\\lotofacil\\18_25\\facil-core\\src\\main\\resources\\resultado\\ResultadoGanhadorRNP09.csv");
+		FileWriter arqSaiu = new FileWriter(
+				"D:\\projetos_github\\lotofacil\\18_25\\facil-core\\src\\main\\resources\\resultado\\ResultadoGanhadorRNP09.csv");
 		PrintWriter gravarArq = new PrintWriter(arqSaiu);
 		URL resultado = Principal.class.getClassLoader().getResource("resultado\\ResultadoRNP09.csv");
 		if (Objects.nonNull(resultado)) {
@@ -1954,19 +1966,20 @@ public class Principal {
 					linha[i] = Integer.parseInt(String.valueOf(linhaResultado[i]));
 				}
 				analiseResultadoGanhadorComparar(gravarArq, linha, onze, doze, treze, quatorze, quinze);
-				
+
 				System.out.println(cont++);
 			}
-			
+
 			arqSaiu.close();
 			gravarArq.close();
 		} else {
 			System.out.println("### Arquivo UM nao encontrado... ###");
 		}
 	}
-	
+
 	@SuppressWarnings("deprecation")
-	public void analiseResultadoGanhadorComparar(PrintWriter gravarArq, int[] linha, int onze, int doze, int treze, int quatorze, int quinze) throws URISyntaxException, IOException, LotoException {
+	public void analiseResultadoGanhadorComparar(PrintWriter gravarArq, int[] linha, int onze, int doze, int treze,
+			int quatorze, int quinze) throws URISyntaxException, IOException, LotoException {
 
 		int contador = 0;
 		URL resultado = Principal.class.getClassLoader().getResource("resultado.csv");
@@ -1989,7 +2002,7 @@ public class Principal {
 						}
 					}
 				}
-				
+
 				if (contador == NumeroEnum.ONZE.getValor()) {
 					onze++;
 				} else if (contador == NumeroEnum.DOZE.getValor()) {
@@ -2002,23 +2015,23 @@ public class Principal {
 					quinze++;
 				}
 			}
-			
-			lista = linha[0]+","+linha[1]+","+linha[2]+","+linha[3]+","+linha[4]+","+
-					linha[5]+","+linha[6]+","+linha[7]+","+linha[8]+","+linha[9]+","+
-					linha[10]+","+linha[11]+","+linha[12]+","+linha[13]+","+linha[14]+","+
-					onze+","+doze+","+treze+","+quatorze+","+quinze;
+
+			lista = linha[0] + "," + linha[1] + "," + linha[2] + "," + linha[3] + "," + linha[4] + "," + linha[5] + ","
+					+ linha[6] + "," + linha[7] + "," + linha[8] + "," + linha[9] + "," + linha[10] + "," + linha[11]
+					+ "," + linha[12] + "," + linha[13] + "," + linha[14] + "," + onze + "," + doze + "," + treze + ","
+					+ quatorze + "," + quinze;
 			gravarArq.printf("%s%n", lista);
 		} else {
 			System.out.println("### Arquivo DOIS nao encontrado... ###");
 		}
 
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public void frequencia() throws URISyntaxException, IOException, LotoException {
-		
+
 		RNP07 rnp07 = new RNP07();
-		
+
 		int cont = 0;
 		int saiu = 0;
 		int naosaiu = 0;
@@ -2030,16 +2043,16 @@ public class Principal {
 			while (Objects.nonNull((linhaResultado = csvReader.readNext()))) {
 				cont++;
 				saiu = 0;
-				
+
 				int[] linha = new int[linhaResultado.length];
 				for (int i = 0; i < linhaResultado.length; i++) {
 					linha[i] = Integer.parseInt(String.valueOf(linhaResultado[i]));
 				}
-				
+
 				if (rnp07.aplicar(linha)) {
 					saiu++;
 				}
-				
+
 				if (saiu == NumeroEnum.UM.getValor()) {
 					naosaiu = 0;
 				} else {
@@ -2052,13 +2065,13 @@ public class Principal {
 		System.out.println("Linha" + cont + ": " + naosaiu);
 		System.out.println("Linha" + cont + ":");
 	}
-	
+
 	private static boolean ehPrimo(int numero) {
-	    for (int j = 2; j < numero; j++) {
-	        if (numero % j == 0)
-	            return false;   
-	    }
-	    return true;
+		for (int j = 2; j < numero; j++) {
+			if (numero % j == 0)
+				return false;
+		}
+		return true;
 	}
-	
+
 }
