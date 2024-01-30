@@ -992,6 +992,12 @@ public class Principal {
 
 	@SuppressWarnings("deprecation")
 	public void resultadoNumerosMenorQueDezRNP05() throws URISyntaxException, IOException, LotoException {
+		FileWriter arquivoCINCO = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP05NumerosMenorQueDez_CINCO.csv");
+		PrintWriter gravarArquivoCINCO = new PrintWriter(arquivoCINCO);
+		FileWriter arquivoSEIS = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP05NumerosMenorQueDez_SEIS.csv");
+		PrintWriter gravarArquivoSEIS = new PrintWriter(arquivoSEIS);
 
 		int cont = 0;
 		int contlinha = 0;
@@ -1031,8 +1037,20 @@ public class Principal {
 				} else if (contlinha == NumeroEnum.QUATRO.getValor()) {
 					quatro++;
 				} else if (contlinha == NumeroEnum.CINCO.getValor()) {
+					String lista = null;
+					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + ","
+							+ linha1525[4] + "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + ","
+							+ linha1525[8] + "," + linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
+							+ linha1525[12] + "," + linha1525[13] + "," + linha1525[14];
+					gravarArquivoCINCO.printf("%s%n", lista);
 					cinco++;
 				} else if (contlinha == NumeroEnum.SEIS.getValor()) {
+					String lista = null;
+					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + ","
+							+ linha1525[4] + "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + ","
+							+ linha1525[8] + "," + linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
+							+ linha1525[12] + "," + linha1525[13] + "," + linha1525[14];
+					gravarArquivoSEIS.printf("%s%n", lista);
 					seis++;
 				} else if (contlinha == NumeroEnum.SETE.getValor()) {
 					sete++;
@@ -1042,6 +1060,11 @@ public class Principal {
 					nove++;
 				}
 			}
+			
+			arquivoCINCO.close();
+			gravarArquivoCINCO.close();
+			arquivoSEIS.close();
+			gravarArquivoSEIS.close();
 		} else {
 			System.out.println("### [resultadoNumerosMenorQueDezRNP05] - Arquivo nao encontrado... ###");
 		}

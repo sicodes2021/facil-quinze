@@ -43,6 +43,26 @@ public class RNS1115 implements RegraNegocio<String[], Boolean> {
 
 		return retorno;
 	}
+	
+	public Boolean aplicar(int[] entrada) throws LotoException {
+		
+		boolean retorno = false;
+		int contRegra = 0;
+		
+		for (int i = 0; i < regraCinco.length; i++) {
+			for (int j = 0; j < entrada.length; j++) {
+				if (regraCinco[i] == entrada[j]) {
+					contRegra++;
+				}
+			}
+		}
+		
+		if (contRegra == NumeroEnum.CINCO.getValor()) {
+			retorno = true;
+		}
+
+		return retorno;
+	}
 
 	public Boolean verificar(String[] entrada) throws LotoException, URISyntaxException, IOException {
 		return null;

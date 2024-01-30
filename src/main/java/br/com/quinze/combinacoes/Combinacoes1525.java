@@ -27,64 +27,127 @@ import br.com.quinze.regras.pares.RNP09;
 import br.com.quinze.regras.pares.RNP10;
 import br.com.quinze.regras.pares.RNP11;
 import br.com.quinze.regras.pares.RNP12;
+import br.com.quinze.regras.sequencia.RNS0105;
+import br.com.quinze.regras.sequencia.RNS0610;
+import br.com.quinze.regras.sequencia.RNS1115;
+import br.com.quinze.regras.sequencia.RNS1620;
+import br.com.quinze.regras.sequencia.RNS2125;
 
 public class Combinacoes1525 {
 	
 	public static void main(String[] args) throws URISyntaxException, IOException, LotoException {
 		
 		Combinacoes1525 combinacoes1525 = new Combinacoes1525();
-		List<String> listaCombinacoes1525 = combinacoes1525.gerar1525();
-		System.out.println("listaCombinacoes1525: " + listaCombinacoes1525.size());
+//		List<String> listaCombinacoes1525 = combinacoes1525.gerar1525();
+//		System.out.println("listaCombinacoes1525: " + listaCombinacoes1525.size());
 		
-		List<String> listaCombinacoesRNP02 = combinacoes1525.gerar1525RNP02();
-		System.out.println("RNP02: " + listaCombinacoesRNP02.size());
-		combinacoes1525.resultadoNumerosMenorQueDezRNP02();
+//		List<String> listaCombinacoesRNP02 = combinacoes1525.gerar1525RNP02();
+//		System.out.println("RNP02: " + listaCombinacoesRNP02.size());
+//		combinacoes1525.resultadoNumerosMenorQueDezRNP02();
 		
-		List<String> listaCombinacoesRNP03 = combinacoes1525.gerar1525RNP03();
-		System.out.println("RNP03: " + listaCombinacoesRNP03.size());
-		combinacoes1525.resultadoNumerosMenorQueDezRNP03();
+//		List<String> listaCombinacoesRNP02RNS0105 = combinacoes1525.gerar1525RNP02RNS0105();
+//		System.out.println("RNP02RNS0105: " + listaCombinacoesRNP02RNS0105.size());
+//		List<String> listaCombinacoesRNP02RNS1115 = combinacoes1525.gerar1525RNP02RNS1115();
+//		System.out.println("RNP02RNS1115: " + listaCombinacoesRNP02RNS1115.size());
+//		List<String> listaCombinacoesRNP02RNS2125 = combinacoes1525.gerar1525RNP02RNS2125();
+//		System.out.println("RNP02RNS2125: " + listaCombinacoesRNP02RNS2125.size());
 		
-		List<String> listaCombinacoesRNP04 = combinacoes1525.gerar1525RNP04();
-		System.out.println("RNP04: " + listaCombinacoesRNP04.size());
-		combinacoes1525.resultadoNumerosMenorQueDezRNP04();
+//		List<String> listaCombinacoesRNP03 = combinacoes1525.gerar1525RNP03();
+//		System.out.println("RNP03: " + listaCombinacoesRNP03.size());
+//		combinacoes1525.resultadoNumerosMenorQueDezRNP03();
 		
-		List<String> listaCombinacoesRNP05 = combinacoes1525.gerar1525RNP05();
-		System.out.println("RNP05: " + listaCombinacoesRNP05.size());
-//		combinacoes1525.gravarRNP05(listaCombinacoesRNP05);
-		combinacoes1525.resultadoNumerosMenorQueDezRNP05();
+//		List<String> listaCombinacoesRNP03RNS0105 = combinacoes1525.gerar1525RNP03RNS0105();
+//		System.out.println("RNP03RNS0105: " + listaCombinacoesRNP03RNS0105.size());
+//		List<String> listaCombinacoesRNP03RNS0610 = combinacoes1525.gerar1525RNP03RNS0610();
+//		System.out.println("RNP03RNS0610: " + listaCombinacoesRNP03RNS0610.size());
+//		List<String> listaCombinacoesRNP03RNS1115 = combinacoes1525.gerar1525RNP03RNS1115();
+//		System.out.println("RNP03RNS1115: " + listaCombinacoesRNP03RNS1115.size());
+//		List<String> listaCombinacoesRNP03RNS1620 = combinacoes1525.gerar1525RNP03RNS1620();
+//		System.out.println("RNP03RNS1620: " + listaCombinacoesRNP03RNS1620.size());
+//		List<String> listaCombinacoesRNP03RNS2125 = combinacoes1525.gerar1525RNP03RNS2125();
+//		System.out.println("RNP03RNS2125: " + listaCombinacoesRNP03RNS2125.size());
 		
-		List<String> listaCombinacoesRNP06 = combinacoes1525.gerar1525RNP06();
-		System.out.println("RNP06: " + listaCombinacoesRNP06.size());
-//		combinacoes1525.gravarRNP06(listaCombinacoesRNP06);
-		combinacoes1525.resultadoNumerosMenorQueDezRNP06();
+//		List<String> listaCombinacoesRNP04 = combinacoes1525.gerar1525RNP04();
+//		System.out.println("RNP04: " + listaCombinacoesRNP04.size());
+//		combinacoes1525.resultadoNumerosMenorQueDezRNP04();
 		
-		List<String> listaCombinacoesRNP07 = combinacoes1525.gerar1525RNP07();
-		System.out.println("RNP07: " + listaCombinacoesRNP07.size());
-//		combinacoes1525.gravarRNP07(listaCombinacoesRNP07);
-		combinacoes1525.resultadoNumerosMenorQueDezRNP07();
+//		List<String> listaCombinacoesRNP04RNS0105 = combinacoes1525.gerar1525RNP04RNS0105();
+//		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP04RNS0105.size());
+//		List<String> listaCombinacoesRNP04RNS0610 = combinacoes1525.gerar1525RNP04RNS0610();
+//		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP04RNS0610.size());
+//		List<String> listaCombinacoesRNP04RNS1115 = combinacoes1525.gerar1525RNP04RNS1115();
+//		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP04RNS1115.size());
+//		List<String> listaCombinacoesRNP04RNS1620 = combinacoes1525.gerar1525RNP04RNS1620();
+//		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP04RNS1620.size());
+//		List<String> listaCombinacoesRNP04RNS2125 = combinacoes1525.gerar1525RNP04RNS2125();
+//		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP04RNS2125.size());
+		
+//		List<String> listaCombinacoesRNP05 = combinacoes1525.gerar1525RNP05();
+//		System.out.println("RNP05: " + listaCombinacoesRNP05.size());
+//		combinacoes1525.resultadoNumerosMenorQueDezRNP05();
+		
+//		List<String> listaCombinacoesRNP05RNS0105 = combinacoes1525.gerar1525RNP05RNS0105();
+//		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP05RNS0105.size());
+//		List<String> listaCombinacoesRNP05RNS0610 = combinacoes1525.gerar1525RNP05RNS0610();
+//		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP05RNS0610.size());
+//		List<String> listaCombinacoesRNP05RNS1115 = combinacoes1525.gerar1525RNP05RNS1115();
+//		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP05RNS1115.size());
+//		List<String> listaCombinacoesRNP05RNS1620 = combinacoes1525.gerar1525RNP05RNS1620();
+//		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP05RNS1620.size());
+//		List<String> listaCombinacoesRNP05RNS2125 = combinacoes1525.gerar1525RNP05RNS2125();
+//		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP05RNS2125.size());
+		
+//		List<String> listaCombinacoesRNP06 = combinacoes1525.gerar1525RNP06();
+//		System.out.println("RNP06: " + listaCombinacoesRNP06.size());
+//		combinacoes1525.resultadoNumerosMenorQueDezRNP06();
+		
+//		List<String> listaCombinacoesRNP06RNS0105 = combinacoes1525.gerar1525RNP06RNS0105();
+//		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP06RNS0105.size());
+//		List<String> listaCombinacoesRNP06RNS0610 = combinacoes1525.gerar1525RNP06RNS0610();
+//		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP06RNS0610.size());
+//		List<String> listaCombinacoesRNP06RNS1115 = combinacoes1525.gerar1525RNP06RNS1115();
+//		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP06RNS1115.size());
+//		List<String> listaCombinacoesRNP06RNS1620 = combinacoes1525.gerar1525RNP06RNS1620();
+//		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP06RNS1620.size());
+//		List<String> listaCombinacoesRNP06RNS2125 = combinacoes1525.gerar1525RNP06RNS2125();
+//		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP06RNS2125.size());
+		
+//		List<String> listaCombinacoesRNP07 = combinacoes1525.gerar1525RNP07();
+//		System.out.println("RNP07: " + listaCombinacoesRNP07.size());
+//		combinacoes1525.resultadoNumerosMenorQueDezRNP07();
+		
+//		List<String> listaCombinacoesRNP07RNS0105 = combinacoes1525.gerar1525RNP07RNS0105();
+//		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP07RNS0105.size());
+//		List<String> listaCombinacoesRNP07RNS0610 = combinacoes1525.gerar1525RNP07RNS0610();
+//		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP07RNS0610.size());
+//		List<String> listaCombinacoesRNP07RNS1115 = combinacoes1525.gerar1525RNP07RNS1115();
+//		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP07RNS1115.size());
+//		List<String> listaCombinacoesRNP07RNS1620 = combinacoes1525.gerar1525RNP07RNS1620();
+//		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP07RNS1620.size());
+//		List<String> listaCombinacoesRNP07RNS2125 = combinacoes1525.gerar1525RNP07RNS2125();
+//		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP07RNS2125.size());
 		
 		List<String> listaCombinacoesRNP08 = combinacoes1525.gerar1525RNP08();
 		System.out.println("RNP08: " + listaCombinacoesRNP08.size());
-//		combinacoes1525.gravarRNP08(listaCombinacoesRNP08);
 		combinacoes1525.resultadoNumerosMenorQueDezRNP08();
 		
-		List<String> listaCombinacoesRNP09 = combinacoes1525.gerar1525RNP09();
-		System.out.println("RNP09: " + listaCombinacoesRNP09.size());
-//		combinacoes1525.gravarRNP09(listaCombinacoesRNP09);
-		combinacoes1525.resultadoNumerosMenorQueDezRNP09();
-		
-		List<String> listaCombinacoesRNP10 = combinacoes1525.gerar1525RNP10();
-		System.out.println("RNP10: " + listaCombinacoesRNP10.size());
-		combinacoes1525.resultadoNumerosMenorQueDezRNP10();
-		
-		List<String> listaCombinacoesRNP11 = combinacoes1525.gerar1525RNP11();
-		System.out.println("RNP11: " + listaCombinacoesRNP11.size());
-		combinacoes1525.resultadoNumerosMenorQueDezRNP11();
-		
-		List<String> listaCombinacoesRNP12 = combinacoes1525.gerar1525RNP12();
-		System.out.println("RNP12: " + listaCombinacoesRNP12.size());
-		combinacoes1525.resultadoNumerosMenorQueDezRNP12();
-		
+//		List<String> listaCombinacoesRNP09 = combinacoes1525.gerar1525RNP09();
+//		System.out.println("RNP09: " + listaCombinacoesRNP09.size());
+////		combinacoes1525.gravarRNP09(listaCombinacoesRNP09);
+//		combinacoes1525.resultadoNumerosMenorQueDezRNP09();
+//		
+//		List<String> listaCombinacoesRNP10 = combinacoes1525.gerar1525RNP10();
+//		System.out.println("RNP10: " + listaCombinacoesRNP10.size());
+//		combinacoes1525.resultadoNumerosMenorQueDezRNP10();
+//		
+//		List<String> listaCombinacoesRNP11 = combinacoes1525.gerar1525RNP11();
+//		System.out.println("RNP11: " + listaCombinacoesRNP11.size());
+//		combinacoes1525.resultadoNumerosMenorQueDezRNP11();
+//		
+//		List<String> listaCombinacoesRNP12 = combinacoes1525.gerar1525RNP12();
+//		System.out.println("RNP12: " + listaCombinacoesRNP12.size());
+//		combinacoes1525.resultadoNumerosMenorQueDezRNP12();
+//		
 //		combinacoes1525.resultadoParesImparesFechamento11();
 //		combinacoes1525.resultadoNumerosMenorQueDez();
 		
@@ -100,7 +163,7 @@ public class Combinacoes1525 {
 	public List<String> gerar1525() throws URISyntaxException, IOException, LotoException {
 		FileWriter arquivo1525 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\15_25.csv");
 		PrintWriter gravarArquivo1525 = new PrintWriter(arquivo1525);
-		int cont = 0;
+		//int cont = 0;
 		List<String> lista1525 = new ArrayList<String>();
 		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 		int[] saida;
@@ -109,7 +172,7 @@ public class Combinacoes1525 {
 			String lista = null;
 			saida = comb1.next();
 			//if (!saiu15(saida)) {
-				cont++;
+				//cont++;
 				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
 						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
 						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
@@ -119,7 +182,7 @@ public class Combinacoes1525 {
 		}
 		arquivo1525.close();
 		gravarArquivo1525.close();
-		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25: " + cont);
+		//System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25: " + cont);
 		return lista1525;
 	}
 	
@@ -152,6 +215,105 @@ public class Combinacoes1525 {
 		arquivoRNP02.close();
 		gravarArquivoRNP02.close();
 		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP02: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp02/rns0105
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP02RNS0105() throws URISyntaxException, IOException, LotoException  {
+//		FileWriter arquivoRNP02 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP02\\15_25-RNP02.csv");
+//		PrintWriter gravarArquivoRNP02 = new PrintWriter(arquivoRNP02);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP02 rnp02 = new RNP02();
+		RNS0105 rns0105 = new RNS0105();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp02.aplicar(saida) && rns0105.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP02.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP02.close();
+//		gravarArquivoRNP02.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP02: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp02/rns1115
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP02RNS1115() throws URISyntaxException, IOException, LotoException  {
+//		FileWriter arquivoRNP02 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP02\\15_25-RNP02.csv");
+//		PrintWriter gravarArquivoRNP02 = new PrintWriter(arquivoRNP02);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP02 rnp02 = new RNP02();
+		RNS1115 rns1115 = new RNS1115();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp02.aplicar(saida) && rns1115.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP02.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP02.close();
+//		gravarArquivoRNP02.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP02: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp02/rns2125
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP02RNS2125() throws URISyntaxException, IOException, LotoException  {
+//		FileWriter arquivoRNP02 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP02\\15_25-RNP02.csv");
+//		PrintWriter gravarArquivoRNP02 = new PrintWriter(arquivoRNP02);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP02 rnp02 = new RNP02();
+		RNS2125 rns2125 = new RNS2125();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp02.aplicar(saida) && rns2125.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP02.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP02.close();
+//		gravarArquivoRNP02.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP02: " + cont);
 		return lista1525;
 	}
 	
@@ -380,6 +542,172 @@ public class Combinacoes1525 {
 		return lista1525;
 	}
 	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp03/rns0105
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP03RNS0105() throws URISyntaxException, IOException, LotoException  {
+//		FileWriter arquivoRNP03 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP03\\15_25-RNP03.csv");
+//		PrintWriter gravarArquivoRNP03 = new PrintWriter(arquivoRNP03);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP03 rnp03 = new RNP03();
+		RNS0105 rns0105 = new RNS0105();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp03.aplicar(saida) && rns0105.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP03.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP03.close();
+//		gravarArquivoRNP03.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP03: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp03/rns0610
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP03RNS0610() throws URISyntaxException, IOException, LotoException  {
+//		FileWriter arquivoRNP03 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP03\\15_25-RNP03.csv");
+//		PrintWriter gravarArquivoRNP03 = new PrintWriter(arquivoRNP03);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP03 rnp03 = new RNP03();
+		RNS0610 rns0610 = new RNS0610();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp03.aplicar(saida) && rns0610.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP03.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP03.close();
+//		gravarArquivoRNP03.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP03: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp03/rns1115
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP03RNS1115() throws URISyntaxException, IOException, LotoException  {
+//		FileWriter arquivoRNP03 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP03\\15_25-RNP03.csv");
+//		PrintWriter gravarArquivoRNP03 = new PrintWriter(arquivoRNP03);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP03 rnp03 = new RNP03();
+		RNS1115 rns1115 = new RNS1115();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp03.aplicar(saida) && rns1115.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP03.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP03.close();
+//		gravarArquivoRNP03.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP03: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp03/rns1620
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP03RNS1620() throws URISyntaxException, IOException, LotoException  {
+//		FileWriter arquivoRNP03 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP03\\15_25-RNP03.csv");
+//		PrintWriter gravarArquivoRNP03 = new PrintWriter(arquivoRNP03);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP03 rnp03 = new RNP03();
+		RNS1620 rns1620 = new RNS1620();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp03.aplicar(saida) && rns1620.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP03.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP03.close();
+//		gravarArquivoRNP03.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP03: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp03/rns2125
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP03RNS2125() throws URISyntaxException, IOException, LotoException  {
+//		FileWriter arquivoRNP03 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP03\\15_25-RNP03.csv");
+//		PrintWriter gravarArquivoRNP03 = new PrintWriter(arquivoRNP03);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP03 rnp03 = new RNP03();
+		RNS2125 rns2125 = new RNS2125();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp03.aplicar(saida) && rns2125.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP03.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP03.close();
+//		gravarArquivoRNP03.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP03: " + cont);
+		return lista1525;
+	}
+
+	
 	@SuppressWarnings("deprecation")
 	public void resultadoNumerosMenorQueDezRNP03() throws URISyntaxException, IOException, LotoException {
 		
@@ -605,6 +933,171 @@ public class Combinacoes1525 {
 		return lista1525;
 	}
 	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp04/rns0105
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP04RNS0105() throws URISyntaxException, IOException, LotoException  {
+//		FileWriter arquivoRNP04 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP04\\15_25-RNP04.csv");
+//		PrintWriter gravarArquivoRNP04 = new PrintWriter(arquivoRNP04);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP04 rnp04 = new RNP04();
+		RNS0105 rns0105 = new RNS0105();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp04.aplicar(saida) && rns0105.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP04.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP04.close();
+//		gravarArquivoRNP04.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP04: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp04/rns0610
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP04RNS0610() throws URISyntaxException, IOException, LotoException  {
+//		FileWriter arquivoRNP04 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP04\\15_25-RNP04.csv");
+//		PrintWriter gravarArquivoRNP04 = new PrintWriter(arquivoRNP04);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP04 rnp04 = new RNP04();
+		RNS0610 rns0610 = new RNS0610();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp04.aplicar(saida) && rns0610.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP04.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP04.close();
+//		gravarArquivoRNP04.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP04: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp04/rns1115
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP04RNS1115() throws URISyntaxException, IOException, LotoException  {
+//		FileWriter arquivoRNP04 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP04\\15_25-RNP04.csv");
+//		PrintWriter gravarArquivoRNP04 = new PrintWriter(arquivoRNP04);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP04 rnp04 = new RNP04();
+		RNS1115 rns1115 = new RNS1115();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp04.aplicar(saida) && rns1115.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP04.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP04.close();
+//		gravarArquivoRNP04.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP04: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp04/rns1620
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP04RNS1620() throws URISyntaxException, IOException, LotoException  {
+//		FileWriter arquivoRNP04 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP04\\15_25-RNP04.csv");
+//		PrintWriter gravarArquivoRNP04 = new PrintWriter(arquivoRNP04);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP04 rnp04 = new RNP04();
+		RNS1620 rns1620 = new RNS1620();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp04.aplicar(saida) && rns1620.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP04.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP04.close();
+//		gravarArquivoRNP04.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP04: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp04/rns2125
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP04RNS2125() throws URISyntaxException, IOException, LotoException  {
+//		FileWriter arquivoRNP04 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP04\\15_25-RNP04.csv");
+//		PrintWriter gravarArquivoRNP04 = new PrintWriter(arquivoRNP04);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP04 rnp04 = new RNP04();
+		RNS2125 rns2125 = new RNS2125();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp04.aplicar(saida) && rns2125.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP04.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP04.close();
+//		gravarArquivoRNP04.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP04: " + cont);
+		return lista1525;
+	}
+	
 	@SuppressWarnings("deprecation")
 	public void resultadoNumerosMenorQueDezRNP04() throws URISyntaxException, IOException, LotoException {
 		
@@ -811,21 +1304,201 @@ public class Combinacoes1525 {
 		int[] saida;
 		Combinacoes comb1 = new Combinacoes(str, 15);
 		RNP05 rnp05 = new RNP05();
+		RNS0105 rns0105 = new RNS0105();
+		RNS0610 rns0610 = new RNS0610();
+		RNS1115 rns1115 = new RNS1115();
+		RNS1620 rns1620 = new RNS1620();
+		RNS2125 rns2125 = new RNS2125();
 		while (comb1.hasNext()) {
 			String lista = null;
 			saida = comb1.next();
 			if (rnp05.aplicar(saida)) {
-				cont++;
-				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
-						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
-						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
-				gravarArquivoRNP05.printf("%s%n", lista);
-				lista1525.add(lista);
+				if (!rns0105.aplicar(saida)) {
+					if (!rns0610.aplicar(saida)) {
+						if (!rns1115.aplicar(saida)) {
+							if (!rns1620.aplicar(saida)) {
+								if (!rns2125.aplicar(saida)) {
+									cont++;
+									lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+											saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+											saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+									gravarArquivoRNP05.printf("%s%n", lista);
+									lista1525.add(lista);
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 		arquivoRNP05.close();
 		gravarArquivoRNP05.close();
 		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP05: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp05/rns0105
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP05RNS0105() throws URISyntaxException, IOException, LotoException  {
+//		FileWriter arquivoRNP05 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP05\\15_25-RNP05.csv");
+//		PrintWriter gravarArquivoRNP05 = new PrintWriter(arquivoRNP05);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP05 rnp05 = new RNP05();
+		RNS0105 rns0105 = new RNS0105();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp05.aplicar(saida) && rns0105.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP05.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP05.close();
+//		gravarArquivoRNP05.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP05: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp05/rns0610
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP05RNS0610() throws URISyntaxException, IOException, LotoException  {
+//		FileWriter arquivoRNP05 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP05\\15_25-RNP05.csv");
+//		PrintWriter gravarArquivoRNP05 = new PrintWriter(arquivoRNP05);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP05 rnp05 = new RNP05();
+		RNS0610 rns0610 = new RNS0610();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp05.aplicar(saida) && rns0610.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP05.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP05.close();
+//		gravarArquivoRNP05.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP05: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp05/rns1115
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP05RNS1115() throws URISyntaxException, IOException, LotoException  {
+//		FileWriter arquivoRNP05 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP05\\15_25-RNP05.csv");
+//		PrintWriter gravarArquivoRNP05 = new PrintWriter(arquivoRNP05);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP05 rnp05 = new RNP05();
+		RNS1115 rns1115 = new RNS1115();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp05.aplicar(saida) && rns1115.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP05.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP05.close();
+//		gravarArquivoRNP05.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP05: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp05/rns1620
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP05RNS1620() throws URISyntaxException, IOException, LotoException  {
+//		FileWriter arquivoRNP05 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP05\\15_25-RNP05.csv");
+//		PrintWriter gravarArquivoRNP05 = new PrintWriter(arquivoRNP05);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP05 rnp05 = new RNP05();
+		RNS1620 rns1620 = new RNS1620();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp05.aplicar(saida) && rns1620.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP05.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP05.close();
+//		gravarArquivoRNP05.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP05: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp05/rns2125
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP05RNS2125() throws URISyntaxException, IOException, LotoException  {
+//		FileWriter arquivoRNP05 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP05\\15_25-RNP05.csv");
+//		PrintWriter gravarArquivoRNP05 = new PrintWriter(arquivoRNP05);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP05 rnp05 = new RNP05();
+		RNS2125 rns2125 = new RNS2125();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp05.aplicar(saida) && rns2125.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP05.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP05.close();
+//		gravarArquivoRNP05.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP05: " + cont);
 		return lista1525;
 	}
 	
@@ -1020,6 +1693,171 @@ public class Combinacoes1525 {
 		arquivoRNP06.close();
 		gravarArquivoRNP06.close();
 		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP06: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp06/rns0105
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP06RNS0105() throws URISyntaxException, IOException, LotoException  {
+//		FileWriter arquivoRNP06 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP06\\15_25-RNP06.csv");
+//		PrintWriter gravarArquivoRNP06 = new PrintWriter(arquivoRNP06);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP06 rnp06 = new RNP06();
+		RNS0105 rns0105 = new RNS0105();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp06.aplicar(saida) && rns0105.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP06.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP06.close();
+//		gravarArquivoRNP06.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP06: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp06/rns0610
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP06RNS0610() throws URISyntaxException, IOException, LotoException  {
+//		FileWriter arquivoRNP06 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP06\\15_25-RNP06.csv");
+//		PrintWriter gravarArquivoRNP06 = new PrintWriter(arquivoRNP06);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP06 rnp06 = new RNP06();
+		RNS0610 rns0610 = new RNS0610();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp06.aplicar(saida) && rns0610.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP06.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP06.close();
+//		gravarArquivoRNP06.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP06: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp06/rns1115
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP06RNS1115() throws URISyntaxException, IOException, LotoException  {
+//		FileWriter arquivoRNP06 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP06\\15_25-RNP06.csv");
+//		PrintWriter gravarArquivoRNP06 = new PrintWriter(arquivoRNP06);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP06 rnp06 = new RNP06();
+		RNS1115 rns1115 = new RNS1115();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp06.aplicar(saida) && rns1115.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP06.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP06.close();
+//		gravarArquivoRNP06.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP06: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp06/rns1620
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP06RNS1620() throws URISyntaxException, IOException, LotoException  {
+//		FileWriter arquivoRNP06 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP06\\15_25-RNP06.csv");
+//		PrintWriter gravarArquivoRNP06 = new PrintWriter(arquivoRNP06);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP06 rnp06 = new RNP06();
+		RNS1620 rns1620 = new RNS1620();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp06.aplicar(saida) && rns1620.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP06.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP06.close();
+//		gravarArquivoRNP06.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP06: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp06/rns2125
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP06RNS2125() throws URISyntaxException, IOException, LotoException  {
+//		FileWriter arquivoRNP06 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP06\\15_25-RNP06.csv");
+//		PrintWriter gravarArquivoRNP06 = new PrintWriter(arquivoRNP06);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP06 rnp06 = new RNP06();
+		RNS2125 rns2125 = new RNS2125();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp06.aplicar(saida) && rns2125.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP06.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP06.close();
+//		gravarArquivoRNP06.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP06: " + cont);
 		return lista1525;
 	}
 	
@@ -1244,6 +2082,171 @@ public class Combinacoes1525 {
 		arquivoRNP07.close();
 		gravarArquivoRNP07.close();
 		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP07: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp07/rns0105
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP07RNS0105() throws URISyntaxException, IOException, LotoException {
+//		FileWriter arquivoRNP07 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP07\\15_25-RNP07.csv");
+//		PrintWriter gravarArquivoRNP07 = new PrintWriter(arquivoRNP07);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP07 rnp07 = new RNP07();
+		RNS0105 rns0105 = new RNS0105();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp07.aplicar(saida) && rns0105.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP07.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP07.close();
+//		gravarArquivoRNP07.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP07: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp07/rns0610
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP07RNS0610() throws URISyntaxException, IOException, LotoException {
+//		FileWriter arquivoRNP07 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP07\\15_25-RNP07.csv");
+//		PrintWriter gravarArquivoRNP07 = new PrintWriter(arquivoRNP07);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP07 rnp07 = new RNP07();
+		RNS0610 rns0610 = new RNS0610();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp07.aplicar(saida) && rns0610.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP07.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP07.close();
+//		gravarArquivoRNP07.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP07: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp07/rns1115
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP07RNS1115() throws URISyntaxException, IOException, LotoException {
+//		FileWriter arquivoRNP07 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP07\\15_25-RNP07.csv");
+//		PrintWriter gravarArquivoRNP07 = new PrintWriter(arquivoRNP07);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP07 rnp07 = new RNP07();
+		RNS1115 rns1115 = new RNS1115();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp07.aplicar(saida) && rns1115.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP07.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP07.close();
+//		gravarArquivoRNP07.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP07: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp07/rns1620
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP07RNS1620() throws URISyntaxException, IOException, LotoException {
+//		FileWriter arquivoRNP07 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP07\\15_25-RNP07.csv");
+//		PrintWriter gravarArquivoRNP07 = new PrintWriter(arquivoRNP07);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP07 rnp07 = new RNP07();
+		RNS1620 rns1620 = new RNS1620();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp07.aplicar(saida) && rns1620.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP07.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP07.close();
+//		gravarArquivoRNP07.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP07: " + cont);
+		return lista1525;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp07/rns2125
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> gerar1525RNP07RNS2125() throws URISyntaxException, IOException, LotoException {
+//		FileWriter arquivoRNP07 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\15_25-3268760\\RNP07\\15_25-RNP07.csv");
+//		PrintWriter gravarArquivoRNP07 = new PrintWriter(arquivoRNP07);
+//		int cont = 0;
+		List<String> lista1525 = new ArrayList<String>();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] saida;
+		Combinacoes comb1 = new Combinacoes(str, 15);
+		RNP07 rnp07 = new RNP07();
+		RNS2125 rns2125 = new RNS2125();
+		while (comb1.hasNext()) {
+			String lista = null;
+			saida = comb1.next();
+			if (rnp07.aplicar(saida) && rns2125.aplicar(saida)) {
+//				cont++;
+				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
+						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
+						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+//				gravarArquivoRNP07.printf("%s%n", lista);
+				lista1525.add(lista);
+			}
+		}
+//		arquivoRNP07.close();
+//		gravarArquivoRNP07.close();
+//		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP07: " + cont);
 		return lista1525;
 	}
 	
