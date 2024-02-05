@@ -18,7 +18,7 @@ import com.opencsv.CSVReader;
 import br.com.quinze.combinacoes.Combinacoes;
 import br.com.quinze.enumerador.NumeroEnum;
 import br.com.quinze.excecao.LotoException;
-import br.com.quinze.regras.pares.RNP05;
+import br.com.quinze.regras.pares.RNP09;
 import br.com.quinze.regras.sequencia.RNS0105;
 import br.com.quinze.regras.sequencia.RNS0610;
 import br.com.quinze.regras.sequencia.RNS1115;
@@ -40,7 +40,7 @@ public class PrincipalRNP09_CINCO {
 		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 		int[] saida;
 		Combinacoes comb1 = new Combinacoes(str, 15);
-		RNP05 rnp05 = new RNP05();
+		RNP09 rnp09 = new RNP09();
 		RNS0105 rns0105 = new RNS0105();
 		RNS0610 rns0610 = new RNS0610();
 		RNS1115 rns1115 = new RNS1115();
@@ -49,7 +49,7 @@ public class PrincipalRNP09_CINCO {
 		while (comb1.hasNext()) {
 			String lista = null;
 			saida = comb1.next();
-			if (rnp05.aplicar(saida)) {
+			if (rnp09.aplicar(saida)) {
 				if (rns0105.aplicar(saida)) {
 					if (!rns0610.aplicar(saida)) {
 						if (!rns1115.aplicar(saida)) {

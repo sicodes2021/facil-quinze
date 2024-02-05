@@ -19,6 +19,11 @@ import br.com.quinze.combinacoes.Combinacoes;
 import br.com.quinze.enumerador.NumeroEnum;
 import br.com.quinze.excecao.LotoException;
 import br.com.quinze.regras.pares.RNP06;
+import br.com.quinze.regras.sequencia.RNS0105;
+import br.com.quinze.regras.sequencia.RNS0610;
+import br.com.quinze.regras.sequencia.RNS1115;
+import br.com.quinze.regras.sequencia.RNS1620;
+import br.com.quinze.regras.sequencia.RNS2125;
 
 public class PrincipalRNP06_CINCO {
 
@@ -35,15 +40,30 @@ public class PrincipalRNP06_CINCO {
 		int[] saida;
 		Combinacoes comb1 = new Combinacoes(str, 15);
 		RNP06 rnp06 = new RNP06();
+		RNS0105 rns0105 = new RNS0105();
+		RNS0610 rns0610 = new RNS0610();
+		RNS1115 rns1115 = new RNS1115();
+		RNS1620 rns1620 = new RNS1620();
+		RNS2125 rns2125 = new RNS2125();
 		while (comb1.hasNext()) {
 			String lista = null;
 			saida = comb1.next();
 			if (rnp06.aplicar(saida)) {
-				cont++;
-				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + saida[5]
-						+ "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + saida[10] + ","
-						+ saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
-				lista1525.add(lista);
+				if (!rns0105.aplicar(saida)) {
+					if (!rns0610.aplicar(saida)) {
+						if (!rns1115.aplicar(saida)) {
+							if (!rns1620.aplicar(saida)) {
+								if (!rns2125.aplicar(saida)) {
+									cont++;
+									lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + saida[5]
+											+ "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + saida[10] + ","
+											+ saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+									lista1525.add(lista);
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP06: " + cont);

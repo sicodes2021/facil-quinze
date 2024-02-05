@@ -82,14 +82,19 @@ public class PrincipalRNP05_CINCO {
 		System.out.println("listaCincoRNP05: " + listaCincoRPN05.size());
 
 		List<String> listaSaiu15RPN05 = principal.retirarSaiu15RNP05(listaCincoRPN05);
-		principal.gravarRetirarSaiu15RNP05(listaSaiu15RPN05);
+		//principal.gravarRetirarSaiu15RNP05(listaSaiu15RPN05);
 		System.out.println("Lista Retirar Saiu 15: " + listaSaiu15RPN05.size());
 
 		List<String> listaSaiu14RNP05 = principal.retirarSaiu14RNP05(listaSaiu15RPN05);
 		principal.gravarRetirarSaiu14RNP05(listaSaiu14RNP05);
+		principal.gravarRandom(listaSaiu14RNP05);
 		System.out.println("Lista Retirar Saiu 14: " + listaSaiu14RNP05.size());
+		
+		List<String> listaSaiu13RNP05 = principal.retirarSaiu13RNP05(listaSaiu14RNP05);
+		//principal.gravarRetirarSaiu13RNP05(listaSaiu13RNP05);
+		System.out.println("Lista Retirar Saiu 13: " + listaSaiu13RNP05.size());
 
-		List<String> listaFechamentoRNP05 = principal.fechamento(listaSaiu14RNP05);
+		List<String> listaFechamentoRNP05 = principal.fechamento(listaSaiu13RNP05);
 		principal.gravarFechamento(listaFechamentoRNP05);
 		System.out.println("Fechamento: " + listaFechamentoRNP05.size());
 	}
@@ -246,6 +251,66 @@ public class PrincipalRNP05_CINCO {
 
 		return retorno;
 	}
+	
+	public List<String> retirarSaiu13RNP05(List<String> listaCombinacoesRNP05)
+			throws URISyntaxException, IOException, LotoException {
+		List<String> listaRNP05 = new ArrayList<String>();
+		for (String lista15 : listaCombinacoesRNP05) {
+			String lista = null;
+			String[] linha15 = lista15.split(",");
+
+			int[] linha1525 = new int[linha15.length];
+			for (int i = 0; i < linha15.length; i++) {
+				linha1525[i] = Integer.parseInt(String.valueOf(linha15[i]));
+			}
+
+			if (resultadoRNP0513(linha1525)) {
+				lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
+						+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
+						+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
+						+ linha1525[13] + "," + linha1525[14];
+				listaRNP05.add(lista);
+			}
+		}
+
+		return listaRNP05;
+	}
+
+	@SuppressWarnings("deprecation")
+	public boolean resultadoRNP0513(int[] linha1525) throws URISyntaxException, NumberFormatException, IOException {
+		boolean retorno = false;
+		int contador = 0;
+		URL resultado = PrincipalRNP05_CINCO.class.getClassLoader().getResource("resultado.csv");
+		if (Objects.nonNull(resultado)) {
+			Path caminho = Paths.get(resultado.toURI());
+			CSVReader csvReader = new CSVReader(new FileReader(caminho.toFile()), ',');
+			String[] linhaResultado;
+			while (Objects.nonNull((linhaResultado = csvReader.readNext()))) {
+				contador = 0;
+				int[] resultado1525 = new int[linhaResultado.length];
+				for (int i = 0; i < linhaResultado.length; i++) {
+					resultado1525[i] = Integer.parseInt(String.valueOf(linhaResultado[i]));
+				}
+
+				for (int i = 0; i < linha1525.length; i++) {
+					for (int j = 0; j < resultado1525.length; j++) {
+						if (linha1525[i] == resultado1525[j]) {
+							contador++;
+						}
+					}
+				}
+
+				if (contador == NumeroEnum.TREZE.getValor()) {
+					retorno = true;
+					break;
+				}
+			}
+		} else {
+			System.out.println("### [ResultadoRNP05.csv] Arquivo nao encontrado... ###");
+		}
+
+		return retorno;
+	}
 
 	public List<String> fechamento(List<String> lista) throws URISyntaxException, IOException, LotoException {
 
@@ -360,6 +425,22 @@ public class PrincipalRNP05_CINCO {
 		arqSaiu.close();
 		gravarArqSaiu.close();
 	}
+	
+	public void gravarRetirarSaiu13RNP05(List<String> lista) throws URISyntaxException, IOException, LotoException {
+		FileWriter arqSaiu = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\rnp05\\PrincipalRNP05_CINCO\\RetirarSaiu13RNP05.csv");
+		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
+		for (String lista15 : lista) {
+			String[] linha15 = lista15.split(",");
+			int[] jogo = new int[linha15.length];
+			for (int i = 0; i < linha15.length; i++) {
+				jogo[i] = Integer.parseInt(String.valueOf(linha15[i]));
+			}
+			gravarArqSaiu.printf("%s%n", lista15);
+		}
+		arqSaiu.close();
+		gravarArqSaiu.close();
+	}
 
 	public void gravarFechamento(List<String> lista) throws URISyntaxException, IOException, LotoException {
 		FileWriter arqSaiu = new FileWriter(
@@ -372,6 +453,32 @@ public class PrincipalRNP05_CINCO {
 				jogo[i] = Integer.parseInt(String.valueOf(linha15[i]));
 			}
 			gravarArqSaiu.printf("%s%n", lista15);
+		}
+		arqSaiu.close();
+		gravarArqSaiu.close();
+	}
+	
+	public void gravarRandom(List<String> lista) throws URISyntaxException, IOException, LotoException {
+		FileWriter arqSaiu = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\rnp05\\PrincipalRNP05_CINCO\\RandomRNP05_CINCO.csv");
+		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
+		
+		PrincipalRNP05_CINCO pp = new PrincipalRNP05_CINCO();
+		List<String[]> listaNumeros = new ArrayList<String[]>();
+		
+		for (int i = 0; i < 20; i++) {
+			String lista15Random = pp.getRandomElement(lista);
+			String[] linha15Random = lista15Random.split(",");
+			listaNumeros.add(linha15Random);
+		}
+		
+		String listaNova = null;
+		for (String[] linha1525 : listaNumeros) {
+			listaNova = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
+					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
+					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
+					+ linha1525[13] + "," + linha1525[14];
+			gravarArqSaiu.printf("%s%n", listaNova);
 		}
 		arqSaiu.close();
 		gravarArqSaiu.close();
