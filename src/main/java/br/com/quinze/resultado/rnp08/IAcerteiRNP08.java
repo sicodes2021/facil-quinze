@@ -1,4 +1,4 @@
-package br.com.quinze.resultado;
+package br.com.quinze.resultado.rnp08;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -13,15 +13,15 @@ import com.opencsv.CSVReader;
 import br.com.quinze.enumerador.NumeroEnum;
 import br.com.quinze.excecao.LotoException;
 
-public class IAcertei {
+public class IAcerteiRNP08 {
 	
 	public static void main(String[] args) throws URISyntaxException, IOException, LotoException {
-		IAcertei jaSaiu = new IAcertei();
-		jaSaiu.RNP05();
+		IAcerteiRNP08 jaSaiu = new IAcerteiRNP08();
+		jaSaiu.RNP08();
 	}
 	
 	@SuppressWarnings("deprecation")
-	public void RNP05() throws URISyntaxException, IOException, LotoException {
+	public void RNP08() throws URISyntaxException, IOException, LotoException {
 		int contLinha = 0;
 		
 		int contonze = 0;
@@ -31,7 +31,7 @@ public class IAcertei {
 		int contquinze = 0;
 		int contJogo = 0;
 		
-		URL resultado1525 = IAcertei.class.getClassLoader().getResource("\\rnp08\\RandomRNP08_conc3022.csv");
+		URL resultado1525 = IAcerteiRNP08.class.getClassLoader().getResource("hoje.csv");
 		if (Objects.nonNull(resultado1525)) {
 			Path caminho = Paths.get(resultado1525.toURI());
 			CSVReader csvReader = new CSVReader(new FileReader(caminho.toFile()), ',');
@@ -45,7 +45,12 @@ public class IAcertei {
 				}
 
 				System.out.println("Jogo: " + contLinha);
-				URL combinacoes = IAcertei.class.getClassLoader().getResource("resultado.csv");
+//				URL combinacoes = IAcerteiRNP08.class.getClassLoader().getResource("\\jogos\\rnp08\\25\\quatro\\RandomRNP08_QUATRO_10_Fechamento.csv");
+//				URL combinacoes = IAcerteiRNP08.class.getClassLoader().getResource("\\jogos\\rnp08\\25\\quatro\\RandomRNP08_QUATRO_10_NaoFechamento.csv");
+//				URL combinacoes = IAcerteiRNP08.class.getClassLoader().getResource("\\jogos\\rnp08\\25\\cinco\\RandomRNP08_CINCO_10_Fechamento.csv");
+//				URL combinacoes = IAcerteiRNP08.class.getClassLoader().getResource("\\jogos\\rnp08\\25\\cinco\\RandomRNP08_CINCO_10_NaoFechamento.csv");
+//				URL combinacoes = IAcerteiRNP08.class.getClassLoader().getResource("\\jogos\\rnp08\\25\\sete\\RandomRNP08_CINCO_10_Fechamento.csv");
+				URL combinacoes = IAcerteiRNP08.class.getClassLoader().getResource("\\jogos\\rnp08\\25\\sete\\RandomRNP08_CINCO_10_NaoFechamento.csv");
 				if (Objects.nonNull(combinacoes)) {
 					Path caminho2 = Paths.get(combinacoes.toURI());
 					CSVReader csvReader2 = new CSVReader(new FileReader(caminho2.toFile()), ',');

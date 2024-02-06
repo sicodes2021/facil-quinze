@@ -69,7 +69,7 @@ public class PrincipalRNP08_CINCO {
 		System.out.println("Lista Retirar Saiu 15: " + listaSaiu15RNP08.size());
 
 		List<String> listaSaiu14RNP08 = principal.retirarSaiu14RNP08(listaSaiu15RNP08);
-		principal.gravarRetirarSaiu14RNP08(listaSaiu14RNP08);
+//		principal.gravarRetirarSaiu14RNP08(listaSaiu14RNP08);
 		System.out.println("Lista Retirar Saiu 14: " + listaSaiu14RNP08.size());
 		
 		
@@ -80,10 +80,10 @@ public class PrincipalRNP08_CINCO {
 		/**
 		 * Fechamento para ganhar!!!
 		 */
-		List<String> listaFechamentoRNP08 = principal.fechamento(listaFinalVinteCinco);
+//		List<String> listaFechamentoRNP08 = principal.fechamento(listaFinalVinteCinco);
 //		principal.gravarFechamento(listaFechamentoRNP08);
-		principal.gravarRandomFechamento(listaFechamentoRNP08);
-		System.out.println("Fechamento: " + listaFechamentoRNP08.size());
+//		principal.gravarRandomFechamento(listaFechamentoRNP08);
+//		System.out.println("Fechamento: " + listaFechamentoRNP08.size());
 
 	}
 
@@ -192,7 +192,7 @@ public class PrincipalRNP08_CINCO {
 				linha1525[i] = Integer.parseInt(String.valueOf(linha15[i]));
 			}
 
-			if (!resultadoRNP0814(linha1525)) {
+			if (resultadoRNP0814(linha1525)) {
 				lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
 						+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
 						+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
