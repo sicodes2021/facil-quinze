@@ -80,7 +80,7 @@ public class PrincipalRNP08_CINCO {
 		/**
 		 * Fechamento para ganhar!!!
 		 */
-//		List<String> listaFechamentoRNP08 = principal.fechamento(listaFinalVinteCinco);
+		List<String> listaFechamentoRNP08 = principal.fechamento(listaFinalVinteCinco);
 //		principal.gravarFechamento(listaFechamentoRNP08);
 //		principal.gravarRandomFechamento(listaFechamentoRNP08);
 //		System.out.println("Fechamento: " + listaFechamentoRNP08.size());

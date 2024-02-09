@@ -46,11 +46,11 @@ public class IAcerteiRNP08 {
 
 				System.out.println("Jogo: " + contLinha);
 //				URL combinacoes = IAcerteiRNP08.class.getClassLoader().getResource("\\jogos\\rnp08\\25\\quatro\\RandomRNP08_QUATRO_10_Fechamento.csv");
-//				URL combinacoes = IAcerteiRNP08.class.getClassLoader().getResource("\\jogos\\rnp08\\25\\quatro\\RandomRNP08_QUATRO_10_NaoFechamento.csv");
+				URL combinacoes = IAcerteiRNP08.class.getClassLoader().getResource("\\jogos\\rnp08\\25\\quatro\\RandomRNP08_QUATRO_10_NaoFechamento.csv");
 //				URL combinacoes = IAcerteiRNP08.class.getClassLoader().getResource("\\jogos\\rnp08\\25\\cinco\\RandomRNP08_CINCO_10_Fechamento.csv");
 //				URL combinacoes = IAcerteiRNP08.class.getClassLoader().getResource("\\jogos\\rnp08\\25\\cinco\\RandomRNP08_CINCO_10_NaoFechamento.csv");
 //				URL combinacoes = IAcerteiRNP08.class.getClassLoader().getResource("\\jogos\\rnp08\\25\\sete\\RandomRNP08_CINCO_10_Fechamento.csv");
-				URL combinacoes = IAcerteiRNP08.class.getClassLoader().getResource("\\jogos\\rnp08\\25\\sete\\RandomRNP08_CINCO_10_NaoFechamento.csv");
+//				URL combinacoes = IAcerteiRNP08.class.getClassLoader().getResource("\\jogos\\rnp08\\25\\sete\\RandomRNP08_CINCO_10_NaoFechamento.csv");
 				if (Objects.nonNull(combinacoes)) {
 					Path caminho2 = Paths.get(combinacoes.toURI());
 					CSVReader csvReader2 = new CSVReader(new FileReader(caminho2.toFile()), ',');

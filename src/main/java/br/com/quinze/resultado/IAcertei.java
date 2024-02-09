@@ -31,7 +31,7 @@ public class IAcertei {
 		int contquinze = 0;
 		int contJogo = 0;
 		
-		URL resultado1525 = IAcertei.class.getClassLoader().getResource("\\rnp08\\RandomRNP08_conc3022.csv");
+		URL resultado1525 = IAcertei.class.getClassLoader().getResource("hoje.csv");
 		if (Objects.nonNull(resultado1525)) {
 			Path caminho = Paths.get(resultado1525.toURI());
 			CSVReader csvReader = new CSVReader(new FileReader(caminho.toFile()), ',');
@@ -45,7 +45,7 @@ public class IAcertei {
 				}
 
 				System.out.println("Jogo: " + contLinha);
-				URL combinacoes = IAcertei.class.getClassLoader().getResource("resultado.csv");
+				URL combinacoes = IAcertei.class.getClassLoader().getResource("\\combinacoes\\15_25-3268760\\jogo_rnp07\\15_25-RNP07_SEIS.csv");
 				if (Objects.nonNull(combinacoes)) {
 					Path caminho2 = Paths.get(combinacoes.toURI());
 					CSVReader csvReader2 = new CSVReader(new FileReader(caminho2.toFile()), ',');
