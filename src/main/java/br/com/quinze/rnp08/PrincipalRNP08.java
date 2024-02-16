@@ -15,7 +15,7 @@ import java.util.Random;
 
 import com.opencsv.CSVReader;
 
-import br.com.quinze.combinacoes.Combinacoes1626;
+import br.com.quinze.combinacoes.Combinacoes1625;
 import br.com.quinze.enumerador.NumeroEnum;
 import br.com.quinze.excecao.LotoException;
 
@@ -23,7 +23,7 @@ public class PrincipalRNP08 {
 
 	public static void main(String[] args) throws URISyntaxException, IOException, LotoException {
 		PrincipalRNP08 principalRNP08 = new PrincipalRNP08();
-		Combinacoes1626 combinacoes1626 = new Combinacoes1626();
+		Combinacoes1625 combinacoes1626 = new Combinacoes1625();
 		
 		List<String> listaCombinacoes1625RNP08SEMRNS = combinacoes1626.gerar1625RNP08SEMRNS();
 		List<String> listaFinalVinteCinco = principalRNP08.resultadoNumerosFinalVinteCinco(listaCombinacoes1625RNP08SEMRNS);

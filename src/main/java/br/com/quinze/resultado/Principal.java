@@ -25,6 +25,10 @@ import br.com.quinze.regras.pares.RNP09;
 import br.com.quinze.regras.pares.RNP10;
 import br.com.quinze.regras.pares.RNP11;
 import br.com.quinze.regras.pares.RNP12;
+import br.com.quinze.regras.sequencia.RNS0610;
+import br.com.quinze.regras.sequencia.RNS1115;
+import br.com.quinze.regras.sequencia.RNS1620;
+import br.com.quinze.regras.sequencia.RNS2125;
 
 public class Principal {
 
@@ -1361,6 +1365,26 @@ public class Principal {
 		FileWriter arquivoQUATRO = new FileWriter(
 				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP08NumerosMenorQueDez_QUATRO.csv");
 		PrintWriter gravarArquivoQUATRO = new PrintWriter(arquivoQUATRO);
+		
+		FileWriter arquivoQUATRORNS0610 = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP08NumerosMenorQueDez_QUATRORNS0610.csv");
+		PrintWriter gravarArquivoQUATRORNS0610 = new PrintWriter(arquivoQUATRORNS0610);
+		
+		FileWriter arquivoQUATRORNS1115 = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP08NumerosMenorQueDez_QUATRORNS1115.csv");
+		PrintWriter gravarArquivoQUATRORNS1115 = new PrintWriter(arquivoQUATRORNS1115);
+		
+		FileWriter arquivoQUATRORNS1620 = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP08NumerosMenorQueDez_QUATRORNS1620.csv");
+		PrintWriter gravarArquivoQUATRORNS1620 = new PrintWriter(arquivoQUATRORNS1620);
+		
+		FileWriter arquivoQUATRORNS2125 = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP08NumerosMenorQueDez_QUATRORNS2125.csv");
+		PrintWriter gravarArquivoQUATRORNS2125 = new PrintWriter(arquivoQUATRORNS2125);
+		
+		
+		
+		
 		FileWriter arquivoCINCO = new FileWriter(
 				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP08NumerosMenorQueDez_CINCO.csv");
 		PrintWriter gravarArquivoCINCO = new PrintWriter(arquivoCINCO);
@@ -1370,6 +1394,11 @@ public class Principal {
 		FileWriter arquivoSETE = new FileWriter(
 				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP08NumerosMenorQueDez_SETE.csv");
 		PrintWriter gravarArquivoSETE = new PrintWriter(arquivoSETE);
+		
+		RNS0610 rns0610 = new RNS0610();
+		RNS1115 rns1115 = new RNS1115();
+		RNS1620 rns1620 = new RNS1620();
+		RNS2125 rns2125 = new RNS2125();
 		
 		int cont = 0;
 		int contlinha = 0;
@@ -1383,6 +1412,10 @@ public class Principal {
 		int sete = 0;
 		int oito = 0;
 		int nove = 0;
+		int contrns0610 = 0;
+		int contrns1115 = 0;
+		int contrns1620 = 0;
+		int contrns2125 = 0;
 		URL resultado1525 = Principal.class.getClassLoader().getResource("resultado\\ResultadoRNP08.csv");
 		if (Objects.nonNull(resultado1525)) {
 			Path caminho = Paths.get(resultado1525.toURI());
@@ -1420,6 +1453,25 @@ public class Principal {
 							+ linha1525[12] + "," + linha1525[13] + "," + linha1525[14];
 					gravarArquivoQUATRO.printf("%s%n", lista);
 					quatro++;
+					if (rns0610.aplicar(linha1525)) {
+						gravarArquivoQUATRORNS0610.printf("%s%n", lista);
+						contrns0610++;
+					}
+					
+					if (rns1115.aplicar(linha1525)) {
+						gravarArquivoQUATRORNS1115.printf("%s%n", lista);
+						contrns1115++;
+					}
+					
+					if (rns1620.aplicar(linha1525)) {
+						gravarArquivoQUATRORNS1620.printf("%s%n", lista);
+						contrns1620++;
+					}
+					
+					if (rns2125.aplicar(linha1525)) {
+						gravarArquivoQUATRORNS2125.printf("%s%n", lista);
+						contrns2125++;
+					}
 				} else if (contlinha == NumeroEnum.CINCO.getValor()) {
 					String lista = null;
 					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + ","
@@ -1453,6 +1505,14 @@ public class Principal {
 			
 			arquivoQUATRO.close();
 			gravarArquivoQUATRO.close();
+			arquivoQUATRORNS0610.close();
+			gravarArquivoQUATRORNS0610.close();
+			arquivoQUATRORNS1115.close();
+			gravarArquivoQUATRORNS1115.close();
+			arquivoQUATRORNS1620.close();
+			gravarArquivoQUATRORNS1620.close();
+			arquivoQUATRORNS2125.close();
+			gravarArquivoQUATRORNS2125.close();
 			arquivoCINCO.close();
 			gravarArquivoCINCO.close();
 			arquivoSEIS.close();
@@ -1476,8 +1536,13 @@ public class Principal {
 		System.out.println("SETE: " + sete);
 		System.out.println("OITO: " + oito);
 		System.out.println("NOVE: " + nove);
+		System.out.println("RNS0610: " + contrns0610);
+		System.out.println("RNS1115: " + contrns1115);
+		System.out.println("RNS1620: " + contrns1620);
+		System.out.println("RNS2125: " + contrns2125);
 		Double total = (double) (cont * 100) / 849420;
 		System.out.println("TOTAL %: " + total);
+		
 
 	}
 

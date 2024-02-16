@@ -28,11 +28,11 @@ import br.com.quinze.regras.pares.RNP10;
 import br.com.quinze.regras.pares.RNP11;
 import br.com.quinze.regras.pares.RNP12;
 
-public class Combinacoes1526_JogoRNP07_2025 {
+public class Combinacoes1525_JogoRNP07_2025 {
 	
 	public static void main(String[] args) throws URISyntaxException, IOException, LotoException {
 		
-		Combinacoes1526_JogoRNP07_2025 combinacoes1525 = new Combinacoes1526_JogoRNP07_2025();
+		Combinacoes1525_JogoRNP07_2025 combinacoes1525 = new Combinacoes1525_JogoRNP07_2025();
 		combinacoes1525.gerar1525();
 		
 		combinacoes1525.gerar1525RNP02();
@@ -167,7 +167,7 @@ public class Combinacoes1526_JogoRNP07_2025 {
 		int sete = 0;
 		int oito = 0;
 		int nove = 0;
-		URL resultado1525 = Combinacoes1526_JogoRNP07_2025.class.getClassLoader().getResource("combinacoes\\15_25-3268760\\RNP02\\15_25-RNP02.csv");
+		URL resultado1525 = Combinacoes1525_JogoRNP07_2025.class.getClassLoader().getResource("combinacoes\\15_25-3268760\\RNP02\\15_25-RNP02.csv");
 		if (Objects.nonNull(resultado1525)) {
 			Path caminho = Paths.get(resultado1525.toURI());
 			CSVReader csvReader = new CSVReader(new FileReader(caminho.toFile()), ',');
@@ -393,7 +393,7 @@ public class Combinacoes1526_JogoRNP07_2025 {
 		int sete = 0;
 		int oito = 0;
 		int nove = 0;
-		URL resultado1525 = Combinacoes1526_JogoRNP07_2025.class.getClassLoader().getResource("combinacoes\\15_25-3268760\\RNP03\\15_25-RNP03.csv");
+		URL resultado1525 = Combinacoes1525_JogoRNP07_2025.class.getClassLoader().getResource("combinacoes\\15_25-3268760\\RNP03\\15_25-RNP03.csv");
 		if (Objects.nonNull(resultado1525)) {
 			Path caminho = Paths.get(resultado1525.toURI());
 			CSVReader csvReader = new CSVReader(new FileReader(caminho.toFile()), ',');
@@ -621,7 +621,7 @@ public class Combinacoes1526_JogoRNP07_2025 {
 		int sete = 0;
 		int oito = 0;
 		int nove = 0;
-		URL resultado1525 = Combinacoes1526_JogoRNP07_2025.class.getClassLoader().getResource("combinacoes\\15_25-3268760\\RNP04\\15_25-RNP04.csv");
+		URL resultado1525 = Combinacoes1525_JogoRNP07_2025.class.getClassLoader().getResource("combinacoes\\15_25-3268760\\RNP04\\15_25-RNP04.csv");
 		if (Objects.nonNull(resultado1525)) {
 			Path caminho = Paths.get(resultado1525.toURI());
 			CSVReader csvReader = new CSVReader(new FileReader(caminho.toFile()), ',');
@@ -842,7 +842,7 @@ public class Combinacoes1526_JogoRNP07_2025 {
 		int sete = 0;
 		int oito = 0;
 		int nove = 0;
-		URL resultado1525 = Combinacoes1526_JogoRNP07_2025.class.getClassLoader().getResource("combinacoes\\15_25-3268760\\jogo_rnp07\\15_25-RNP05.csv");
+		URL resultado1525 = Combinacoes1525_JogoRNP07_2025.class.getClassLoader().getResource("combinacoes\\15_25-3268760\\jogo_rnp07\\15_25-RNP05.csv");
 		if (Objects.nonNull(resultado1525)) {
 			Path caminho = Paths.get(resultado1525.toURI());
 			CSVReader csvReader = new CSVReader(new FileReader(caminho.toFile()), ',');
@@ -1044,7 +1044,7 @@ public class Combinacoes1526_JogoRNP07_2025 {
 		int sete = 0;
 		int oito = 0;
 		int nove = 0;
-		URL resultado1525 = Combinacoes1526_JogoRNP07_2025.class.getClassLoader().getResource("combinacoes\\15_25-3268760\\RNP06\\15_25-RNP06.csv");
+		URL resultado1525 = Combinacoes1525_JogoRNP07_2025.class.getClassLoader().getResource("combinacoes\\15_25-3268760\\RNP06\\15_25-RNP06.csv");
 		if (Objects.nonNull(resultado1525)) {
 			Path caminho = Paths.get(resultado1525.toURI());
 			CSVReader csvReader = new CSVReader(new FileReader(caminho.toFile()), ',');
@@ -1271,7 +1271,7 @@ public class Combinacoes1526_JogoRNP07_2025 {
 		int sete = 0;
 		int oito = 0;
 		int nove = 0;
-		URL resultado1525 = Combinacoes1526_JogoRNP07_2025.class.getClassLoader().getResource("combinacoes\\15_25-3268760\\jogo_rnp07\\15_25-RNP07.csv");
+		URL resultado1525 = Combinacoes1525_JogoRNP07_2025.class.getClassLoader().getResource("combinacoes\\15_25-3268760\\jogo_rnp07\\15_25-RNP07.csv");
 		if (Objects.nonNull(resultado1525)) {
 			Path caminho = Paths.get(resultado1525.toURI());
 			CSVReader csvReader = new CSVReader(new FileReader(caminho.toFile()), ',');
@@ -1494,7 +1494,7 @@ public class Combinacoes1526_JogoRNP07_2025 {
 		int sete = 0;
 		int oito = 0;
 		int nove = 0;
-		URL resultado1525 = Combinacoes1526_JogoRNP07_2025.class.getClassLoader().getResource("combinacoes\\15_25-3268760\\RNP08\\15_25-RNP08.csv");
+		URL resultado1525 = Combinacoes1525_JogoRNP07_2025.class.getClassLoader().getResource("combinacoes\\15_25-3268760\\RNP08\\15_25-RNP08.csv");
 		if (Objects.nonNull(resultado1525)) {
 			Path caminho = Paths.get(resultado1525.toURI());
 			CSVReader csvReader = new CSVReader(new FileReader(caminho.toFile()), ',');
@@ -1717,7 +1717,7 @@ public class Combinacoes1526_JogoRNP07_2025 {
 		int sete = 0;
 		int oito = 0;
 		int nove = 0;
-		URL resultado1525 = Combinacoes1526_JogoRNP07_2025.class.getClassLoader().getResource("combinacoes\\15_25-3268760\\RNP09\\15_25-RNP09.csv");
+		URL resultado1525 = Combinacoes1525_JogoRNP07_2025.class.getClassLoader().getResource("combinacoes\\15_25-3268760\\RNP09\\15_25-RNP09.csv");
 		if (Objects.nonNull(resultado1525)) {
 			Path caminho = Paths.get(resultado1525.toURI());
 			CSVReader csvReader = new CSVReader(new FileReader(caminho.toFile()), ',');
@@ -1941,7 +1941,7 @@ public class Combinacoes1526_JogoRNP07_2025 {
 		int sete = 0;
 		int oito = 0;
 		int nove = 0;
-		URL resultado1525 = Combinacoes1526_JogoRNP07_2025.class.getClassLoader().getResource("combinacoes\\15_25-3268760\\RNP10\\15_25-RNP10.csv");
+		URL resultado1525 = Combinacoes1525_JogoRNP07_2025.class.getClassLoader().getResource("combinacoes\\15_25-3268760\\RNP10\\15_25-RNP10.csv");
 		if (Objects.nonNull(resultado1525)) {
 			Path caminho = Paths.get(resultado1525.toURI());
 			CSVReader csvReader = new CSVReader(new FileReader(caminho.toFile()), ',');
@@ -2165,7 +2165,7 @@ public class Combinacoes1526_JogoRNP07_2025 {
 		int sete = 0;
 		int oito = 0;
 		int nove = 0;
-		URL resultado1525 = Combinacoes1526_JogoRNP07_2025.class.getClassLoader().getResource("combinacoes\\15_25-3268760\\RNP11\\15_25-RNP11.csv");
+		URL resultado1525 = Combinacoes1525_JogoRNP07_2025.class.getClassLoader().getResource("combinacoes\\15_25-3268760\\RNP11\\15_25-RNP11.csv");
 		if (Objects.nonNull(resultado1525)) {
 			Path caminho = Paths.get(resultado1525.toURI());
 			CSVReader csvReader = new CSVReader(new FileReader(caminho.toFile()), ',');
@@ -2390,7 +2390,7 @@ public class Combinacoes1526_JogoRNP07_2025 {
 		int sete = 0;
 		int oito = 0;
 		int nove = 0;
-		URL resultado1525 = Combinacoes1526_JogoRNP07_2025.class.getClassLoader().getResource("combinacoes\\15_25-3268760\\RNP12\\15_25-RNP12.csv");
+		URL resultado1525 = Combinacoes1525_JogoRNP07_2025.class.getClassLoader().getResource("combinacoes\\15_25-3268760\\RNP12\\15_25-RNP12.csv");
 		if (Objects.nonNull(resultado1525)) {
 			Path caminho = Paths.get(resultado1525.toURI());
 			CSVReader csvReader = new CSVReader(new FileReader(caminho.toFile()), ',');

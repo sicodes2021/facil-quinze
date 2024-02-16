@@ -1,4 +1,4 @@
-package br.com.quinze.rnp08;
+package br.com.quinze.rnp08.combinacoes1625;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -25,19 +25,19 @@ import br.com.quinze.regras.sequencia.RNS1115;
 import br.com.quinze.regras.sequencia.RNS1620;
 import br.com.quinze.regras.sequencia.RNS2125;
 
-public class PrincipalRNP08_QUATRO {
+public class PrincipalRNP08_1625_QUATRO {
 
 	
 
 	public static void main(String[] args) throws URISyntaxException, IOException, LotoException {
-		PrincipalRNP08_QUATRO principal = new PrincipalRNP08_QUATRO();
+		PrincipalRNP08_1625_QUATRO principal = new PrincipalRNP08_1625_QUATRO();
 
 		/**********************************************************************
 		 * RPN08
 		 */
 		System.out.println("**************RPN08_QUATRO****************************");
 //		List<String> listaCombinacoesRNP08 = principal.gerar1525RNP08();
-		List<String> listaCombinacoesRNP08_SEM_RNS = principal.gerar1525RNP08_SEM_RNS();
+		List<String> listaCombinacoesRNP08_SEM_RNS = principal.gerar1625RNP08_SEM_RNS();
 //		List<String> listaCombinacoesRNP08_RNS0105 = principal.gerar1525RNP08_RNS0105();
 //		List<String> listaCombinacoesRNP08_RNS0610 = principal.gerar1525RNP08_RNS0610();
 //		List<String> listaCombinacoesRNP08_RNS1115 = principal.gerar1525RNP08_RNS1115();
@@ -64,44 +64,46 @@ public class PrincipalRNP08_QUATRO {
 		/**
 		 * Retirar o que ja foi premiado!!!
 		 */
-		List<String> listaSaiu15RNP08 = principal.retirarSaiu15RNP08(listaQuatroRPN08_SEM_RNS);
+//		List<String> listaSaiu15RNP08 = principal.retirarSaiu15RNP08(listaQuatroRPN08_SEM_RNS);
 //		principal.gravarRetirarSaiu15RNP08(listaSaiu15RNP08);
-		System.out.println("Lista Retirar Saiu 15: " + listaSaiu15RNP08.size());
+//		System.out.println("Lista Retirar Saiu 15: " + listaSaiu15RNP08.size());
 
-		List<String> listaSaiu14RNP08 = principal.retirarSaiu14RNP08(listaSaiu15RNP08);
-		principal.gravarRetirarSaiu14RNP08(listaSaiu14RNP08);
-		System.out.println("Lista Retirar Saiu 14: " + listaSaiu14RNP08.size());
+//		List<String> listaSaiu14RNP08 = principal.retirarSaiu14RNP08(listaSaiu15RNP08);
+//		principal.gravarRetirarSaiu14RNP08(listaSaiu14RNP08);
+//		System.out.println("Lista Retirar Saiu 14: " + listaSaiu14RNP08.size());
 		
 //		List<String> listaSaiu13RNP08 = principal.retirarSaiu13RNP08(listaSaiu14RNP08);
 //		principal.gravarRetirarSaiu13RNP08(listaSaiu14RNP08);
 //		System.out.println("Lista Retirar Saiu 13: " + listaSaiu13RNP08.size());
 		
 		
-//		List<String> listaFinalVinteUm = principal.resultadoNumerosFinalVinteUm(listaSaiu14RNP08);
-//		System.out.println("listaFinalVinteUm: " + listaFinalVinteUm.size());
-//		List<String> listaFinalVinteDois = principal.resultadoNumerosFinalVinteDois(listaSaiu14RNP08);
-//		System.out.println("listaFinalVinteDois: " + listaFinalVinteDois.size());
-//		List<String> listaFinalVinteTres = principal.resultadoNumerosFinalVinteTres(listaSaiu14RNP08);
-//		System.out.println("listaFinalVinteTres: " + listaFinalVinteTres.size());
+		List<String> listaFinalVinteUm = principal.resultadoNumerosFinalVinteUm(listaQuatroRPN08_SEM_RNS);
+		System.out.println("listaFinalVinteUm: " + listaFinalVinteUm.size());
 		
-		List<String> listaFinalVinteQuatro = principal.resultadoNumerosFinalVinteQuatro(listaSaiu14RNP08);
+		List<String> listaFinalVinteDois = principal.resultadoNumerosFinalVinteDois(listaQuatroRPN08_SEM_RNS);
+		System.out.println("listaFinalVinteDois: " + listaFinalVinteDois.size());
+		
+		List<String> listaFinalVinteTres = principal.resultadoNumerosFinalVinteTres(listaQuatroRPN08_SEM_RNS);
+		System.out.println("listaFinalVinteTres: " + listaFinalVinteTres.size());
+		
+		List<String> listaFinalVinteQuatro = principal.resultadoNumerosFinalVinteQuatro(listaQuatroRPN08_SEM_RNS);
 		System.out.println("listaFinalVinteQuatro: " + listaFinalVinteQuatro.size());
 		
-//		List<String> listaFinalVinteCinco = principal.resultadoNumerosFinalVinteCinco(listaSaiu14RNP08);
-//		System.out.println("listaFinalVinteCinco: " + listaFinalVinteCinco.size());
+		List<String> listaFinalVinteCinco = principal.resultadoNumerosFinalVinteCinco(listaQuatroRPN08_SEM_RNS);
+		System.out.println("listaFinalVinteCinco: " + listaFinalVinteCinco.size());
 
 
 		/**
 		 * Fechamento para ganhar!!!
 		 */
 		List<String> fechamentoUm = principal.fechamento1(listaFinalVinteQuatro);
-		List<String> fechamentoDois = principal.fechamento2(fechamentoUm);
-		List<String> fechamentoTres = principal.fechamento3(fechamentoDois);
-		List<String> fechamentoQuatro = principal.fechamento4(fechamentoTres);
-		List<String> fechamentoCinco = principal.fechamento5(fechamentoQuatro);
-		principal.gravarFechamento(fechamentoCinco);
+//		List<String> fechamentoDois = principal.fechamento2(fechamentoUm);
+//		List<String> fechamentoTres = principal.fechamento3(fechamentoDois);
+//		List<String> fechamentoQuatro = principal.fechamento4(fechamentoTres);
+//		List<String> fechamentoCinco = principal.fechamento5(fechamentoQuatro);
+//		principal.gravarFechamento(fechamentoCinco);
 //		principal.gravarRandomFechamento(listaFechamentoRNP08);
-		System.out.println("Fechamento: " + fechamentoCinco.size());
+//		System.out.println("Fechamento: " + fechamentoCinco.size());
 
 	}
 
@@ -130,7 +132,7 @@ public class PrincipalRNP08_QUATRO {
 				lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
 						+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
 						+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
-						+ linha1525[13] + "," + linha1525[14];
+						+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
 				listaResultado.add(lista);
 			}
 		}
@@ -166,7 +168,7 @@ public class PrincipalRNP08_QUATRO {
 	public boolean resultadoRNP0815(int[] linha1525) throws URISyntaxException, NumberFormatException, IOException {
 		boolean retorno = false;
 		int contador = 0;
-		URL resultado = PrincipalRNP08_QUATRO.class.getClassLoader().getResource("\\resultado\\ResultadoRNP08.csv");
+		URL resultado = PrincipalRNP08_1625_QUATRO.class.getClassLoader().getResource("\\resultado\\ResultadoRNP08.csv");
 		if (Objects.nonNull(resultado)) {
 			Path caminho = Paths.get(resultado.toURI());
 			CSVReader csvReader = new CSVReader(new FileReader(caminho.toFile()), ',');
@@ -226,7 +228,7 @@ public class PrincipalRNP08_QUATRO {
 	public boolean resultadoRNP0814(int[] linha1525) throws URISyntaxException, NumberFormatException, IOException {
 		boolean retorno = false;
 		int contador = 0;
-		URL resultado = PrincipalRNP08_QUATRO.class.getClassLoader().getResource("resultado.csv");
+		URL resultado = PrincipalRNP08_1625_QUATRO.class.getClassLoader().getResource("resultado.csv");
 		if (Objects.nonNull(resultado)) {
 			Path caminho = Paths.get(resultado.toURI());
 			CSVReader csvReader = new CSVReader(new FileReader(caminho.toFile()), ',');
@@ -286,7 +288,7 @@ public class PrincipalRNP08_QUATRO {
 	public boolean resultadoRNP0813(int[] linha1525) throws URISyntaxException, NumberFormatException, IOException {
 		boolean retorno = false;
 		int contador = 0;
-		URL resultado = PrincipalRNP08_QUATRO.class.getClassLoader().getResource("resultado.csv");
+		URL resultado = PrincipalRNP08_1625_QUATRO.class.getClassLoader().getResource("resultado.csv");
 		if (Objects.nonNull(resultado)) {
 			Path caminho = Paths.get(resultado.toURI());
 			CSVReader csvReader = new CSVReader(new FileReader(caminho.toFile()), ',');
@@ -346,7 +348,7 @@ public class PrincipalRNP08_QUATRO {
 	public boolean resultadoRNP0812(int[] linha1525) throws URISyntaxException, NumberFormatException, IOException {
 		boolean retorno = false;
 		int contador = 0;
-		URL resultado = PrincipalRNP08_QUATRO.class.getClassLoader().getResource("resultado.csv");
+		URL resultado = PrincipalRNP08_1625_QUATRO.class.getClassLoader().getResource("resultado.csv");
 		if (Objects.nonNull(resultado)) {
 			Path caminho = Paths.get(resultado.toURI());
 			CSVReader csvReader = new CSVReader(new FileReader(caminho.toFile()), ',');
@@ -395,8 +397,8 @@ public class PrincipalRNP08_QUATRO {
 			lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
 					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
 					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
-					+ linha1525[13] + "," + linha1525[14];
-			if (linha1525[14] == 21) {
+					+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
+			if (linha1525[15] == 21) {
 				listaRNP08VinteUm.add(lista);
 			}
 		}
@@ -422,8 +424,8 @@ public class PrincipalRNP08_QUATRO {
 			lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
 					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
 					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
-					+ linha1525[13] + "," + linha1525[14];
-			if (linha1525[14] == 22) {
+					+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
+			if (linha1525[15] == 22) {
 				listaRNP08VinteDois.add(lista);
 			}
 		}
@@ -449,8 +451,8 @@ public class PrincipalRNP08_QUATRO {
 			lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
 					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
 					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
-					+ linha1525[13] + "," + linha1525[14];
-			if (linha1525[14] == 23) {
+					+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
+			if (linha1525[15] == 23) {
 				listaRNP08VinteTres.add(lista);
 			}
 		}
@@ -476,8 +478,8 @@ public class PrincipalRNP08_QUATRO {
 			lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
 					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
 					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
-					+ linha1525[13] + "," + linha1525[14];
-			if (linha1525[14] == 24) {
+					+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
+			if (linha1525[15] == 24) {
 				listaRNP08VinteQuatro.add(lista);
 			}
 		}
@@ -503,8 +505,8 @@ public class PrincipalRNP08_QUATRO {
 			lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
 					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
 					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
-					+ linha1525[13] + "," + linha1525[14];
-			if (linha1525[0] == 4 && linha1525[14] == 25) {
+					+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
+			if (linha1525[15] == 25) {
 				listaRNP08VinteCinco.add(lista);
 			}
 		}
@@ -543,7 +545,8 @@ public class PrincipalRNP08_QUATRO {
 			listaNova = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
 					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
 					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
-					+ linha1525[13] + "," + linha1525[14];
+					+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
+			System.out.println(listaNova);
 			listaqualquer.add(listaNova);
 		}
 		
@@ -561,7 +564,7 @@ public class PrincipalRNP08_QUATRO {
 		System.out.println("Numero  de Fechamentos: " + listaNumeros.size());
 		System.out.println("Numero  de NAO Fechamentos: " + listaNAONumeros.size());
 		
-		this.gravarFechamentoUm(listaqualquer);
+//		this.gravarFechamentoUm(listaqualquer);
 		
 		return listaqualquerNaoFechamento;
 	}
@@ -615,7 +618,7 @@ public class PrincipalRNP08_QUATRO {
 		System.out.println("Numero  de NAO Fechamentos: " + listaNAONumeros.size());
 		
 		
-		this.gravarFechamentoDois(listaqualquer);
+//		this.gravarFechamentoDois(listaqualquer);
 //		this.gravarRandomNaoFechamento(listaqualquerNaoFechamento);
 		
 		return listaqualquerNaoFechamento;
@@ -670,7 +673,7 @@ public class PrincipalRNP08_QUATRO {
 		System.out.println("Numero  de NAO Fechamentos: " + listaNAONumeros.size());
 		
 		
-		this.gravarFechamentoTres(listaqualquer);
+//		this.gravarFechamentoTres(listaqualquer);
 //		this.gravarRandomNaoFechamento(listaqualquerNaoFechamento);
 		
 		return listaqualquerNaoFechamento;
@@ -725,7 +728,7 @@ public class PrincipalRNP08_QUATRO {
 		System.out.println("Numero  de NAO Fechamentos: " + listaNAONumeros.size());
 		
 		
-		this.gravarFechamentoQuatro(listaqualquer);
+//		this.gravarFechamentoQuatro(listaqualquer);
 //		this.gravarRandomNaoFechamento(listaqualquerNaoFechamento);
 		
 		return listaqualquerNaoFechamento;
@@ -780,7 +783,7 @@ public class PrincipalRNP08_QUATRO {
 		System.out.println("Numero  de NAO Fechamentos: " + listaNAONumeros.size());
 		
 		
-		this.gravarFechamentoCinco(listaqualquer);
+//		this.gravarFechamentoCinco(listaqualquer);
 //		this.gravarRandomNaoFechamento(listaqualquerNaoFechamento);
 		
 		return listaqualquer;
@@ -815,7 +818,7 @@ public class PrincipalRNP08_QUATRO {
 				}
 			}
 
-			if (contJogo < NumeroEnum.QUATORZE.getValor()) {
+			if (contJogo < NumeroEnum.DOZE.getValor()) {
 				retorno = true;
 			} else {
 				retorno = false;
@@ -1246,17 +1249,17 @@ public class PrincipalRNP08_QUATRO {
 		}
 		
 		/**
-		 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial rnp08_sem_rns
+		 * Metodo responsavel por gerar as combinacoes 1625 com a regra negocial rnp08_sem_rns
 		 * 
 		 * @return
 		 * @throws LotoException
 		 */
-		public List<String> gerar1525RNP08_SEM_RNS() throws URISyntaxException, IOException, LotoException {
+		public List<String> gerar1625RNP08_SEM_RNS() throws URISyntaxException, IOException, LotoException {
 			int cont = 0;
 			List<String> lista1525 = new ArrayList<String>();
-			int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+			int[] str = { 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 			int[] saida;
-			Combinacoes comb1 = new Combinacoes(str, 15);
+			Combinacoes comb1 = new Combinacoes(str, 16);
 			RNP08 rnp08 = new RNP08();
 			RNS0105 rns0105 = new RNS0105();
 			RNS0610 rns0610 = new RNS0610();
@@ -1276,7 +1279,7 @@ public class PrincipalRNP08_QUATRO {
 										lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4]
 												+ "," + saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + ","
 												+ saida[9] + "," + saida[10] + "," + saida[11] + "," + saida[12] + ","
-												+ saida[13] + "," + saida[14];
+												+ saida[13] + "," + saida[14] + "," + saida[15];
 										lista1525.add(lista);
 									}
 								}
@@ -1285,7 +1288,7 @@ public class PrincipalRNP08_QUATRO {
 					}
 				}
 			}
-			System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP08_SEM_RNS: " + cont);
+			System.out.println("TOTAL DE LINHAS NO ARQUIVO 16_25-RNP08_SEM_RNS: " + cont);
 			return lista1525;
 		}
 		
