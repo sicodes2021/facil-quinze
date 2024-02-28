@@ -15,9 +15,9 @@ import java.util.Random;
 
 import com.opencsv.CSVReader;
 
-import br.com.quinze.combinacoes.Combinacoes1625;
-import br.com.quinze.enumerador.NumeroEnum;
-import br.com.quinze.excecao.LotoException;
+import br.com.combinacoes.Combinacoes1625;
+import br.com.enumerador.NumeroEnum;
+import br.com.excecao.LotoException;
 
 public class PrincipalRNP08 {
 

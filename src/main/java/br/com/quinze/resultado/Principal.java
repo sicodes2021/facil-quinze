@@ -12,23 +12,23 @@ import java.util.Objects;
 
 import com.opencsv.CSVReader;
 
-import br.com.quinze.enumerador.NumeroEnum;
-import br.com.quinze.excecao.LotoException;
-import br.com.quinze.regras.pares.RNP02;
-import br.com.quinze.regras.pares.RNP03;
-import br.com.quinze.regras.pares.RNP04;
-import br.com.quinze.regras.pares.RNP05;
-import br.com.quinze.regras.pares.RNP06;
-import br.com.quinze.regras.pares.RNP07;
-import br.com.quinze.regras.pares.RNP08;
-import br.com.quinze.regras.pares.RNP09;
-import br.com.quinze.regras.pares.RNP10;
-import br.com.quinze.regras.pares.RNP11;
-import br.com.quinze.regras.pares.RNP12;
-import br.com.quinze.regras.sequencia.RNS0610;
-import br.com.quinze.regras.sequencia.RNS1115;
-import br.com.quinze.regras.sequencia.RNS1620;
-import br.com.quinze.regras.sequencia.RNS2125;
+import br.com.enumerador.NumeroEnum;
+import br.com.excecao.LotoException;
+import br.com.regras.pares.RNP02;
+import br.com.regras.pares.RNP03;
+import br.com.regras.pares.RNP04;
+import br.com.regras.pares.RNP05;
+import br.com.regras.pares.RNP06;
+import br.com.regras.pares.RNP07;
+import br.com.regras.pares.RNP08;
+import br.com.regras.pares.RNP09;
+import br.com.regras.pares.RNP10;
+import br.com.regras.pares.RNP11;
+import br.com.regras.pares.RNP12;
+import br.com.regras.sequencia.RNS0610;
+import br.com.regras.sequencia.RNS1115;
+import br.com.regras.sequencia.RNS1620;
+import br.com.regras.sequencia.RNS2125;
 
 public class Principal {
 
@@ -37,48 +37,28 @@ public class Principal {
 		Principal principal = new Principal();
 		principal.resultadoParesImpares();
 
-		// gerar resultado RNP02
-//		principal.resultadoRNP02();
+		principal.resultadoRNP02();
+		principal.resultadoRNP03();
+		principal.resultadoRNP04();
+		principal.resultadoRNP05();
+		principal.resultadoRNP06();
+		principal.resultadoRNP07();
+		principal.resultadoRNP08();
+		principal.resultadoRNP09();
+		principal.resultadoRNP10();
+		principal.resultadoRNP11();
+		principal.resultadoRNP12();
+		
 		principal.resultadoNumerosMenorQueDezRNP02();
-
-		// gerar resultado RNP03
-//		principal.resultadoRNP03();
 		principal.resultadoNumerosMenorQueDezRNP03();
-
-		// gerar resultado RNP04
-//		principal.resultadoRNP04();
 		principal.resultadoNumerosMenorQueDezRNP04();
-
-		// gerar resultado RNP05
-//		principal.resultadoRNP05();
 		principal.resultadoNumerosMenorQueDezRNP05();
-
-		// gerar resultado RNP06
-//		principal.resultadoRNP06();
 		principal.resultadoNumerosMenorQueDezRNP06();
-
-		// gerar resultado RNP07
-//		principal.resultadoRNP07();
 		principal.resultadoNumerosMenorQueDezRNP07();
-
-		// gerar resultado RNP08
-//		principal.resultadoRNP08();
 		principal.resultadoNumerosMenorQueDezRNP08();
-
-		// gerar resultado RNP09
-//		principal.resultadoRNP09();
 		principal.resultadoNumerosMenorQueDezRNP09();
-
-		// gerar resultado RNP10
-//		principal.resultadoRNP10();
 		principal.resultadoNumerosMenorQueDezRNP10();
-
-		// gerar resultado RNP11
-//		principal.resultadoRNP11();
 		principal.resultadoNumerosMenorQueDezRNP11();
-
-		// gerar resultado RNP12
-//		principal.resultadoRNP12();
 		principal.resultadoNumerosMenorQueDezRNP12();
 
 		// gerar resultado numeros menor que dez

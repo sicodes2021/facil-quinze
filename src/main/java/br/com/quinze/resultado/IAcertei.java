@@ -10,8 +10,8 @@ import java.util.Objects;
 
 import com.opencsv.CSVReader;
 
-import br.com.quinze.enumerador.NumeroEnum;
-import br.com.quinze.excecao.LotoException;
+import br.com.enumerador.NumeroEnum;
+import br.com.excecao.LotoException;
 
 public class IAcertei {
 	

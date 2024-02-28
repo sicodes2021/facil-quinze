@@ -10,8 +10,8 @@ import java.util.Objects;
 
 import com.opencsv.CSVReader;
 
-import br.com.quinze.enumerador.NumeroEnum;
-import br.com.quinze.excecao.LotoException;
+import br.com.enumerador.NumeroEnum;
+import br.com.excecao.LotoException;
 
 public class IAcerteiRNP08 {
 	
@@ -46,7 +46,7 @@ public class IAcerteiRNP08 {
 
 				System.out.println("Jogo: " + contLinha);
 //				URL combinacoes = IAcerteiRNP08.class.getClassLoader().getResource("\\jogos\\rnp08\\25\\quatro\\RandomRNP08_QUATRO_10_Fechamento.csv");
-				URL combinacoes = IAcerteiRNP08.class.getClassLoader().getResource("\\jogos\\rnp08\\25\\quatro\\RandomRNP08_QUATRO_10_NaoFechamento.csv");
+				URL combinacoes = IAcerteiRNP08.class.getClassLoader().getResource("\\rnp08\\PrincipalRNP08_SEIS\\1625_3031_RN0610.csv");
 //				URL combinacoes = IAcerteiRNP08.class.getClassLoader().getResource("\\jogos\\rnp08\\25\\cinco\\RandomRNP08_CINCO_10_Fechamento.csv");
 //				URL combinacoes = IAcerteiRNP08.class.getClassLoader().getResource("\\jogos\\rnp08\\25\\cinco\\RandomRNP08_CINCO_10_NaoFechamento.csv");
 //				URL combinacoes = IAcerteiRNP08.class.getClassLoader().getResource("\\jogos\\rnp08\\25\\sete\\RandomRNP08_CINCO_10_Fechamento.csv");

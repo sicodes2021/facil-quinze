@@ -15,15 +15,15 @@ import java.util.Random;
 
 import com.opencsv.CSVReader;
 
-import br.com.quinze.combinacoes.Combinacoes;
-import br.com.quinze.enumerador.NumeroEnum;
-import br.com.quinze.excecao.LotoException;
-import br.com.quinze.regras.pares.RNP08;
-import br.com.quinze.regras.sequencia.RNS0105;
-import br.com.quinze.regras.sequencia.RNS0610;
-import br.com.quinze.regras.sequencia.RNS1115;
-import br.com.quinze.regras.sequencia.RNS1620;
-import br.com.quinze.regras.sequencia.RNS2125;
+import br.com.combinacoes.Combinacoes;
+import br.com.enumerador.NumeroEnum;
+import br.com.excecao.LotoException;
+import br.com.regras.pares.RNP08;
+import br.com.regras.sequencia.RNS0105;
+import br.com.regras.sequencia.RNS0610;
+import br.com.regras.sequencia.RNS1115;
+import br.com.regras.sequencia.RNS1620;
+import br.com.regras.sequencia.RNS2125;
 
 public class PrincipalRNP08_CINCO {
 
@@ -70,17 +70,18 @@ public class PrincipalRNP08_CINCO {
 
 		List<String> listaSaiu14RNP08 = principal.retirarSaiu14RNP08(listaSaiu15RNP08);
 //		principal.gravarRetirarSaiu14RNP08(listaSaiu14RNP08);
+		principal.gravarRandom(listaSaiu14RNP08);
 		System.out.println("Lista Retirar Saiu 14: " + listaSaiu14RNP08.size());
 		
 		
-		List<String> listaFinalVinteCinco = principal.resultadoNumerosFinalVinteCinco(listaSaiu14RNP08);
-		System.out.println("listaFinalVinteCinco: " + listaFinalVinteCinco.size());
+//		List<String> listaFinalVinteCinco = principal.resultadoNumerosFinalVinteCinco(listaSaiu14RNP08);
+//		System.out.println("listaFinalVinteCinco: " + listaFinalVinteCinco.size());
 
 		
 		/**
 		 * Fechamento para ganhar!!!
 		 */
-		List<String> listaFechamentoRNP08 = principal.fechamento(listaFinalVinteCinco);
+//		List<String> listaFechamentoRNP08 = principal.fechamento(listaFinalVinteCinco);
 //		principal.gravarFechamento(listaFechamentoRNP08);
 //		principal.gravarRandomFechamento(listaFechamentoRNP08);
 //		System.out.println("Fechamento: " + listaFechamentoRNP08.size());
@@ -494,6 +495,33 @@ public class PrincipalRNP08_CINCO {
 				jogo[i] = Integer.parseInt(String.valueOf(linha15[i]));
 			}
 			gravarArqSaiu.printf("%s%n", lista15);
+		}
+		arqSaiu.close();
+		gravarArqSaiu.close();
+	}
+	
+	public void gravarRandom(List<String> lista) throws URISyntaxException, IOException, LotoException {
+		FileWriter arqSaiu = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\rnp08\\PrincipalRNP08_CINCO\\RandomRNP08_CINCO_con3036.csv");
+		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
+		
+		List<String[]> listaNumeros = new ArrayList<String[]>();
+		String lista15Random = null;
+		for (int i = 0; i < 3; i++) {
+			for (int r = 0; r < 3036; r++) {
+				lista15Random = this.getRandomElement(lista);
+			}
+			String[] linha15Random = lista15Random.split(",");
+			listaNumeros.add(linha15Random);
+		}
+		
+		String listaNova = null;
+		for (String[] linha1525 : listaNumeros) {
+			listaNova = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
+					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
+					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
+					+ linha1525[13] + "," + linha1525[14];
+			gravarArqSaiu.printf("%s%n", listaNova);
 		}
 		arqSaiu.close();
 		gravarArqSaiu.close();

@@ -15,15 +15,15 @@ import java.util.Random;
 
 import com.opencsv.CSVReader;
 
-import br.com.quinze.combinacoes.Combinacoes;
-import br.com.quinze.enumerador.NumeroEnum;
-import br.com.quinze.excecao.LotoException;
-import br.com.quinze.regras.pares.RNP07;
-import br.com.quinze.regras.sequencia.RNS0105;
-import br.com.quinze.regras.sequencia.RNS0610;
-import br.com.quinze.regras.sequencia.RNS1115;
-import br.com.quinze.regras.sequencia.RNS1620;
-import br.com.quinze.regras.sequencia.RNS2125;
+import br.com.combinacoes.Combinacoes;
+import br.com.enumerador.NumeroEnum;
+import br.com.excecao.LotoException;
+import br.com.regras.pares.RNP07;
+import br.com.regras.sequencia.RNS0105;
+import br.com.regras.sequencia.RNS0610;
+import br.com.regras.sequencia.RNS1115;
+import br.com.regras.sequencia.RNS1620;
+import br.com.regras.sequencia.RNS2125;
 
 public class PrincipalRNP07_QUATRO {
 

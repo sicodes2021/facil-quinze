@@ -1,4 +1,4 @@
-package br.com.quinze.rnp05;
+package br.com.dezesseis.rnp05;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -110,6 +110,17 @@ public class PrincipalRNP05_CINCO {
 		
 		List<String> listaCincoRPN05_RNS2125 = principal.resultadoNumerosMenorQueDezCINCO(listaCombinacoesRNP05_RNS2125, "listaCincoRPN05_RNS2125");
 		
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("VINTE_UM-VINTE_CINCO");
+		List<String> listaFinalVinteUm = principal.resultadoNumerosFinalVinteUm(listaCincoRPN05_SEM_RNS);
+		List<String> listaFinalVinteDois = principal.resultadoNumerosFinalVinteDois(listaCincoRPN05_SEM_RNS);
+		List<String> listaFinalVinteTres = principal.resultadoNumerosFinalVinteTres(listaCincoRPN05_SEM_RNS);
+		List<String> listaFinalVinteQuatro = principal.resultadoNumerosFinalVinteQuatro(listaCincoRPN05_SEM_RNS);
+		List<String> listaFinalVinteCinco = principal.resultadoNumerosFinalVinteCinco(listaCincoRPN05_SEM_RNS);
+		principal.gravar(listaFinalVinteCinco, "listaFinalVinteCinco");
+		
 		
 		/**
 		 * Retirar o que ja foi premiado!!!
@@ -160,7 +171,7 @@ public class PrincipalRNP05_CINCO {
 				lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
 						+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
 						+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
-						+ linha1525[13] + "," + linha1525[14];
+						+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
 				listaResultado.add(lista);
 			}
 		}
@@ -187,7 +198,7 @@ public class PrincipalRNP05_CINCO {
 				lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
 						+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
 						+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
-						+ linha1525[13] + "," + linha1525[14];
+						+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
 				listaRNP05.add(lista);
 			}
 		}
@@ -247,7 +258,7 @@ public class PrincipalRNP05_CINCO {
 				lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
 						+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
 						+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
-						+ linha1525[13] + "," + linha1525[14];
+						+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
 				listaRNP05.add(lista);
 			}
 		}
@@ -524,6 +535,177 @@ public class PrincipalRNP05_CINCO {
 		gravarArqSaiu.close();
 	}
 	
+	public List<String> resultadoNumerosFinalVinteUm(List<String> listaRNP08)
+			throws URISyntaxException, IOException, LotoException {
+		
+		List<String> listaRNP08VinteUm = new ArrayList<String>();
+		for (String lista15 : listaRNP08) {
+			String lista = null;
+			String[] linha15 = lista15.split(",");
+
+			int[] linha1525 = new int[linha15.length];
+			for (int i = 0; i < linha15.length; i++) {
+				linha1525[i] = Integer.parseInt(String.valueOf(linha15[i]));
+			}
+
+
+			lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
+					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
+					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
+					+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
+			if (linha1525[15] == 21) {
+				listaRNP08VinteUm.add(lista);
+			}
+		}
+		
+		List<String> listaSaiu15RPN05 = this.retirarSaiu15RNP05(listaRNP08VinteUm);
+		Integer saiu = (listaRNP08VinteUm.size() - listaSaiu15RPN05.size());
+		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP05_VINTE_UM: " + listaRNP08VinteUm.size() + " - " + listaSaiu15RPN05.size() + " => Saiu: " + saiu);
+
+		return listaRNP08VinteUm;
+		
+	}
+	
+	public List<String> resultadoNumerosFinalVinteDois(List<String> listaRNP08)
+			throws URISyntaxException, IOException, LotoException {
+		
+		List<String> listaRNP08VinteDois = new ArrayList<String>();
+		for (String lista15 : listaRNP08) {
+			String lista = null;
+			String[] linha15 = lista15.split(",");
+
+			int[] linha1525 = new int[linha15.length];
+			for (int i = 0; i < linha15.length; i++) {
+				linha1525[i] = Integer.parseInt(String.valueOf(linha15[i]));
+			}
+
+
+			lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
+					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
+					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
+					+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
+			if (linha1525[15] == 22) {
+				listaRNP08VinteDois.add(lista);
+			}
+		}
+		
+		List<String> listaSaiu15RPN05 = this.retirarSaiu15RNP05(listaRNP08VinteDois);
+		Integer saiu = (listaRNP08VinteDois.size() - listaSaiu15RPN05.size());
+		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP05_VINTE_DOIS: " + listaRNP08VinteDois.size() + " - " + listaSaiu15RPN05.size() + " => Saiu: " + saiu);
+
+		return listaRNP08VinteDois;
+		
+	}
+	
+	public List<String> resultadoNumerosFinalVinteTres(List<String> listaRNP08)
+			throws URISyntaxException, IOException, LotoException {
+		
+		List<String> listaRNP08VinteTres = new ArrayList<String>();
+		for (String lista15 : listaRNP08) {
+			String lista = null;
+			String[] linha15 = lista15.split(",");
+
+			int[] linha1525 = new int[linha15.length];
+			for (int i = 0; i < linha15.length; i++) {
+				linha1525[i] = Integer.parseInt(String.valueOf(linha15[i]));
+			}
+
+
+			lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
+					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
+					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
+					+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
+			if (linha1525[15] == 23) {
+				listaRNP08VinteTres.add(lista);
+			}
+		}
+		
+		List<String> listaSaiu15RPN05 = this.retirarSaiu15RNP05(listaRNP08VinteTres);
+		Integer saiu = (listaRNP08VinteTres.size() - listaSaiu15RPN05.size());
+		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP05_VINTE_TRES: " + listaRNP08VinteTres.size() + " - " + listaSaiu15RPN05.size() + " => Saiu: " + saiu);
+
+		return listaRNP08VinteTres;
+		
+	}
+	
+	public List<String> resultadoNumerosFinalVinteQuatro(List<String> listaRNP08)
+			throws URISyntaxException, IOException, LotoException {
+		
+		List<String> listaRNP08VinteQuatro = new ArrayList<String>();
+		for (String lista15 : listaRNP08) {
+			String lista = null;
+			String[] linha15 = lista15.split(",");
+
+			int[] linha1525 = new int[linha15.length];
+			for (int i = 0; i < linha15.length; i++) {
+				linha1525[i] = Integer.parseInt(String.valueOf(linha15[i]));
+			}
+
+
+			lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
+					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
+					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
+					+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
+			if (linha1525[0] == 2 && linha1525[15] == 24) {
+				listaRNP08VinteQuatro.add(lista);
+			}
+		}
+		
+		List<String> listaSaiu15RPN05 = this.retirarSaiu15RNP05(listaRNP08VinteQuatro);
+		Integer saiu = (listaRNP08VinteQuatro.size() - listaSaiu15RPN05.size());
+		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP05_VINTE_QUATRO: " + listaRNP08VinteQuatro.size() + " - " + listaSaiu15RPN05.size() + " => Saiu: " + saiu);
+
+		return listaRNP08VinteQuatro;
+		
+	}
+	
+	public List<String> resultadoNumerosFinalVinteCinco(List<String> listaRNP08)
+			throws URISyntaxException, IOException, LotoException {
+		
+		List<String> listaRNP08VinteCinco = new ArrayList<String>();
+		for (String lista15 : listaRNP08) {
+			String lista = null;
+			String[] linha15 = lista15.split(",");
+
+			int[] linha1525 = new int[linha15.length];
+			for (int i = 0; i < linha15.length; i++) {
+				linha1525[i] = Integer.parseInt(String.valueOf(linha15[i]));
+			}
+
+
+			lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
+					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
+					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
+					+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
+			if (linha1525[0] == 2 && linha1525[15] == 25) {
+				listaRNP08VinteCinco.add(lista);
+			}
+		}
+		
+		List<String> listaSaiu15RPN05 = this.retirarSaiu15RNP05(listaRNP08VinteCinco);
+		Integer saiu = (listaRNP08VinteCinco.size() - listaSaiu15RPN05.size());
+		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP05_VINTE_CINCO: " + listaRNP08VinteCinco.size() + " - " + listaSaiu15RPN05.size() + " => Saiu: " + saiu);
+
+		return listaRNP08VinteCinco;
+		
+	}
+	
+	public void gravar(List<String> lista, String nomeArquivo) throws URISyntaxException, IOException, LotoException {
+		FileWriter arqSaiu = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\dezesseis\\rnp05\\"+nomeArquivo+".csv");
+		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
+		for (String lista15 : lista) {
+			String[] linha15 = lista15.split(",");
+			int[] jogo = new int[linha15.length];
+			for (int i = 0; i < linha15.length; i++) {
+				jogo[i] = Integer.parseInt(String.valueOf(linha15[i]));
+			}
+			gravarArqSaiu.printf("%s%n", lista15);
+		}
+		arqSaiu.close();
+		gravarArqSaiu.close();
+	}
+	
 	
 	// ==============================================================================================//
 		// ==============================COMBINACOES=====================================================//
@@ -538,7 +720,7 @@ public class PrincipalRNP05_CINCO {
 			List<String> lista1525 = new ArrayList<String>();
 			int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 			int[] saida;
-			Combinacoes comb1 = new Combinacoes(str, 15);
+			Combinacoes comb1 = new Combinacoes(str, 16);
 			RNP05 rnp05 = new RNP05();
 			while (comb1.hasNext()) {
 				String lista = null;
@@ -546,7 +728,7 @@ public class PrincipalRNP05_CINCO {
 				if (rnp05.aplicar(saida)) {
 					lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + saida[5]
 							+ "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + saida[10] + ","
-							+ saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14];
+							+ saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14] + "," + saida[15];
 					lista1525.add(lista);
 				}
 			}
@@ -567,7 +749,7 @@ public class PrincipalRNP05_CINCO {
 			List<String> lista1525 = new ArrayList<String>();
 			int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 			int[] saida;
-			Combinacoes comb1 = new Combinacoes(str, 15);
+			Combinacoes comb1 = new Combinacoes(str, 16);
 			RNP05 rnp05 = new RNP05();
 			RNS0105 rns0105 = new RNS0105();
 			RNS0610 rns0610 = new RNS0610();
@@ -586,7 +768,7 @@ public class PrincipalRNP05_CINCO {
 										lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4]
 												+ "," + saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + ","
 												+ saida[9] + "," + saida[10] + "," + saida[11] + "," + saida[12] + ","
-												+ saida[13] + "," + saida[14];
+												+ saida[13] + "," + saida[14] + "," + saida[15];
 										lista1525.add(lista);
 									}
 								}
@@ -613,7 +795,7 @@ public class PrincipalRNP05_CINCO {
 			List<String> lista1525 = new ArrayList<String>();
 			int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 			int[] saida;
-			Combinacoes comb1 = new Combinacoes(str, 15);
+			Combinacoes comb1 = new Combinacoes(str, 16);
 			RNP05 rnp05 = new RNP05();
 			RNS0105 rns0105 = new RNS0105();
 			RNS0610 rns0610 = new RNS0610();
@@ -632,7 +814,7 @@ public class PrincipalRNP05_CINCO {
 										lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4]
 												+ "," + saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + ","
 												+ saida[9] + "," + saida[10] + "," + saida[11] + "," + saida[12] + ","
-												+ saida[13] + "," + saida[14];
+												+ saida[13] + "," + saida[14] + "," + saida[15];
 										lista1525.add(lista);
 									}
 								}
@@ -659,7 +841,7 @@ public class PrincipalRNP05_CINCO {
 			List<String> lista1525 = new ArrayList<String>();
 			int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 			int[] saida;
-			Combinacoes comb1 = new Combinacoes(str, 15);
+			Combinacoes comb1 = new Combinacoes(str, 16);
 			RNP05 rnp05 = new RNP05();
 			RNS0105 rns0105 = new RNS0105();
 			RNS0610 rns0610 = new RNS0610();
@@ -678,7 +860,7 @@ public class PrincipalRNP05_CINCO {
 										lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4]
 												+ "," + saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + ","
 												+ saida[9] + "," + saida[10] + "," + saida[11] + "," + saida[12] + ","
-												+ saida[13] + "," + saida[14];
+												+ saida[13] + "," + saida[14] + "," + saida[15];
 										lista1525.add(lista);
 									}
 								}
@@ -705,7 +887,7 @@ public class PrincipalRNP05_CINCO {
 			List<String> lista1525 = new ArrayList<String>();
 			int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 			int[] saida;
-			Combinacoes comb1 = new Combinacoes(str, 15);
+			Combinacoes comb1 = new Combinacoes(str, 16);
 			RNP05 rnp05 = new RNP05();
 			RNS0105 rns0105 = new RNS0105();
 			RNS0610 rns0610 = new RNS0610();
@@ -724,7 +906,7 @@ public class PrincipalRNP05_CINCO {
 										lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4]
 												+ "," + saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + ","
 												+ saida[9] + "," + saida[10] + "," + saida[11] + "," + saida[12] + ","
-												+ saida[13] + "," + saida[14];
+												+ saida[13] + "," + saida[14] + "," + saida[15];
 										lista1525.add(lista);
 									}
 								}
@@ -751,7 +933,7 @@ public class PrincipalRNP05_CINCO {
 			List<String> lista1525 = new ArrayList<String>();
 			int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 			int[] saida;
-			Combinacoes comb1 = new Combinacoes(str, 15);
+			Combinacoes comb1 = new Combinacoes(str, 16);
 			RNP05 rnp05 = new RNP05();
 			RNS0105 rns0105 = new RNS0105();
 			RNS0610 rns0610 = new RNS0610();
@@ -770,7 +952,7 @@ public class PrincipalRNP05_CINCO {
 										lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4]
 												+ "," + saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + ","
 												+ saida[9] + "," + saida[10] + "," + saida[11] + "," + saida[12] + ","
-												+ saida[13] + "," + saida[14];
+												+ saida[13] + "," + saida[14] + "," + saida[15];
 										lista1525.add(lista);
 									}
 								}
@@ -797,7 +979,7 @@ public class PrincipalRNP05_CINCO {
 			List<String> lista1525 = new ArrayList<String>();
 			int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 			int[] saida;
-			Combinacoes comb1 = new Combinacoes(str, 15);
+			Combinacoes comb1 = new Combinacoes(str, 16);
 			RNP05 rnp05 = new RNP05();
 			RNS0105 rns0105 = new RNS0105();
 			RNS0610 rns0610 = new RNS0610();
@@ -816,7 +998,7 @@ public class PrincipalRNP05_CINCO {
 										lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4]
 												+ "," + saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + ","
 												+ saida[9] + "," + saida[10] + "," + saida[11] + "," + saida[12] + ","
-												+ saida[13] + "," + saida[14];
+												+ saida[13] + "," + saida[14] + "," + saida[15];
 										lista1525.add(lista);
 									}
 								}
@@ -843,7 +1025,7 @@ public class PrincipalRNP05_CINCO {
 			List<String> lista1525 = new ArrayList<String>();
 			int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 			int[] saida;
-			Combinacoes comb1 = new Combinacoes(str, 15);
+			Combinacoes comb1 = new Combinacoes(str, 16);
 			RNP05 rnp05 = new RNP05();
 			RNS0105 rns0105 = new RNS0105();
 			RNS0610 rns0610 = new RNS0610();
@@ -862,7 +1044,7 @@ public class PrincipalRNP05_CINCO {
 										lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4]
 												+ "," + saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + ","
 												+ saida[9] + "," + saida[10] + "," + saida[11] + "," + saida[12] + ","
-												+ saida[13] + "," + saida[14];
+												+ saida[13] + "," + saida[14] + "," + saida[15];
 										lista1525.add(lista);
 									}
 								}
@@ -889,7 +1071,7 @@ public class PrincipalRNP05_CINCO {
 			List<String> lista1525 = new ArrayList<String>();
 			int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 			int[] saida;
-			Combinacoes comb1 = new Combinacoes(str, 15);
+			Combinacoes comb1 = new Combinacoes(str, 16);
 			RNP05 rnp05 = new RNP05();
 			RNS0105 rns0105 = new RNS0105();
 			RNS0610 rns0610 = new RNS0610();
@@ -908,7 +1090,7 @@ public class PrincipalRNP05_CINCO {
 										lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4]
 												+ "," + saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + ","
 												+ saida[9] + "," + saida[10] + "," + saida[11] + "," + saida[12] + ","
-												+ saida[13] + "," + saida[14];
+												+ saida[13] + "," + saida[14] + "," + saida[15];
 										lista1525.add(lista);
 									}
 								}
@@ -935,7 +1117,7 @@ public class PrincipalRNP05_CINCO {
 			List<String> lista1525 = new ArrayList<String>();
 			int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 			int[] saida;
-			Combinacoes comb1 = new Combinacoes(str, 15);
+			Combinacoes comb1 = new Combinacoes(str, 16);
 			RNP05 rnp05 = new RNP05();
 			RNS0105 rns0105 = new RNS0105();
 			RNS0610 rns0610 = new RNS0610();
@@ -954,7 +1136,7 @@ public class PrincipalRNP05_CINCO {
 										lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4]
 												+ "," + saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + ","
 												+ saida[9] + "," + saida[10] + "," + saida[11] + "," + saida[12] + ","
-												+ saida[13] + "," + saida[14];
+												+ saida[13] + "," + saida[14] + "," + saida[15];
 										lista1525.add(lista);
 									}
 								}
@@ -981,7 +1163,7 @@ public class PrincipalRNP05_CINCO {
 			List<String> lista1525 = new ArrayList<String>();
 			int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 			int[] saida;
-			Combinacoes comb1 = new Combinacoes(str, 15);
+			Combinacoes comb1 = new Combinacoes(str, 16);
 			RNP05 rnp05 = new RNP05();
 			RNS0105 rns0105 = new RNS0105();
 			RNS0610 rns0610 = new RNS0610();
@@ -1000,7 +1182,7 @@ public class PrincipalRNP05_CINCO {
 										lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4]
 												+ "," + saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + ","
 												+ saida[9] + "," + saida[10] + "," + saida[11] + "," + saida[12] + ","
-												+ saida[13] + "," + saida[14];
+												+ saida[13] + "," + saida[14] + "," + saida[15];
 										lista1525.add(lista);
 									}
 								}
@@ -1027,7 +1209,7 @@ public class PrincipalRNP05_CINCO {
 			List<String> lista1525 = new ArrayList<String>();
 			int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 			int[] saida;
-			Combinacoes comb1 = new Combinacoes(str, 15);
+			Combinacoes comb1 = new Combinacoes(str, 16);
 			RNP05 rnp05 = new RNP05();
 			RNS0105 rns0105 = new RNS0105();
 			RNS0610 rns0610 = new RNS0610();
@@ -1046,7 +1228,7 @@ public class PrincipalRNP05_CINCO {
 										lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4]
 												+ "," + saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + ","
 												+ saida[9] + "," + saida[10] + "," + saida[11] + "," + saida[12] + ","
-												+ saida[13] + "," + saida[14];
+												+ saida[13] + "," + saida[14] + "," + saida[15];
 										lista1525.add(lista);
 									}
 								}
@@ -1073,7 +1255,7 @@ public class PrincipalRNP05_CINCO {
 			List<String> lista1525 = new ArrayList<String>();
 			int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 			int[] saida;
-			Combinacoes comb1 = new Combinacoes(str, 15);
+			Combinacoes comb1 = new Combinacoes(str, 16);
 			RNP05 rnp05 = new RNP05();
 			RNS0105 rns0105 = new RNS0105();
 			RNS0610 rns0610 = new RNS0610();
@@ -1092,7 +1274,7 @@ public class PrincipalRNP05_CINCO {
 										lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4]
 												+ "," + saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + ","
 												+ saida[9] + "," + saida[10] + "," + saida[11] + "," + saida[12] + ","
-												+ saida[13] + "," + saida[14];
+												+ saida[13] + "," + saida[14] + "," + saida[15];
 										lista1525.add(lista);
 									}
 								}
@@ -1120,7 +1302,7 @@ public class PrincipalRNP05_CINCO {
 			List<String> lista1525 = new ArrayList<String>();
 			int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 			int[] saida;
-			Combinacoes comb1 = new Combinacoes(str, 15);
+			Combinacoes comb1 = new Combinacoes(str, 16);
 			RNP05 rnp05 = new RNP05();
 			RNS0105 rns0105 = new RNS0105();
 			RNS0610 rns0610 = new RNS0610();
@@ -1139,7 +1321,7 @@ public class PrincipalRNP05_CINCO {
 										lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4]
 												+ "," + saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + ","
 												+ saida[9] + "," + saida[10] + "," + saida[11] + "," + saida[12] + ","
-												+ saida[13] + "," + saida[14];
+												+ saida[13] + "," + saida[14] + "," + saida[15];
 										lista1525.add(lista);
 									}
 								}
@@ -1166,7 +1348,7 @@ public class PrincipalRNP05_CINCO {
 			List<String> lista1525 = new ArrayList<String>();
 			int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 			int[] saida;
-			Combinacoes comb1 = new Combinacoes(str, 15);
+			Combinacoes comb1 = new Combinacoes(str, 16);
 			RNP05 rnp05 = new RNP05();
 			RNS0105 rns0105 = new RNS0105();
 			RNS0610 rns0610 = new RNS0610();
@@ -1185,7 +1367,7 @@ public class PrincipalRNP05_CINCO {
 										lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4]
 												+ "," + saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + ","
 												+ saida[9] + "," + saida[10] + "," + saida[11] + "," + saida[12] + ","
-												+ saida[13] + "," + saida[14];
+												+ saida[13] + "," + saida[14] + "," + saida[15];
 										lista1525.add(lista);
 									}
 								}
@@ -1212,7 +1394,7 @@ public class PrincipalRNP05_CINCO {
 			List<String> lista1525 = new ArrayList<String>();
 			int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 			int[] saida;
-			Combinacoes comb1 = new Combinacoes(str, 15);
+			Combinacoes comb1 = new Combinacoes(str, 16);
 			RNP05 rnp05 = new RNP05();
 			RNS0105 rns0105 = new RNS0105();
 			RNS0610 rns0610 = new RNS0610();
@@ -1231,7 +1413,7 @@ public class PrincipalRNP05_CINCO {
 										lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4]
 												+ "," + saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + ","
 												+ saida[9] + "," + saida[10] + "," + saida[11] + "," + saida[12] + ","
-												+ saida[13] + "," + saida[14];
+												+ saida[13] + "," + saida[14] + "," + saida[15];
 										lista1525.add(lista);
 									}
 								}

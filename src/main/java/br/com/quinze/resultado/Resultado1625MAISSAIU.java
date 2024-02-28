@@ -12,8 +12,8 @@ import java.util.Objects;
 
 import com.opencsv.CSVReader;
 
-import br.com.quinze.enumerador.NumeroEnum;
-import br.com.quinze.excecao.LotoException;
+import br.com.enumerador.NumeroEnum;
+import br.com.excecao.LotoException;
 
 public class Resultado1625MAISSAIU {
 
@@ -63,7 +63,7 @@ public class Resultado1625MAISSAIU {
 
 		int contJogo = 0;
 		int qtdJogoSaiu = 0;
-		URL resultado1825SAIU = Resultado1625MAISSAIU.class.getClassLoader().getResource("resultado.csv");
+		URL resultado1825SAIU = Resultado1625MAISSAIU.class.getClassLoader().getResource("hoje.csv");
 		if (Objects.nonNull(resultado1825SAIU)) {
 			
 			Path caminho = Paths.get(resultado1825SAIU.toURI());

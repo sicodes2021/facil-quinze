@@ -12,15 +12,15 @@ import java.util.Objects;
 
 import com.opencsv.CSVReader;
 
-import br.com.quinze.enumerador.NumeroEnum;
-import br.com.quinze.excecao.LotoException;
+import br.com.enumerador.NumeroEnum;
+import br.com.excecao.LotoException;
 
 public class Resultado2025MAISSAIU {
 
 	@SuppressWarnings({ "deprecation" })
 	public static void main(String[] args) throws URISyntaxException, IOException, LotoException {
 		
-		FileWriter arqSaiu = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\20_25\\Resultado2025MAISSAIU_conc3024.csv");
+		FileWriter arqSaiu = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\20_25\\Resultado2025MAISSAIU_conc3031.csv");
 		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
 
 		int cont = 0;
