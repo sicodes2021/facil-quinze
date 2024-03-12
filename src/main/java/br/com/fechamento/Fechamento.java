@@ -22,7 +22,7 @@ public class Fechamento {
 	public static void main(String[] args) throws URISyntaxException, IOException, LotoException {
 		Fechamento fechamento = new Fechamento();
 		
-		URL resultado = Fechamento.class.getClassLoader().getResource("\\dezesseis\\rnp05\\listaFinalVinteQuatro.csv");
+		URL resultado = Fechamento.class.getClassLoader().getResource("\\dezesseis\\rnp08\\listaFinalVinteCinco.csv");
 		if (Objects.nonNull(resultado)) {
 			List<String> listaqualquer = new ArrayList<String>();
 			Path caminho = Paths.get(resultado.toURI());
