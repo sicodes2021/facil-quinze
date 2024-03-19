@@ -1,4 +1,4 @@
-package br.com.vinte.resultado;
+package br.com.dezesseis.resultado;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -15,16 +15,16 @@ import com.opencsv.CSVReader;
 import br.com.enumerador.NumeroEnum;
 import br.com.excecao.LotoException;
 
-public class Resultado2025MAISSAIU {
+public class Resultado1625MAISSAIU {
 
 	@SuppressWarnings({ "deprecation" })
 	public static void main(String[] args) throws URISyntaxException, IOException, LotoException {
 		
-		FileWriter arqSaiu = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\vinte\\Resultado2025SEMRNS_CONC_3052.csv");
+		FileWriter arqSaiu = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\dezesseis\\rnp08\\Resultado1625SEMRNS_CONC_3057.csv");
 		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
 
 		int cont = 0;
-		URL combinacao1825 = Resultado2025MAISSAIU.class.getClassLoader().getResource("vinte\\2025SEMRNS_CONC_3052.csv");
+		URL combinacao1825 = Resultado1625MAISSAIU.class.getClassLoader().getResource("dezesseis\\rnp08\\listaFinalVinteCinco_conc3057.csv");
 		if (Objects.nonNull(combinacao1825)) {
 			
 			Path caminho = Paths.get(combinacao1825.toURI());
@@ -45,7 +45,6 @@ public class Resultado2025MAISSAIU {
 							+ linhaCombinacao1825[4] + "," + linhaCombinacao1825[5] + "," + linhaCombinacao1825[6] + "," + linhaCombinacao1825[7] + ","
 							+ linhaCombinacao1825[8] + "," + linhaCombinacao1825[9] + "," + linhaCombinacao1825[10] + "," + linhaCombinacao1825[11] + ","
 							+ linhaCombinacao1825[12] + "," + linhaCombinacao1825[13] + "," + linhaCombinacao1825[14] + "," + linhaCombinacao1825[15] + ","
-							+ linhaCombinacao1825[16] + "," + linhaCombinacao1825[17] + "," + linhaCombinacao1825[18] + "," + linhaCombinacao1825[19] + "," 
 							+ retorno + "," + frequencia; 
 					gravarArqSaiu.printf("%s%n", lista);
 				}
@@ -65,7 +64,7 @@ public class Resultado2025MAISSAIU {
 
 		int contJogo = 0;
 		int qtdJogoSaiu = 0;
-		URL resultado1825SAIU = Resultado2025MAISSAIU.class.getClassLoader().getResource("resultado.csv");
+		URL resultado1825SAIU = Resultado1625MAISSAIU.class.getClassLoader().getResource("resultado.csv");
 		if (Objects.nonNull(resultado1825SAIU)) {
 			
 			Path caminho = Paths.get(resultado1825SAIU.toURI());
@@ -103,7 +102,7 @@ public class Resultado2025MAISSAIU {
 
 		int contJogo = 0;
 		int qtdJogoNaoSaiu = 0;
-		URL resultado1825SAIU = Resultado2025MAISSAIU.class.getClassLoader().getResource("resultado.csv");
+		URL resultado1825SAIU = Resultado1625MAISSAIU.class.getClassLoader().getResource("resultado.csv");
 		if (Objects.nonNull(resultado1825SAIU)) {
 			
 			Path caminho = Paths.get(resultado1825SAIU.toURI());

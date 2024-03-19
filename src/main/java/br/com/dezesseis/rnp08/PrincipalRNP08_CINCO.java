@@ -118,7 +118,7 @@ public class PrincipalRNP08_CINCO {
 		List<String> listaFinalVinteTres = principal.resultadoNumerosFinalVinteTres(listaCincoRPN08_SEM_RNS);
 		List<String> listaFinalVinteQuatro = principal.resultadoNumerosFinalVinteQuatro(listaCincoRPN08_SEM_RNS);
 		List<String> listaFinalVinteCinco = principal.resultadoNumerosFinalVinteCinco(listaCincoRPN08_SEM_RNS);
-		principal.gravar(listaFinalVinteCinco, "listaFinalVinteCinco_Cinco");
+		principal.gravar(listaFinalVinteCinco, "listaFinalVinteCinco_Cinco_new");
 		
 		
 		/**
@@ -676,7 +676,7 @@ public class PrincipalRNP08_CINCO {
 					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
 					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
 					+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
-			if (linha1525[0] == 1 && linha1525[15] == 25) {
+			if (linha1525[0] == 2 && linha1525[15] == 25) {
 				listaRNP08VinteCinco.add(lista);
 			}
 		}

@@ -1,4 +1,4 @@
-package br.com.vinte.resultado;
+package br.com.dezesseis;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -17,12 +17,13 @@ public class IAcertei {
 	
 	public static void main(String[] args) throws URISyntaxException, IOException, LotoException {
 		IAcertei jaSaiu = new IAcertei();
-		jaSaiu.hoje();
+		jaSaiu.RNP05();
 	}
 	
 	@SuppressWarnings("deprecation")
-	public void hoje() throws URISyntaxException, IOException, LotoException {
+	public void RNP05() throws URISyntaxException, IOException, LotoException {
 		int contLinha = 0;
+		int contLinhaComb = 0;
 		
 		int contonze = 0;
 		int contdoze = 0;
@@ -45,7 +46,7 @@ public class IAcertei {
 				}
 
 				System.out.println("Jogo: " + contLinha);
-				URL combinacoes = IAcertei.class.getClassLoader().getResource("\\vinte\\2025SEMRNS_CONC_3052.csv");
+				URL combinacoes = IAcertei.class.getClassLoader().getResource("\\dezesseis\\rnp08\\listaFinalVinteCinco_Cinco_new.csv");
 				if (Objects.nonNull(combinacoes)) {
 					Path caminho2 = Paths.get(combinacoes.toURI());
 					CSVReader csvReader2 = new CSVReader(new FileReader(caminho2.toFile()), ',');
@@ -53,6 +54,7 @@ public class IAcertei {
 					String[] linhaCombinacoes;
 					while (Objects.nonNull((linhaCombinacoes = csvReader2.readNext()))) {
 						contJogo = 0;
+						contLinhaComb++;
 						int[] linhaCombinacoesInteiro = new int[linhaCombinacoes.length];
 						for (int i = 0; i < linhaCombinacoes.length; i++) {
 							linhaCombinacoesInteiro[i] = Integer.parseInt(String.valueOf(linhaCombinacoes[i]));
@@ -80,10 +82,12 @@ public class IAcertei {
 
 						if (contJogo == NumeroEnum.QUATORZE.getValor()) {
 							contquatorze++;
+							System.out.println("Jogo Vencedor Quatorze: " + contLinhaComb);
 						}
 
 						if (contJogo == NumeroEnum.QUINZE.getValor()) {
 							contquinze++;
+							System.out.println("Jogo Vencedor Quinze: " + contLinhaComb);
 						}
 					}
 				} else {
