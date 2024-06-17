@@ -25,7 +25,9 @@ public class PrincipalRNP08 {
 		PrincipalRNP08 principalRNP08 = new PrincipalRNP08();
 		Combinacoes1625 combinacoes1626 = new Combinacoes1625();
 		
-		List<String> listaCombinacoes1625RNP08SEMRNS = combinacoes1626.gerar1625RNP08SEMRNS();
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		
+		List<String> listaCombinacoes1625RNP08SEMRNS = combinacoes1626.gerar1625RNP08SEMRNS(str);
 		List<String> listaFinalVinteCinco = principalRNP08.resultadoNumerosFinalVinteCinco(listaCombinacoes1625RNP08SEMRNS);
 		System.out.println("listaFinalVinteCinco: " + listaFinalVinteCinco.size());
 		List<String> listaFechamentoRNP08 = principalRNP08.fechamento(listaFinalVinteCinco);

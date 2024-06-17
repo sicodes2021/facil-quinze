@@ -37,9 +37,13 @@ public class Combinacoes1825 {
 	public static void main(String[] args) throws URISyntaxException, IOException, LotoException {
 		
 		Combinacoes1825 combinacoes1525 = new Combinacoes1825();
-		combinacoes1525.gerar1825();
-		combinacoes1525.gerar1825SEMRNS();
-		combinacoes1525.gerar1825RNP05_09();
+		
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		
+		
+		combinacoes1525.gerar1825(str);
+		combinacoes1525.gerar1825SEMRNS(str);
+//		combinacoes1525.gerar1825RNP05_09();
 		
 		
 //		combinacoes1525.gerar1625RNP03();
@@ -73,9 +77,9 @@ public class Combinacoes1825 {
 //		List<String> listaCombinacoesRNP04RNS2125 = combinacoes1525.gerar1525RNP04RNS2125();
 //		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP04RNS2125.size());
 		
-		combinacoes1525.gerar1825RNP05();
-		List<String> listaCombinacoes1825RNP05SEMRNS = combinacoes1525.gerar1825RNP05SEMRNS();
-		combinacoes1525.gravar(listaCombinacoes1825RNP05SEMRNS, "1825RNP05SEMRNS");
+//		combinacoes1525.gerar1825RNP05();
+//		List<String> listaCombinacoes1825RNP05SEMRNS = combinacoes1525.gerar1825RNP05SEMRNS();
+//		combinacoes1525.gravar(listaCombinacoes1825RNP05SEMRNS, "1825RNP05SEMRNS");
 //		System.out.println("RNP05: " + listaCombinacoesRNP05.size());
 //		combinacoes1525.resultadoNumerosMenorQueDezRNP05();
 		
@@ -90,8 +94,8 @@ public class Combinacoes1825 {
 //		List<String> listaCombinacoesRNP05RNS2125 = combinacoes1525.gerar1525RNP05RNS2125();
 //		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP05RNS2125.size());
 		
-		combinacoes1525.gerar1825RNP06();
-		combinacoes1525.gerar1825RNP06SEMRNS();
+//		combinacoes1525.gerar1825RNP06();
+//		combinacoes1525.gerar1825RNP06SEMRNS();
 //		System.out.println("RNP06: " + listaCombinacoesRNP06.size());
 //		combinacoes1525.resultadoNumerosMenorQueDezRNP06();
 		
@@ -106,8 +110,8 @@ public class Combinacoes1825 {
 //		List<String> listaCombinacoesRNP06RNS2125 = combinacoes1525.gerar1525RNP06RNS2125();
 //		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP06RNS2125.size());
 		
-		combinacoes1525.gerar1825RNP07();
-		combinacoes1525.gerar1825RNP07SEMRNS();
+//		combinacoes1525.gerar1825RNP07();
+//		combinacoes1525.gerar1825RNP07SEMRNS();
 //		combinacoes1525.resultadoNumerosMenorQueDezRNP07();
 		
 //		combinacoes1525.gerar1625RNP07RNS0105();
@@ -121,13 +125,13 @@ public class Combinacoes1825 {
 //		List<String> listaCombinacoesRNP07RNS2125 = combinacoes1525.gerar1525RNP07RNS2125();
 //		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP07RNS2125.size());
 		
-		combinacoes1525.gerar1825RNP08();
-		combinacoes1525.gerar1825RNP08SEMRNS();
+//		combinacoes1525.gerar1825RNP08();
+//		combinacoes1525.gerar1825RNP08SEMRNS();
 //		System.out.println("RNP08: " + listaCombinacoesRNP08.size());
 //		combinacoes1525.resultadoNumerosMenorQueDezRNP08();
 		
-		combinacoes1525.gerar1825RNP09();
-		combinacoes1525.gerar1825RNP09SEMRNS();
+//		combinacoes1525.gerar1825RNP09();
+//		combinacoes1525.gerar1825RNP09SEMRNS();
 //		System.out.println("RNP09: " + listaCombinacoesRNP09.size());
 //		combinacoes1525.gravarRNP09(listaCombinacoesRNP09);
 //		combinacoes1525.resultadoNumerosMenorQueDezRNP09();
@@ -161,12 +165,11 @@ public class Combinacoes1825 {
 	 * 
 	 * @return List<String>
 	 */
-	public List<String> gerar1825() throws URISyntaxException, IOException, LotoException {
+	public List<String> gerar1825(int[] str) throws URISyntaxException, IOException, LotoException {
 //		FileWriter arquivo1525 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\18_25-480700\\18_25.csv");
 //		PrintWriter gravarArquivo1525 = new PrintWriter(arquivo1525);
 		int cont = 0;
 		List<String> lista1525 = new ArrayList<String>();
-		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 		int[] saida;
 		Combinacoes comb1 = new Combinacoes(str, 18);
 		while (comb1.hasNext()) {
@@ -193,7 +196,7 @@ public class Combinacoes1825 {
 	 * 
 	 * @return List<String>
 	 */
-	public List<String> gerar1825SEMRNS() throws URISyntaxException, IOException, LotoException {
+	public List<String> gerar1825SEMRNS(int[] str) throws URISyntaxException, IOException, LotoException {
 //		FileWriter arquivo1525 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\16_25-2042975\\16_25_SEMRNS.csv");
 //		PrintWriter gravarArquivo1525 = new PrintWriter(arquivo1525);
 		
@@ -205,7 +208,6 @@ public class Combinacoes1825 {
 		
 		int cont = 0;
 		List<String> lista1525 = new ArrayList<String>();
-		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 		int[] saida;
 		Combinacoes comb1 = new Combinacoes(str, 18);
 		while (comb1.hasNext()) {

@@ -118,7 +118,7 @@ public class PrincipalRNP07_SEIS {
 		List<String> listaFinalVinteTres = principal.resultadoNumerosFinalVinteTres(listaSeisRPN07_SEM_RNS);
 		List<String> listaFinalVinteQuatro = principal.resultadoNumerosFinalVinteQuatro(listaSeisRPN07_SEM_RNS);
 		List<String> listaFinalVinteCinco = principal.resultadoNumerosFinalVinteCinco(listaSeisRPN07_SEM_RNS);
-		principal.gravar(listaFinalVinteCinco, "listaFinalVinteCinco_Seis");
+//		principal.gravar(listaFinalVinteCinco, "listaFinalVinteCinco_Seis");
 		
 		
 		/**
@@ -140,9 +140,10 @@ public class PrincipalRNP07_SEIS {
 //		/**
 //		 * Fechamento para ganhar!!!
 //		 */
-////		List<String> listaFechamentoRNP07 = principal.fechamento(listaSaiu13RNP07);
-////		principal.gravarFechamento(listaFechamentoRNP07);
-////		System.out.println("Fechamento: " + listaFechamentoRNP07.size());
+		List<String> listaFechamentoRNP07 = principal.fechamento(listaFinalVinteCinco);
+//		principal.gravarFechamento(listaFechamentoRNP07);
+		principal.gravarRandom(listaFechamentoRNP07);
+		System.out.println("Fechamento: " + listaFechamentoRNP07.size());
 	}
 
 	public List<String> resultadoNumerosMenorQueDezSEIS(List<String> listaCombinacoesRNP07, String nomeLista)
@@ -432,7 +433,7 @@ public class PrincipalRNP07_SEIS {
 				}
 			}
 
-			if (contJogo < NumeroEnum.ONZE.getValor()) {
+			if (contJogo < NumeroEnum.QUATORZE.getValor()) {
 				retorno = true;
 			} else {
 				retorno = false;
@@ -509,13 +510,13 @@ public class PrincipalRNP07_SEIS {
 	
 	public void gravarRandom(List<String> lista) throws URISyntaxException, IOException, LotoException {
 		FileWriter arqSaiu = new FileWriter(
-				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\RNP07\\PrincipalRNP07_CINCO\\RandomRNP07_CINCO_con3036.csv");
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\rnp07\\PrincipalRNP07_CINCO\\RandomRNP07_CINCO_con3066.csv");
 		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
 		
 		List<String[]> listaNumeros = new ArrayList<String[]>();
 		String lista15Random = null;
-		for (int i = 0; i < 3; i++) {
-			for (int r = 0; r < 3036; r++) {
+		for (int i = 0; i < 1; i++) {
+			for (int r = 0; r < 3066; r++) {
 				lista15Random = this.getRandomElement(lista);
 			}
 			String[] linha15Random = lista15Random.split(",");
@@ -645,7 +646,7 @@ public class PrincipalRNP07_SEIS {
 					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
 					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
 					+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
-			if (linha1525[0] == 2 && linha1525[15] == 24) {
+			if (linha1525[15] == 24) {
 				listaRNP07VinteQuatro.add(lista);
 			}
 		}
@@ -676,7 +677,7 @@ public class PrincipalRNP07_SEIS {
 					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
 					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
 					+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
-			if (linha1525[0] == 2 && linha1525[15] == 25) {
+			if (linha1525[15] == 25) {
 				listaRNP07VinteCinco.add(lista);
 			}
 		}

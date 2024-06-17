@@ -25,6 +25,7 @@ import br.com.regras.pares.RNP09;
 import br.com.regras.pares.RNP10;
 import br.com.regras.pares.RNP11;
 import br.com.regras.pares.RNP12;
+import br.com.regras.sequencia.RNS0105;
 import br.com.regras.sequencia.RNS0610;
 import br.com.regras.sequencia.RNS1115;
 import br.com.regras.sequencia.RNS1620;
@@ -63,6 +64,9 @@ public class Principal {
 
 		// gerar resultado numeros menor que dez
 		principal.resultadoNumerosMenorQueDez();
+		
+		// gerar resultado numeros regra sequencia
+		principal.resultadoNumerosRNS();
 
 		System.out.println("PRINCIPAL - FIM");
 	}
@@ -793,6 +797,126 @@ public class Principal {
 		System.out.println("NOVE: " + nove);
 
 	}
+	
+	@SuppressWarnings("deprecation")
+	public void resultadoNumerosRNS() throws URISyntaxException, IOException, LotoException {
+
+		FileWriter arquivoRns0105 = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosRNS0105.csv");
+		PrintWriter gravarArquivoRns0105 = new PrintWriter(arquivoRns0105);
+		
+		FileWriter arquivoRns0610 = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosRNS0610.csv");
+		PrintWriter gravarArquivoRns0610 = new PrintWriter(arquivoRns0610);
+		
+		FileWriter arquivoRns1115 = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosRNS1115.csv");
+		PrintWriter gravarArquivoRns1115 = new PrintWriter(arquivoRns1115);
+		
+		FileWriter arquivoRns1620 = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosRNS1620.csv");
+		PrintWriter gravarArquivoRns1620 = new PrintWriter(arquivoRns1620);
+		
+		FileWriter arquivoRns2125 = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoNumerosRNS2125.csv");
+		PrintWriter gravarArquivoRns2125 = new PrintWriter(arquivoRns2125);
+		
+		RNS0105 rns0105 = new RNS0105();
+		RNS0610 rns0610 = new RNS0610();
+		RNS1115 rns1115 = new RNS1115();
+		RNS1620 rns1620 = new RNS1620();
+		RNS2125 rns2125 = new RNS2125();
+		int contRns0105 = 0;
+		int contRns0610 = 0;
+		int contRns1115 = 0;
+		int contRns1620 = 0;
+		int contRns2125 = 0;
+
+		int cont = 0;
+
+		URL resultado1525 = Principal.class.getClassLoader().getResource("resultado.csv");
+		if (Objects.nonNull(resultado1525)) {
+			Path caminho = Paths.get(resultado1525.toURI());
+			CSVReader csvReader = new CSVReader(new FileReader(caminho.toFile()), ',');
+
+			String[] linhaResultado1525;
+			while (Objects.nonNull((linhaResultado1525 = csvReader.readNext()))) {
+
+				cont++;
+				int[] linha1525 = new int[linhaResultado1525.length];
+				for (int i = 0; i < linhaResultado1525.length; i++) {
+					linha1525[i] = Integer.parseInt(String.valueOf(linhaResultado1525[i]));
+				}
+
+				if (rns0105.aplicar(linha1525)) {
+					String lista = null;
+					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + ","
+							+ linha1525[4] + "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + ","
+							+ linha1525[8] + "," + linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
+							+ linha1525[12] + "," + linha1525[13] + "," + linha1525[14];
+					gravarArquivoRns0105.printf("%s%n", lista);
+					contRns0105++;
+				} else if (rns0610.aplicar(linha1525)) {
+					String lista = null;
+					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + ","
+							+ linha1525[4] + "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + ","
+							+ linha1525[8] + "," + linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
+							+ linha1525[12] + "," + linha1525[13] + "," + linha1525[14];
+					gravarArquivoRns0610.printf("%s%n", lista);
+					contRns0610++;
+				} else if (rns1115.aplicar(linha1525)) {
+					String lista = null;
+					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + ","
+							+ linha1525[4] + "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + ","
+							+ linha1525[8] + "," + linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
+							+ linha1525[12] + "," + linha1525[13] + "," + linha1525[14];
+					gravarArquivoRns1115.printf("%s%n", lista);
+					contRns1115++;
+				} else if (rns1620.aplicar(linha1525)) {
+					String lista = null;
+					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + ","
+							+ linha1525[4] + "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + ","
+							+ linha1525[8] + "," + linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
+							+ linha1525[12] + "," + linha1525[13] + "," + linha1525[14];
+					gravarArquivoRns1620.printf("%s%n", lista);
+					contRns1620++;
+				} else if (rns2125.aplicar(linha1525)) {
+					String lista = null;
+					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + ","
+							+ linha1525[4] + "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + ","
+							+ linha1525[8] + "," + linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + ","
+							+ linha1525[12] + "," + linha1525[13] + "," + linha1525[14];
+					gravarArquivoRns2125.printf("%s%n", lista);
+					contRns2125++;
+				}
+
+			}
+
+			arquivoRns0105.close();
+			gravarArquivoRns0105.close();
+			arquivoRns0610.close();
+			gravarArquivoRns0610.close();
+			arquivoRns1115.close();
+			gravarArquivoRns1115.close();
+			arquivoRns1620.close();
+			gravarArquivoRns1620.close();
+			arquivoRns2125.close();
+			gravarArquivoRns2125.close();
+			
+		} else {
+			System.out.println("### [resultadoNumerosMenorQueDez] - Arquivo nao encontrado... ###");
+		}
+
+		System.out.println();
+		System.out.println();
+		System.out.println("TOTAL DE LINHAS NO ARQUIVO: " + cont);
+		System.out.println("RNS0105: " + contRns0105);
+		System.out.println("RNS0610: " + contRns0610);
+		System.out.println("RNS1115: " + contRns1115);
+		System.out.println("RNS1620: " + contRns1620);
+		System.out.println("RNS2125: " + contRns2125);
+
+	}
 
 	@SuppressWarnings("deprecation")
 	public void resultadoNumerosMenorQueDezRNP02() throws URISyntaxException, IOException, LotoException {
@@ -988,6 +1112,12 @@ public class Principal {
 		FileWriter arquivoSETE = new FileWriter(
 				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\resultado\\ResultadoRNP05NumerosMenorQueDez_SETE.csv");
 		PrintWriter gravarArquivoSETE = new PrintWriter(arquivoSETE);
+		
+		RNS0105 rns0105 = new RNS0105();
+		RNS0610 rns0610 = new RNS0610();
+		RNS1115 rns1115 = new RNS1115();
+		RNS1620 rns1620 = new RNS1620();
+		RNS2125 rns2125 = new RNS2125();
 
 		int cont = 0;
 		int contlinha = 0;
@@ -999,6 +1129,17 @@ public class Principal {
 		int sete = 0;
 		int oito = 0;
 		int nove = 0;
+		int contrns0105Cinco = 0;
+		int contrns0610Cinco = 0;
+		int contrns1115Cinco = 0;
+		int contrns1620Cinco = 0;
+		int contrns2125Cinco = 0;
+		
+		int contrns0105Seis = 0;
+		int contrns0610Seis = 0;
+		int contrns1115Seis = 0;
+		int contrns1620Seis = 0;
+		int contrns2125Seis = 0;
 		URL resultado1525 = Principal.class.getClassLoader().getResource("resultado\\ResultadoRNP05.csv");
 		if (Objects.nonNull(resultado1525)) {
 			Path caminho = Paths.get(resultado1525.toURI());
@@ -1040,6 +1181,28 @@ public class Principal {
 							+ linha1525[12] + "," + linha1525[13] + "," + linha1525[14];
 					gravarArquivoCINCO.printf("%s%n", lista);
 					cinco++;
+					
+					if (rns0105.aplicar(linha1525)) {
+						contrns0105Cinco++;
+					}
+					
+					if (rns0610.aplicar(linha1525)) {
+						contrns0610Cinco++;
+					}
+					
+					if (rns1115.aplicar(linha1525)) {
+						contrns1115Cinco++;
+					}
+					
+					if (rns1620.aplicar(linha1525)) {
+						contrns1620Cinco++;
+					}
+					
+					if (rns2125.aplicar(linha1525)) {
+						contrns2125Cinco++;
+						System.out.println(lista);
+						
+					}
 				} else if (contlinha == NumeroEnum.SEIS.getValor()) {
 					String lista = null;
 					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + ","
@@ -1048,6 +1211,26 @@ public class Principal {
 							+ linha1525[12] + "," + linha1525[13] + "," + linha1525[14];
 					gravarArquivoSEIS.printf("%s%n", lista);
 					seis++;
+					
+					if (rns0105.aplicar(linha1525)) {
+						contrns0105Seis++;
+					}
+					
+					if (rns0610.aplicar(linha1525)) {
+						contrns0610Seis++;
+					}
+					
+					if (rns1115.aplicar(linha1525)) {
+						contrns1115Seis++;
+					}
+					
+					if (rns1620.aplicar(linha1525)) {
+						contrns1620Seis++;
+					}
+					
+					if (rns2125.aplicar(linha1525)) {
+						contrns2125Seis++;
+					}
 				} else if (contlinha == NumeroEnum.SETE.getValor()) {
 					String lista = null;
 					lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + ","
@@ -1082,7 +1265,17 @@ public class Principal {
 		System.out.println("TRES: " + tres);
 		System.out.println("QUATRO: " + quatro);
 		System.out.println("CINCO: " + cinco);
+		System.out.println("		RNS0105CINCO: " + contrns0105Cinco);
+		System.out.println("		RNS0610CINCO: " + contrns0610Cinco);
+		System.out.println("		RNS1115CINCO: " + contrns1115Cinco);
+		System.out.println("		RNS1620CINCO: " + contrns1620Cinco);
+		System.out.println("		RNS2125CINCO: " + contrns2125Cinco);
 		System.out.println("SEIS: " + seis);
+		System.out.println("		RNS0105SEIS: " + contrns0105Seis);
+		System.out.println("		RNS0610SEIS: " + contrns0610Seis);
+		System.out.println("		RNS1115SEIS: " + contrns1115Seis);
+		System.out.println("		RNS1620SEIS: " + contrns1620Seis);
+		System.out.println("		RNS2125SEIS: " + contrns2125Seis);
 		System.out.println("SETE: " + sete);
 		System.out.println("OITO: " + oito);
 		System.out.println("NOVE: " + nove);

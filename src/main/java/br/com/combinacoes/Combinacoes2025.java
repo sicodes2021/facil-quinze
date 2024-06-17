@@ -72,7 +72,7 @@ public class Combinacoes2025 {
 //		System.out.println("RNP10: " + listaCombinacoesRNP10.size());
 //		combinacoes1525.resultadoNumerosMenorQueDezRNP10();
 		
-//		combinacoes1525.gerar1625RNP11();
+		combinacoes1525.gerar2025RNP11();
 //		combinacoes1525.gerar1625RNP11SEMRNS();
 //		System.out.println("RNP11: " + listaCombinacoesRNP11.size());
 //		combinacoes1525.resultadoNumerosMenorQueDezRNP11();
@@ -227,11 +227,6 @@ public class Combinacoes2025 {
 		System.out.println("TOTAL DE LINHAS NO ARQUIVO 20_25: " + cont);
 		return lista1525;
 	}
-	
-	
-	
-	
-	
 	
 	
 	
@@ -1501,18 +1496,18 @@ public class Combinacoes2025 {
 	}
 	
 	/**
-	 * Metodo responsavel por gerar as combinacoes 1625 com a regra negocial rnp11
+	 * Metodo responsavel por gerar as combinacoes 2025 com a regra negocial rnp11
 	 * @return
 	 * @throws LotoException
 	 */
-	public List<String> gerar1625RNP11() throws URISyntaxException, IOException, LotoException {
-		FileWriter arquivoRNP11 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\16_25-2042975\\16_25-RNP11.csv");
+	public List<String> gerar2025RNP11() throws URISyntaxException, IOException, LotoException {
+		FileWriter arquivoRNP11 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\20_25-53130\\20_25-RNP11.csv");
 		PrintWriter gravarArquivoRNP11 = new PrintWriter(arquivoRNP11);
 		int cont = 0;
 		List<String> lista1525 = new ArrayList<String>();
 		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 		int[] saida;
-		Combinacoes comb1 = new Combinacoes(str, 16);
+		Combinacoes comb1 = new Combinacoes(str, 20);
 		RNP11 rnp11 = new RNP11();
 		while (comb1.hasNext()) {
 			String lista = null;
@@ -1522,14 +1517,14 @@ public class Combinacoes2025 {
 				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + 
 						saida[5] + "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + 
 						saida[10] + "," + saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14] + "," + 
-						saida[15];
+						saida[15] + "," + saida[16] + "," + saida[17] + "," + saida[18] + "," + saida[19];
 				gravarArquivoRNP11.printf("%s%n", lista);
 				lista1525.add(lista);
 			}
 		}
 		arquivoRNP11.close();
 		gravarArquivoRNP11.close();
-		System.out.println("TOTAL DE LINHAS NO ARQUIVO 16_25-RNP11: " + cont);
+		System.out.println("TOTAL DE LINHAS NO ARQUIVO 20_25-RNP11: " + cont);
 		return lista1525;
 	}
 	

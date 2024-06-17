@@ -29,7 +29,7 @@ public class PrincipalRNP05_CINCO {
 
 	public static void main(String[] args) throws URISyntaxException, IOException, LotoException {
 		PrincipalRNP05_CINCO principal = new PrincipalRNP05_CINCO();
-		int[] str = { 1, 2, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 17, 18, 19, 20, 21, 22, 23, 25 };
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 
 		/*********************************************************************
 		 * RNP05
@@ -37,8 +37,8 @@ public class PrincipalRNP05_CINCO {
 		System.out.println("**************RPN05_CINCO****************************");
 //		List<String> listaCombinacoesRNP05_RPN05 = principal.gerar1525RNP05(str);
 		
-		System.out.println("");
-		List<String> listaCombinacoesRNP05_SEM_RNS = principal.gerar1525RNP05_SEM_RNS(str);
+//		System.out.println("");
+//		List<String> listaCombinacoesRNP05_SEM_RNS = principal.gerar1525RNP05_SEM_RNS(str);
 		
 //		System.out.println("");
 //		System.out.println("");
@@ -46,7 +46,7 @@ public class PrincipalRNP05_CINCO {
 //		List<String> listaCombinacoesRNP05_RNS0105_RNS0610 = principal.gerar1525RNP05_RNS0105_RNS0610(str);
 //		List<String> listaCombinacoesRNP05_RNS0105_RNS1115 = principal.gerar1525RNP05_RNS0105_RNS1115(str);
 //		List<String> listaCombinacoesRNP05_RNS0105_RNS1620 = principal.gerar1525RNP05_RNS0105_RNS1620(str);
-//		List<String> listaCombinacoesRNP05_RNS0105_RNS2125 = principal.gerar1525RNP05_RNS0105_RNS2125(str);
+		List<String> listaCombinacoesRNP05_RNS0105_RNS2125 = principal.gerar1525RNP05_RNS0105_RNS2125(str);
 //		Integer total_rns0105 = (listaCombinacoesRNP05_RNS0105.size() 
 //				+ listaCombinacoesRNP05_RNS0105_RNS0610.size() 
 //				+ listaCombinacoesRNP05_RNS0105_RNS1115.size()
@@ -89,7 +89,7 @@ public class PrincipalRNP05_CINCO {
 //		System.out.println("");
 //		System.out.println("");
 //		
-//		List<String> listaCincoRPN05 = principal.resultadoNumerosMenorQueDezCINCO(listaCombinacoesRNP05_RPN05, "listaCincoRPN05");
+//		List<String> listaCincoRPN05 = principal.resultadoNumerosMenorQueDezCINCO(listaCombinacoesRNP05_SEM_RNS, "listaCincoRPN05");
 //		List<String> listaCincoRPN05_SEM_RNS = principal.resultadoNumerosMenorQueDezCINCO(listaCombinacoesRNP05_SEM_RNS, "listaCincoRPN05_SEM_RNS");
 //		
 //		List<String> listaCincoRPN05_RNS0105 = principal.resultadoNumerosMenorQueDezCINCO(listaCombinacoesRNP05_RNS0105, "listaCincoRPN05_RNS0105");
@@ -115,14 +115,14 @@ public class PrincipalRNP05_CINCO {
 		/**
 		 * Retirar o que ja foi premiado!!!
 		 */
-		List<String> listaSaiu15RPN05 = principal.retirarSaiu15RNP05(listaCombinacoesRNP05_SEM_RNS);
+//		List<String> listaSaiu15RPN05 = principal.retirarSaiu15RNP05(listaCincoRPN05);
 		//principal.gravarRetirarSaiu15RNP05(listaSaiu15RPN05);
-		System.out.println("Lista Retirar Saiu 15: " + listaSaiu15RPN05.size());
+//		System.out.println("Lista Retirar Saiu 15: " + listaSaiu15RPN05.size());
 
-		List<String> listaSaiu14RNP05 = principal.retirarSaiu14RNP05(listaSaiu15RPN05);
+//		List<String> listaSaiu14RNP05 = principal.retirarSaiu14RNP05(listaSaiu15RPN05);
 //		principal.gravarRetirarSaiu14RNP05(listaSaiu14RNP05);
-		principal.gravarRandom(listaSaiu14RNP05);
-		System.out.println("Lista Retirar Saiu 14: " + listaSaiu14RNP05.size());
+//		principal.gravarRandom(listaSaiu14RNP05);
+//		System.out.println("Lista Retirar Saiu 14: " + listaSaiu14RNP05.size());
 		
 //		List<String> listaSaiu13RNP05 = principal.retirarSaiu13RNP05(listaSaiu14RNP05);
 //		//principal.gravarRetirarSaiu13RNP05(listaSaiu13RNP05);
@@ -522,14 +522,14 @@ public class PrincipalRNP05_CINCO {
 	}
 	
 	public void gravarRandom(List<String> lista) throws URISyntaxException, IOException, LotoException {
-//		FileWriter arqSaiu = new FileWriter(
-//				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\rnp05\\PrincipalRNP05_CINCO\\RandomRNP05_CINCO_con3036.csv");
-//		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
+		FileWriter arqSaiu = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\quinze\\FechamentoRNP05_CINCO_3065_1.csv");
+		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
 		
 		List<String[]> listaNumeros = new ArrayList<String[]>();
 		String lista15Random = null;
-		for (int i = 0; i < 8; i++) {
-			for (int r = 0; r < 3036; r++) {
+		for (int i = 0; i < 1; i++) {
+			for (int r = 0; r < 3065; r++) {
 				lista15Random = this.getRandomElement(lista);
 			}
 			String[] linha15Random = lista15Random.split(",");
@@ -543,10 +543,11 @@ public class PrincipalRNP05_CINCO {
 					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
 					+ linha1525[13] + "," + linha1525[14];
 			System.out.println(listaNova);
-//			gravarArqSaiu.printf("%s%n", listaNova);
+			gravarArqSaiu.printf("%s%n", listaNova);
 		}
-//		arqSaiu.close();
-//		gravarArqSaiu.close();
+		arqSaiu.close();
+		gravarArqSaiu.close();
+		
 	}
 	
 	public void gravar(List<String> lista) throws URISyntaxException, IOException, LotoException {
@@ -844,7 +845,7 @@ public class PrincipalRNP05_CINCO {
 				String lista = null;
 				saida = comb1.next();
 				if (rnp05.aplicar(saida)) {
-					if (rns0105.aplicar(saida)) {
+					if (!rns0105.aplicar(saida)) {
 						if (!rns0610.aplicar(saida)) {
 							if (!rns1115.aplicar(saida)) {
 								if (!rns1620.aplicar(saida)) {

@@ -67,20 +67,24 @@ public class PrincipalRNP07_SEIS {
 		System.out.println("Lista Retirar Saiu 15: " + listaSaiu15RNP07.size());
 
 		List<String> listaSaiu14RNP07 = principal.retirarSaiu14RNP07(listaSaiu15RNP07);
-		principal.gravarRetirarSaiu14RNP07(listaSaiu14RNP07);
+//		principal.gravarRetirarSaiu14RNP07(listaSaiu14RNP07);
 		System.out.println("Lista Retirar Saiu 14: " + listaSaiu14RNP07.size());
 		
 		
-		List<String> listaFinalVinteCinco = principal.resultadoNumerosFinalVinteCinco(listaSaiu14RNP07);
-		System.out.println("listaFinalVinteCinco: " + listaFinalVinteCinco.size());
 		
 
 		/**
 		 * Fechamento para ganhar!!!
 		 */
-		List<String> listaFechamentoRNP07 = principal.fechamento(listaFinalVinteCinco);
+		List<String> listaFechamentoRNP07 = principal.fechamento(listaSaiu14RNP07);
 		// principal.gravarFechamento(listaFechamentoRNP07);
-		principal.gravarRandomFechamento(listaFechamentoRNP07);
+		
+		
+		List<String> listaFinalVinteCinco = principal.resultadoNumerosFinalVinteCinco(listaFechamentoRNP07);
+		System.out.println("listaFinalVinteCinco: " + listaFinalVinteCinco.size());
+		principal.gravarRandom(listaFinalVinteCinco);
+		
+//		principal.gravarRandomFechamento(listaFinalVinteCinco);
 		System.out.println("Fechamento: " + listaFechamentoRNP07.size());
 
 	}
@@ -559,6 +563,35 @@ public class PrincipalRNP07_SEIS {
 		}
 		arqSaiu.close();
 		gravarArqSaiu.close();
+	}
+	
+	public void gravarRandom(List<String> lista) throws URISyntaxException, IOException, LotoException {
+		FileWriter arqSaiu = new FileWriter(
+				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\quinze\\FechamentoRNP05_CINCO_3121.csv");
+		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
+		
+		List<String[]> listaNumeros = new ArrayList<String[]>();
+		String lista15Random = null;
+		for (int i = 0; i < 1; i++) {
+			for (int r = 0; r < 3070; r++) {
+				lista15Random = this.getRandomElement(lista);
+			}
+			String[] linha15Random = lista15Random.split(",");
+			listaNumeros.add(linha15Random);
+		}
+		
+		String listaNova = null;
+		for (String[] linha1525 : listaNumeros) {
+			listaNova = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
+					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
+					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
+					+ linha1525[13] + "," + linha1525[14];
+			System.out.println(listaNova);
+			gravarArqSaiu.printf("%s%n", listaNova);
+		}
+		arqSaiu.close();
+		gravarArqSaiu.close();
+		
 	}
 
 	// ==============================================================================================//
