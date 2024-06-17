@@ -1,4 +1,4 @@
-package br.com.vinte.resultado;
+package br.com.dezoito;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -40,7 +40,7 @@ public class IAcertei {
 		int contJogo = 0;
 		List<String> lista1525 = new ArrayList<String>();
 		
-		URL resultado1525 = IAcertei.class.getClassLoader().getResource("\\hoje\\3129.csv");
+		URL resultado1525 = IAcertei.class.getClassLoader().getResource("hoje.csv");
 		if (Objects.nonNull(resultado1525)) {
 			Path caminho = Paths.get(resultado1525.toURI());
 			CSVReader csvReader = new CSVReader(new FileReader(caminho.toFile()), ',');
@@ -54,7 +54,7 @@ public class IAcertei {
 				}
 
 				System.out.println("Jogo: " + contLinha);
-				URL combinacoes = IAcertei.class.getClassLoader().getResource("\\vinte\\20_25_SEMRNS_3122.csv");
+				URL combinacoes = IAcertei.class.getClassLoader().getResource("\\combinacoes\\18_25-480700\\18_25.csv");
 				if (Objects.nonNull(combinacoes)) {
 					Path caminho2 = Paths.get(combinacoes.toURI());
 					CSVReader csvReader2 = new CSVReader(new FileReader(caminho2.toFile()), ',');
@@ -98,7 +98,7 @@ public class IAcertei {
 							lista = linhaCombinacoes[0] + "," + linhaCombinacoes[1] + "," + linhaCombinacoes[2] + "," + linhaCombinacoes[3] + "," + linhaCombinacoes[4] + "," + 
 									linhaCombinacoes[5] + "," + linhaCombinacoes[6] + "," + linhaCombinacoes[7] + "," + linhaCombinacoes[8] + "," + linhaCombinacoes[9] + "," + 
 									linhaCombinacoes[10] + "," + linhaCombinacoes[11] + "," + linhaCombinacoes[12] + "," + linhaCombinacoes[13] + "," + linhaCombinacoes[14] + "," + 
-									linhaCombinacoes[15] + "," + linhaCombinacoes[16] + "," + linhaCombinacoes[17] + "," + linhaCombinacoes[18] + "," + linhaCombinacoes[19];
+									linhaCombinacoes[15] + "," + linhaCombinacoes[16] + "," + linhaCombinacoes[17];
 //							gravarArquivo1525.printf("%s%n", lista);
 							lista1525.add(lista);
 							
