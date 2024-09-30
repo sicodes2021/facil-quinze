@@ -27,7 +27,7 @@ public class IAcertei {
 	@SuppressWarnings("deprecation")
 	public void hoje() throws URISyntaxException, IOException, LotoException {
 		
-//		FileWriter arquivo1525 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\vinte\\20_25_SEMRNS_3129.csv");
+//		FileWriter arquivo1525 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\dezoito\\18_25_3130.csv");
 //		PrintWriter gravarArquivo1525 = new PrintWriter(arquivo1525);
 		
 		int contLinha = 0;
@@ -54,7 +54,7 @@ public class IAcertei {
 				}
 
 				System.out.println("Jogo: " + contLinha);
-				URL combinacoes = IAcertei.class.getClassLoader().getResource("\\combinacoes\\18_25-480700\\18_25.csv");
+				URL combinacoes = IAcertei.class.getClassLoader().getResource("\\dezoito\\18_25_3128.csv");
 				if (Objects.nonNull(combinacoes)) {
 					Path caminho2 = Paths.get(combinacoes.toURI());
 					CSVReader csvReader2 = new CSVReader(new FileReader(caminho2.toFile()), ',');

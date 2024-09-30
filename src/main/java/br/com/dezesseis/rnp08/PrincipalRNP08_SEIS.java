@@ -35,7 +35,7 @@ public class PrincipalRNP08_SEIS {
 		 * RNP08
 		 */
 		System.out.println("**************RPN08_SEIS_16****************************");
-		List<String> listaCombinacoesRNP08_RPN05 = principal.gerar1525RNP08(str);
+		List<String> listaCombinacoesRNP08_RPN05 = principal.gerar1625RNP08(str);
 		
 //		System.out.println("");
 //		List<String> listaCombinacoesRNP08_SEM_RNS = principal.gerar1625RNP08_SEM_RNS();
@@ -141,10 +141,10 @@ public class PrincipalRNP08_SEIS {
 //		/**
 //		 * Fechamento para ganhar!!!
 //		 */
-		List<String> listaFechamentoRNP08 = principal.fechamento(listaCombinacoesRNP08_RPN05);
-		principal.gravarFechamento(listaFechamentoRNP08);
-		principal.gravarRandom(listaFechamentoRNP08);
-		System.out.println("Fechamento: " + listaFechamentoRNP08.size());
+//		List<String> listaFechamentoRNP08 = principal.fechamento(listaCombinacoesRNP08_RPN05);
+//		principal.gravarFechamento(listaFechamentoRNP08);
+//		principal.gravarRandom(listaFechamentoRNP08);
+//		System.out.println("Fechamento: " + listaFechamentoRNP08.size());
 	}
 
 	public List<String> resultadoNumerosMenorQueDezSEIS(List<String> listaCombinacoesRNP08, String nomeLista)
@@ -716,8 +716,8 @@ public class PrincipalRNP08_SEIS {
 		 * @return
 		 * @throws LotoException
 		 */
-		public List<String> gerar1525RNP08(int[] str) throws URISyntaxException, IOException, LotoException {
-			List<String> lista1525 = new ArrayList<String>();
+		public List<String> gerar1625RNP08(int[] str) throws URISyntaxException, IOException, LotoException {
+			List<String> lista1625 = new ArrayList<String>();
 			int[] saida;
 			Combinacoes comb1 = new Combinacoes(str, 16);
 			RNP08 rnp08 = new RNP08();
@@ -728,11 +728,11 @@ public class PrincipalRNP08_SEIS {
 					lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," + saida[4] + "," + saida[5]
 							+ "," + saida[6] + "," + saida[7] + "," + saida[8] + "," + saida[9] + "," + saida[10] + ","
 							+ saida[11] + "," + saida[12] + "," + saida[13] + "," + saida[14] + "," + saida[15];
-					lista1525.add(lista);
+					lista1625.add(lista);
 				}
 			}
-			System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP08: " + lista1525.size());
-			return lista1525;
+			System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP08: " + lista1625.size());
+			return lista1625;
 		}
 
 		/**

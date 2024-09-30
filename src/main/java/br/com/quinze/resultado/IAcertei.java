@@ -23,7 +23,11 @@ public class IAcertei {
 	@SuppressWarnings("deprecation")
 	public void RNP05() throws URISyntaxException, IOException, LotoException {
 		int contLinha = 0;
+		int contLinhaJogo = 0;
 		
+		
+		int contnove = 0;
+		int contdez = 0;
 		int contonze = 0;
 		int contdoze = 0;
 		int conttreze = 0;
@@ -45,7 +49,7 @@ public class IAcertei {
 				}
 
 				System.out.println("Jogo: " + contLinha);
-				URL combinacoes = IAcertei.class.getClassLoader().getResource("\\combinacoes\\15_25-3268760\\jogo_rnp07\\15_25-RNP07_SEIS.csv");
+				URL combinacoes = IAcertei.class.getClassLoader().getResource("\\saiuquinze\\11_15.csv");
 				if (Objects.nonNull(combinacoes)) {
 					Path caminho2 = Paths.get(combinacoes.toURI());
 					CSVReader csvReader2 = new CSVReader(new FileReader(caminho2.toFile()), ',');
@@ -53,6 +57,7 @@ public class IAcertei {
 					String[] linhaCombinacoes;
 					while (Objects.nonNull((linhaCombinacoes = csvReader2.readNext()))) {
 						contJogo = 0;
+						contLinhaJogo++;
 						int[] linhaCombinacoesInteiro = new int[linhaCombinacoes.length];
 						for (int i = 0; i < linhaCombinacoes.length; i++) {
 							linhaCombinacoesInteiro[i] = Integer.parseInt(String.valueOf(linhaCombinacoes[i]));
@@ -64,6 +69,14 @@ public class IAcertei {
 									contJogo++;
 								}
 							}
+						}
+						
+						if (contJogo == NumeroEnum.NOVE.getValor()) {
+							contnove++;
+						}
+						
+						if (contJogo == NumeroEnum.DEZ.getValor()) {
+							contdez++;
 						}
 
 						if (contJogo == NumeroEnum.ONZE.getValor()) {
@@ -88,6 +101,14 @@ public class IAcertei {
 					}
 				} else {
 					System.out.println("### Arquivo nao encontrado... ###");
+				}
+				
+				if (contnove > NumeroEnum.ZERO.getValor()) {
+					System.out.println("NOVE: " + contnove);
+				}
+				
+				if (contdez > NumeroEnum.ZERO.getValor()) {
+					System.out.println("DEZ: " + contdez);
 				}
 				
 				if (contonze > NumeroEnum.ZERO.getValor()) {
@@ -115,13 +136,17 @@ public class IAcertei {
 					
 				}
 				
-				if(contonze == NumeroEnum.ZERO.getValor() 
+				if(contnove == NumeroEnum.ZERO.getValor() 
+						&& contdez == NumeroEnum.ZERO.getValor() 
+						&& contonze == NumeroEnum.ZERO.getValor() 
 						&& contdoze == NumeroEnum.ZERO.getValor() 
 						&& conttreze == NumeroEnum.ZERO.getValor() 
 						&& contquatorze == NumeroEnum.ZERO.getValor() 
 						&& contquinze == NumeroEnum.ZERO.getValor()) {
 					System.out.println("Nenhum Resultado Encontrado!!!");
 				}
+				
+				System.out.println("Linha Jogo: " + contLinhaJogo);
 			}
 		} else {
 			System.out.println("### [resultadoNumerosMenorQueDezRNP05] - Arquivo nao encontrado... ###");
