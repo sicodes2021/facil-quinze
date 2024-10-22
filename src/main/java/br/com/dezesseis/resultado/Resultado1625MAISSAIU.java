@@ -63,11 +63,10 @@ public class Resultado1625MAISSAIU {
 		}
 	}
 
-	public void resultado1625MAISSAIU(List<String> listaCombinacoes)
+	public void resultado1625MAISSAIU(List<String> listaCombinacoes, String nomeLista)
 			throws URISyntaxException, IOException, LotoException {
 
-		FileWriter arqSaiu = new FileWriter(
-				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\dezesseis\\rnp08\\Resultado1625_listaSeisRPN08_SEM_RNS_CONC_3193.csv");
+		FileWriter arqSaiu = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\dezesseis\\"+nomeLista+".csv");
 		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
 
 		for (String lista16 : listaCombinacoes) {
@@ -128,7 +127,7 @@ public class Resultado1625MAISSAIU {
 					}
 				}
 
-				if (contJogo == NumeroEnum.QUINZE.getValor()) {
+				if (contJogo == NumeroEnum.QUATORZE.getValor()) {
 					qtdJogoSaiu++;
 				}
 			}
@@ -167,7 +166,7 @@ public class Resultado1625MAISSAIU {
 					}
 				}
 
-				if (contJogo == NumeroEnum.QUINZE.getValor()) {
+				if (contJogo == NumeroEnum.QUATORZE.getValor()) {
 					qtdJogoNaoSaiu = 0;
 				} else {
 					qtdJogoNaoSaiu++;

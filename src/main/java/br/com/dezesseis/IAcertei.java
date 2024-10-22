@@ -46,7 +46,7 @@ public class IAcertei {
 				}
 
 				System.out.println("Jogo: " + contLinha);
-				URL combinacoes = IAcertei.class.getClassLoader().getResource("\\dezesseis\\rnp08\\listaFinalVinteCinco_Cinco_new.csv");
+				URL combinacoes = IAcertei.class.getClassLoader().getResource("\\dezesseis\\rnp05\\RetirarSaiu14RNP05_3210.csv");
 				if (Objects.nonNull(combinacoes)) {
 					Path caminho2 = Paths.get(combinacoes.toURI());
 					CSVReader csvReader2 = new CSVReader(new FileReader(caminho2.toFile()), ',');
