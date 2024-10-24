@@ -18,6 +18,7 @@ import com.opencsv.CSVReader;
 import br.com.combinacoes.Combinacoes;
 import br.com.combinacoes.Combinacoes1525;
 import br.com.dezesseis.Combinacoes1625;
+import br.com.dezesseis.resultado.IAcertei;
 import br.com.dezesseis.resultado.Resultado1625MAISSAIU;
 import br.com.enumerador.NumeroEnum;
 import br.com.excecao.LotoException;
@@ -28,26 +29,7 @@ import br.com.regras.sequencia.RNS1115;
 import br.com.regras.sequencia.RNS1620;
 import br.com.regras.sequencia.RNS2125;
 
-//**************RPN05_SEIS_16****************************
-//TOTAL DE LINHAS NO ARQUIVO 16_25-RNP05: 61776
-//listaCincoRPN05: 22400
-//
-//TOTAL DE LINHAS NO ARQUIVO 16_25-RNP05_SEM_RNS: 42288
-//listaSeisRPN05_SEM_RNS: 17512
-//
-//
-//
-//VINTE_UM-VINTE_CINCO
-//TOTAL DE LINHAS NO ARQUIVO 16_25-RNP05_VINTE_UM: 24
-//TOTAL DE LINHAS NO ARQUIVO 16_25-RNP05_VINTE_DOIS: 60
-//TOTAL DE LINHAS NO ARQUIVO 16_25-RNP05_VINTE_TRES: 1426
-//TOTAL DE LINHAS NO ARQUIVO 16_25-RNP05_VINTE_QUATRO: 1422
-//TOTAL DE LINHAS NO ARQUIVO 16_25-RNP05_VINTE_CINCO: 14580
-//Lista Retirar Saiu 15: 23
-//Lista Retirar Saiu 14: 19
-//Numero de Combinacoes: 19
-//Numero  de Fechamentos: 2
-//Numero  de NAO Fechamentos: 18
+
 public class PrincipalRNP05_SEIS {
 
 	public static void main(String[] args) throws URISyntaxException, IOException, LotoException {
@@ -55,6 +37,7 @@ public class PrincipalRNP05_SEIS {
 		Combinacoes1525 combinacoes1525 = new Combinacoes1525();
 		Combinacoes1625 combinacoes1625 = new Combinacoes1625();
 		Resultado1625MAISSAIU resultado1625maissaiu = new Resultado1625MAISSAIU();
+		IAcertei acertei = new IAcertei();
 		
 		
 		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
@@ -70,12 +53,14 @@ public class PrincipalRNP05_SEIS {
 		System.out.println("");
 		List<String> listaCombinacoesRNP05 = principal.gerar1625RNP05(str);
 		List<String> listaSeisRPN05 = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP05, "listaSeisRPN05");
-		resultado1625maissaiu.resultado1625MAISSAIU(listaSeisRPN05, "rnp05\\listaSeisRPN05");
+//		resultado1625maissaiu.resultado1625MAISSAIU(listaSeisRPN05, "rnp05\\listaSeisRPN05");
 		
 		System.out.println("");
 		List<String> listaCombinacoesRNP05_SEM_RNS = principal.gerar1625RNP05_SEM_RNS(str);
 		List<String> listaSeisRPN05_SEM_RNS = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP05_SEM_RNS, "listaSeisRPN05_SEM_RNS");
-		resultado1625maissaiu.resultado1625MAISSAIU(listaSeisRPN05_SEM_RNS, "rnp05\\listaSeisRPN05_SEM_RNS");
+//		resultado1625maissaiu.resultado1625MAISSAIU(listaSeisRPN05_SEM_RNS, "rnp05\\listaSeisRPN05_SEM_RNS");
+		acertei.resultadoHoje(listaCombinacoesRNP05_SEM_RNS);
+		
 		
 //		System.out.println("");
 //		System.out.println("");

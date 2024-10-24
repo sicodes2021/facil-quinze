@@ -17,6 +17,7 @@ import com.opencsv.CSVReader;
 
 import br.com.combinacoes.Combinacoes;
 import br.com.combinacoes.Combinacoes1525;
+import br.com.dezesseis.resultado.IAcertei;
 import br.com.dezesseis.resultado.Resultado1625MAISSAIU;
 import br.com.enumerador.NumeroEnum;
 import br.com.excecao.LotoException;
@@ -28,34 +29,13 @@ import br.com.regras.sequencia.RNS1620;
 import br.com.regras.sequencia.RNS2125;
 
 
-//**************RPN08_SEIS_16****************************
-//TOTAL DE LINHAS NO ARQUIVO 16_25: 2042975
-//
-//TOTAL DE LINHAS NO ARQUIVO 16_25-RNP08: 637065
-//listaSeisRPN08: 205632
-//
-//TOTAL DE LINHAS NO ARQUIVO 16_25-RNP08_SEM_RNS: 379893
-//listaSeisRPN08_SEM_RNS: 145623
-//
-//
-//
-//VINTE_UM-VINTE_CINCO
-//TOTAL DE LINHAS NO ARQUIVO 16_25-RNP08_VINTE_UM: 620
-//TOTAL DE LINHAS NO ARQUIVO 16_25-RNP08_VINTE_DOIS: 3717
-//TOTAL DE LINHAS NO ARQUIVO 16_25-RNP08_VINTE_TRES: 12940
-//TOTAL DE LINHAS NO ARQUIVO 16_25-RNP08_VINTE_QUATRO: 41160
-//TOTAL DE LINHAS NO ARQUIVO 16_25-RNP08_VINTE_CINCO: 87186
-//Lista Retirar Saiu 15: 619
-//Lista Retirar Saiu 14: 429
-//Numero de Combinacoes: 429
-//Numero  de Fechamentos: 24
-//Numero  de NAO Fechamentos: 406
 public class PrincipalRNP08_SEIS {
 
 	public static void main(String[] args) throws URISyntaxException, IOException, LotoException {
 		PrincipalRNP08_SEIS principal = new PrincipalRNP08_SEIS();
 		Combinacoes1525 combinacoes1525 = new Combinacoes1525();
 		Resultado1625MAISSAIU resultado1625maissaiu = new Resultado1625MAISSAIU();
+		IAcertei acertei = new IAcertei();
 		
 		
 		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
@@ -81,6 +61,8 @@ public class PrincipalRNP08_SEIS {
 //		List<String> listaSaiu15RPN08_SEM_RNS = principal.retirarSaiu15RNP08(listaSeisRPN08_SEM_RNS);
 //		List<String> listaSaiu14RNP08_SEM_RNS = principal.retirarSaiu14RNP08(listaSaiu15RPN08_SEM_RNS);
 //		resultado1625maissaiu.resultado1625MAISSAIU(listaSaiu14RNP08_SEM_RNS, "rnp08\\listaSeisRPN08_SEM_RNS");
+		
+		acertei.resultadoHoje(listaCombinacoesRNP08_SEM_RNS);
 
 //		System.out.println("");
 //		System.out.println("");

@@ -17,6 +17,7 @@ import com.opencsv.CSVReader;
 
 import br.com.combinacoes.Combinacoes;
 import br.com.combinacoes.Combinacoes1525;
+import br.com.dezesseis.resultado.IAcertei;
 import br.com.dezesseis.resultado.Resultado1625MAISSAIU;
 import br.com.enumerador.NumeroEnum;
 import br.com.excecao.LotoException;
@@ -28,32 +29,14 @@ import br.com.regras.sequencia.RNS1620;
 import br.com.regras.sequencia.RNS2125;
 
 
-//**************RPN09_SEIS_16****************************
-//TOTAL DE LINHAS NO ARQUIVO 16_25: 2042975
-//
-//TOTAL DE LINHAS NO ARQUIVO 16_25-RNP09: 377520
-//listaCincoRPN07: 123312
-//
-//TOTAL DE LINHAS NO ARQUIVO 16_25-RNP09_SEM_RNS: 233028
-//listaSeisRPN09_SEM_RNS: 89502
-//
-//
-//
-//VINTE_UM-VINTE_CINCO
-//TOTAL DE LINHAS NO ARQUIVO 16_25-RNP09_VINTE_UM: 309
-//TOTAL DE LINHAS NO ARQUIVO 16_25-RNP09_VINTE_DOIS: 2884
-//TOTAL DE LINHAS NO ARQUIVO 16_25-RNP09_VINTE_TRES: 6549
-//TOTAL DE LINHAS NO ARQUIVO 16_25-RNP09_VINTE_QUATRO: 32935
-//TOTAL DE LINHAS NO ARQUIVO 16_25-RNP09_VINTE_CINCO: 46825
-//Numero de Combinacoes: 230
-//Numero  de Fechamentos: 12
-//Numero  de NAO Fechamentos: 219
+
 public class PrincipalRNP09_SEIS {
 
 	public static void main(String[] args) throws URISyntaxException, IOException, LotoException {
 		PrincipalRNP09_SEIS principal = new PrincipalRNP09_SEIS();
 		Combinacoes1525 combinacoes1525 = new Combinacoes1525();
 		Resultado1625MAISSAIU resultado1625maissaiu = new Resultado1625MAISSAIU();
+		IAcertei acertei = new IAcertei();
 		
 		
 		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
@@ -73,6 +56,8 @@ public class PrincipalRNP09_SEIS {
 		System.out.println("");
 		List<String> listaCombinacoesRNP09_SEM_RNS = principal.gerar1625RNP09_SEM_RNS(str);
 		List<String> listaSeisRPN09_SEM_RNS = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP09_SEM_RNS, "listaSeisRPN09_SEM_RNS");
+		
+		acertei.resultadoHoje(listaCombinacoesRNP09_SEM_RNS);
 		
 //		System.out.println("");
 //		System.out.println("");
@@ -144,25 +129,25 @@ public class PrincipalRNP09_SEIS {
 		
 
 		
-		System.out.println("");
-		System.out.println("");
-		System.out.println("VINTE_UM-VINTE_CINCO");
-		List<String> listaFinalVinteUm = principal.resultadoNumerosFinalVinteUm(listaSeisRPN09_SEM_RNS);
-		List<String> listaFinalVinteDois = principal.resultadoNumerosFinalVinteDois(listaSeisRPN09_SEM_RNS);
-		List<String> listaFinalVinteTres = principal.resultadoNumerosFinalVinteTres(listaSeisRPN09_SEM_RNS);
-		List<String> listaFinalVinteQuatro = principal.resultadoNumerosFinalVinteQuatro(listaSeisRPN09_SEM_RNS);
-		List<String> listaFinalVinteCinco = principal.resultadoNumerosFinalVinteCinco(listaSeisRPN09_SEM_RNS);
+//		System.out.println("");
+//		System.out.println("");
+//		System.out.println("VINTE_UM-VINTE_CINCO");
+//		List<String> listaFinalVinteUm = principal.resultadoNumerosFinalVinteUm(listaSeisRPN09_SEM_RNS);
+//		List<String> listaFinalVinteDois = principal.resultadoNumerosFinalVinteDois(listaSeisRPN09_SEM_RNS);
+//		List<String> listaFinalVinteTres = principal.resultadoNumerosFinalVinteTres(listaSeisRPN09_SEM_RNS);
+//		List<String> listaFinalVinteQuatro = principal.resultadoNumerosFinalVinteQuatro(listaSeisRPN09_SEM_RNS);
+//		List<String> listaFinalVinteCinco = principal.resultadoNumerosFinalVinteCinco(listaSeisRPN09_SEM_RNS);
 //		principal.gravar(listaFinalVinteCinco, "listaFinalVinteCinco_Seis");
 		
 		
 		/**
 		 * Retirar o que ja foi premiado!!!
 		 */
-		List<String> listaSaiu15RPN05 = principal.retirarSaiu15RNP09(listaFinalVinteUm);
+//		List<String> listaSaiu15RPN05 = principal.retirarSaiu15RNP09(listaFinalVinteUm);
 //		//principal.gravarRetirarSaiu15RNP09(listaSaiu15RPN05);
 //		System.out.println("Lista Retirar Saiu 15: " + listaSaiu15RPN05.size());
 
-		List<String> listaSaiu14RNP09 = principal.retirarSaiu14RNP09(listaSaiu15RPN05);
+//		List<String> listaSaiu14RNP09 = principal.retirarSaiu14RNP09(listaSaiu15RPN05);
 //		principal.gravarRetirarSaiu14RNP09(listaSaiu14RNP09);
 //		principal.gravarRandom(listaSaiu14RNP09);
 //		System.out.println("Lista Retirar Saiu 14: " + listaSaiu14RNP09.size());
@@ -175,7 +160,7 @@ public class PrincipalRNP09_SEIS {
 		/**
 		 * Fechamento para ganhar!!!
 		 */
-		List<String> listaFechamentoRNP09 = principal.fechamento(listaSaiu14RNP09);
+//		List<String> listaFechamentoRNP09 = principal.fechamento(listaSaiu14RNP09);
 //		principal.gravarFechamento(listaFechamentoRNP09);
 //		System.out.println("Fechamento: " + listaFechamentoRNP09.size());
 	}
