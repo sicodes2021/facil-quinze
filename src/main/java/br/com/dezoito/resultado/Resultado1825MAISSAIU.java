@@ -1,4 +1,4 @@
-package br.com.dezoito;
+package br.com.dezoito.resultado;
 
 import java.io.FileReader;
 import java.io.FileWriter;

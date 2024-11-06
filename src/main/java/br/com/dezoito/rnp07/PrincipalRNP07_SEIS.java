@@ -1,4 +1,4 @@
-package br.com.dezesseis.rnp07;
+package br.com.dezoito.rnp07;
 
 import java.io.FileReader;
 import java.io.FileWriter;

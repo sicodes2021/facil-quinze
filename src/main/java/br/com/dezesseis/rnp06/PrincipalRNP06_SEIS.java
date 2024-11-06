@@ -56,7 +56,7 @@ public class PrincipalRNP06_SEIS {
 		List<String> listaCombinacoesRNP06_SEM_RNS = principal.gerar1625RNP06_SEM_RNS(str);
 		List<String> listaSeisRPN06_SEM_RNS = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP06_SEM_RNS, "listaSeisRPN06_SEM_RNS");
 
-		acertei.resultadoHoje(listaCombinacoesRNP06_SEM_RNS);
+		acertei.resultadoHoje(listaSeisRPN06_SEM_RNS);
 		
 //		System.out.println("");
 //		System.out.println("");
