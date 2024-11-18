@@ -76,17 +76,18 @@ public class Resultado1625MAISSAIU {
 			}
 
 			String lista = null;
-			int retorno = resultado1625SAIUQUATORZE(linhaCombinacao1625);
+			int retorno14 = resultado1625SAIUQUATORZE(linhaCombinacao1625);
+			int retorno15 = resultado1625SAIUQUINZE(linhaCombinacao1625);
 			int frequencia = frequenciaResultado1625SAIU(linhaCombinacao1625);
-			if (retorno > NumeroEnum.ZERO.getValor()) {
+//			if (retorno > NumeroEnum.ZERO.getValor()) {
 				lista = linhaCombinacao1625[0] + "," + linhaCombinacao1625[1] + "," + linhaCombinacao1625[2] + ","
 						+ linhaCombinacao1625[3] + "," + linhaCombinacao1625[4] + "," + linhaCombinacao1625[5] + ","
 						+ linhaCombinacao1625[6] + "," + linhaCombinacao1625[7] + "," + linhaCombinacao1625[8] + ","
 						+ linhaCombinacao1625[9] + "," + linhaCombinacao1625[10] + "," + linhaCombinacao1625[11] + ","
 						+ linhaCombinacao1625[12] + "," + linhaCombinacao1625[13] + "," + linhaCombinacao1625[14] + ","
-						+ linhaCombinacao1625[15] + "," + retorno + "," + frequencia;
+						+ linhaCombinacao1625[15] + "," + retorno14 + "," + retorno15 + "," + frequencia;
 				gravarArqSaiu.printf("%s%n", lista);
-			}
+//			}
 
 		}
 
@@ -203,7 +204,7 @@ public class Resultado1625MAISSAIU {
 					}
 				}
 
-				if (contJogo == NumeroEnum.QUINZE.getValor()) {
+				if (contJogo == NumeroEnum.QUATORZE.getValor()) {
 					qtdJogoNaoSaiu = 0;
 				} else {
 					qtdJogoNaoSaiu++;

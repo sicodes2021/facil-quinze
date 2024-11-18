@@ -39,8 +39,8 @@ public class PrincipalRNP08_SEIS {
 		
 		
 		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
-		int[] strNaoSaiu = { 5, 6, 7, 9, 10, 13, 14, 19, 23, 24 };
-		int[] strSaiu = { 1,2,3,4,8,11,12,15,16,17,18,20,21,22,25 };
+		int[] strNaoSaiu = { 3, 4, 8, 12, 14, 15, 17, 19, 22, 25 };
+		int[] strSaiu = { 1, 2, 5, 6, 7, 9, 10, 11, 13, 16, 18, 20, 21, 23, 24 };
 
 		/*********************************************************************
 		 * RNP08
@@ -49,24 +49,27 @@ public class PrincipalRNP08_SEIS {
 		principal.gerar1625(str);
 		
 		System.out.println("");
-		List<String> listaCombinacoesRNP08 = principal.gerar1625RNP08(str);
-		List<String> listaSeisRPN08 = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP08, "listaSeisRPN08");
-		List<String> listaSaiu15RPN08 = principal.retirarSaiu15RNP08(listaSeisRPN08);
-		List<String> listaSaiu14RNP08 = principal.retirarSaiu14RNP08(listaSaiu15RPN08);
-		resultado1625maissaiu.resultado1625MAISSAIU(listaSaiu14RNP08, "rnp08\\listaSeisRPN08");
+		List<String> listaCombinacoes1625RNP08 = principal.gerar1625RNP08(str);
+//		List<String> listaSeisRPN08 = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoes1625RNP08, "listaCombinacoes1625RNP08");
+//		List<String> listaSaiu15RPN08 = principal.retirarSaiu15RNP08(listaSeisRPN08);
+//		List<String> listaSaiu14RNP08 = principal.retirarSaiu14RNP08(listaSaiu15RPN08);
+//		resultado1625maissaiu.resultado1625MAISSAIU(listaSaiu14RNP08, "rnp08\\listaSeisRPN08");
 
 		System.out.println("");
 		List<String> listaCombinacoesRNP08_SEM_RNS = principal.gerar1625RNP08_SEM_RNS(str);
-		List<String> listaSeisRPN08_SEM_RNS = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP08_SEM_RNS, "listaSeisRPN08_SEM_RNS");
+//		List<String> listaSeisRPN08_SEM_RNS = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP08_SEM_RNS, "listaCombinacoesRNP08_SEM_RNS");
 //		List<String> listaSaiu15RPN08_SEM_RNS = principal.retirarSaiu15RNP08(listaSeisRPN08_SEM_RNS);
 //		List<String> listaSaiu14RNP08_SEM_RNS = principal.retirarSaiu14RNP08(listaSaiu15RPN08_SEM_RNS);
-//		resultado1625maissaiu.resultado1625MAISSAIU(listaSaiu14RNP08_SEM_RNS, "rnp08\\listaSeisRPN08_SEM_RNS");
-		
-		acertei.resultadoHoje(listaSeisRPN08_SEM_RNS);
+//		
+//		List<String> listaCombinacoesSaiuQuinzeDez = combinacoes1525.gerarSaiuQuinzeDez(strSaiu);
+//		List<String> listaComparadas = principal.compararListas(listaSaiu14RNP08_SEM_RNS, listaCombinacoesSaiuQuinzeDez);
+//		
+		resultado1625maissaiu.resultado1625MAISSAIU(listaCombinacoesRNP08_SEM_RNS, "rnp08\\listaCombinacoesRNP08_SEM_RNS");
+//		acertei.resultadoHoje(listaSeisRPN08_SEM_RNS);
 
-		System.out.println("");
-		System.out.println("");
-		List<String> listaCombinacoesRNP08_RNS0105 = principal.gerar1625RNP08_RNS0105(str);
+//		System.out.println("");
+//		System.out.println("");
+//		List<String> listaCombinacoesRNP08_RNS0105 = principal.gerar1625RNP08_RNS0105(str);
 //		List<String> listaCincoRPN07_RNS0105 = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP08_RNS0105, "listaCincoRPN07_RNS0105");
 //		List<String> listaCombinacoesRNP08_RNS0105_RNS0610 = principal.gerar1525RNP08_RNS0105_RNS0610();
 //		List<String> listaCincoRNP08_RNS0105_RNS1115 = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP08_RNS0105_RNS0610, "listaCincoRNP08_RNS0105_RNS0610");
@@ -165,20 +168,20 @@ public class PrincipalRNP08_SEIS {
 		/**
 		 * Combinacoes Saiu e NaoSaiu
 		 */
-////		List<String> listaCombinacoesNaoSaiuDezSeis = combinacoes1525.gerarNaoSaiuDezSeis(strNaoSaiu);
-////		List<String> listaCombinacoesSaiuQuinzeOito = combinacoes1525.gerarSaiuQuinzeOito(strSaiu);
+//		List<String> listaCombinacoesNaoSaiuDezSeis = combinacoes1525.gerarNaoSaiuDezSeis(strNaoSaiu);
+//		List<String> listaCombinacoesSaiuQuinzeOito = combinacoes1525.gerarSaiuQuinzeOito(strSaiu);
 //		List<String> listaCombinacoesSaiuQuinzeNove = combinacoes1525.gerarSaiuQuinzeNove(strSaiu);
-////		List<String> listaCombinacoesSaiuQuinzeDez = combinacoes1525.gerarSaiuQuinzeDez(strSaiu);
-//		
-//		List<String> listaComparadas = principal.compararListas(listaSaiu14RNP08, listaCombinacoesSaiuQuinzeNove);
-//		
-//		
-//		/**
-//		 * Fechamento para ganhar!!!
-//		 */
+//		List<String> listaCombinacoesSaiuQuinzeDez = combinacoes1525.gerarSaiuQuinzeDez(strSaiu);
+		
+//		List<String> listaComparadas = principal.compararListas(listaSaiu14RNP08, listaCombinacoesSaiuQuinzeDez);
+		
+		
+		/**
+		 * Fechamento para ganhar!!!
+		 */
 //		List<String> listaFechamentoRNP08 = principal.fechamento(listaComparadas);
 //		principal.gravarFechamento(listaFechamentoRNP08);
-////		principal.gravarRandom(listaFechamentoRNP08);
+//		principal.gravarRandom(listaFechamentoRNP08);
 		
 		/**
 		 * Mais saiu
@@ -778,21 +781,19 @@ public class PrincipalRNP08_SEIS {
 	 * @return List<String>
 	 */
 	public List<String> gerar1625(int[] str) throws URISyntaxException, IOException, LotoException {
-		int cont = 0;
 		List<String> lista1625 = new ArrayList<String>();
 		int[] saida;
 		Combinacoes comb1 = new Combinacoes(str, 16);
 		while (comb1.hasNext()) {
 			String lista = null;
 			saida = comb1.next();
-				cont++;
 				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," 
 						+ saida[4] + "," + saida[5] + "," + saida[6] + "," + saida[7] + "," 
 						+ saida[8] + "," + saida[9] + "," + saida[10] + "," + saida[11] + "," 
 						+ saida[12] + "," + saida[13] + "," + saida[14] + "," + saida[15];
 				lista1625.add(lista);
 		}
-		System.out.println("TOTAL DE LINHAS NO ARQUIVO 16_25: " + cont);
+		System.out.println("TOTAL DE LINHAS NO ARQUIVO 16_25: " + lista1625.size());
 		return lista1625;
 	}
 	
@@ -810,7 +811,7 @@ public class PrincipalRNP08_SEIS {
 		while (comb1.hasNext()) {
 			String lista = null;
 			saida = comb1.next();
-			if (rnp08.aplicar(saida)) {
+			if(rnp08.aplicar(saida)) {
 				lista = saida[0] + "," + saida[1] + "," + saida[2] + "," + saida[3] + "," 
 						+ saida[4] + "," + saida[5] + "," + saida[6] + "," + saida[7] + "," 
 						+ saida[8] + "," + saida[9] + "," + saida[10] + "," + saida[11] + "," 
