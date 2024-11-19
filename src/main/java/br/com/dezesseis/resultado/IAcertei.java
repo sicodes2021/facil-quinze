@@ -20,7 +20,9 @@ public class IAcertei {
 		IAcertei jaSaiu = new IAcertei();
 //		jaSaiu.jogo();
 		
-		int[] meuJogo = { 2, 4, 5, 6, 7, 9, 12, 13, 14, 15, 18, 19, 20, 21, 22, 23 };
+		int[] meuJogo = { 2, 4, 5, 6, 7, 9, 12, 13, 14, 15, 18, 19, 20, 21, 22, 23 }; //RNP08
+//		int[] meuJogo = { 1, 2, 3, 5, 6, 9, 12, 13, 14, 15, 17, 18, 22, 23, 24, 25 }; //RNP07
+//		int[] meuJogo = { 1, 2, 4, 7, 8, 9, 11, 12, 13, 15, 17, 19, 20, 23, 24, 25 }; //RNP06
 		
 		jaSaiu.montarJogoTestar(meuJogo);
 	}
