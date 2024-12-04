@@ -269,9 +269,9 @@ public class IAcertei {
 					linhaCombinacoesInteiro[i] = Integer.parseInt(String.valueOf(meuJogo[i]));
 				}
 
-				for (int i = 0; i < linha1525.length; i++) {
-					for (int j = 0; j < linhaCombinacoesInteiro.length; j++) {
-						if (linha1525[i] == linhaCombinacoesInteiro[j]) {
+				for (int i = 0; i < linhaCombinacoesInteiro.length; i++) {
+					for (int j = 0; j < linha1525.length; j++) {
+						if (linhaCombinacoesInteiro[i] == linha1525[j]) {
 							contJogo++;
 						}
 					}
