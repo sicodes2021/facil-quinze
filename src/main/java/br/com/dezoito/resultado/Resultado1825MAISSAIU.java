@@ -20,11 +20,11 @@ public class Resultado1825MAISSAIU {
 	@SuppressWarnings({ "deprecation" })
 	public static void main(String[] args) throws URISyntaxException, IOException, LotoException {
 		
-		FileWriter arqSaiu = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\18_25-480700\\Resultado2025MAISSAIU_conc3130.csv");
+		FileWriter arqSaiu = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\dezoito\\Resultado1825MAISSAIU_18_25_SEMRNSconc3270.csv");
 		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
 
 		int cont = 0;
-		URL combinacao1825 = Resultado1825MAISSAIU.class.getClassLoader().getResource("combinacoes\\18_25-480700\\18_25.csv");
+		URL combinacao1825 = Resultado1825MAISSAIU.class.getClassLoader().getResource("combinacoes\\18_25-480700\\18_25_SEMRNS.csv");
 		if (Objects.nonNull(combinacao1825)) {
 			
 			Path caminho = Paths.get(combinacao1825.toURI());

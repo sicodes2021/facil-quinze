@@ -110,7 +110,7 @@ public class Combinacoes1825 {
 //		List<String> listaCombinacoesRNP06RNS2125 = combinacoes1525.gerar1525RNP06RNS2125();
 //		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP06RNS2125.size());
 		
-//		combinacoes1525.gerar1825RNP07();
+		combinacoes1525.gerar1825RNP07();
 //		combinacoes1525.gerar1825RNP07SEMRNS();
 //		combinacoes1525.resultadoNumerosMenorQueDezRNP07();
 		
@@ -125,7 +125,7 @@ public class Combinacoes1825 {
 //		List<String> listaCombinacoesRNP07RNS2125 = combinacoes1525.gerar1525RNP07RNS2125();
 //		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP07RNS2125.size());
 		
-//		combinacoes1525.gerar1825RNP08();
+		combinacoes1525.gerar1825RNP08();
 //		combinacoes1525.gerar1825RNP08SEMRNS();
 //		System.out.println("RNP08: " + listaCombinacoesRNP08.size());
 //		combinacoes1525.resultadoNumerosMenorQueDezRNP08();
@@ -197,7 +197,7 @@ public class Combinacoes1825 {
 	 * @return List<String>
 	 */
 	public List<String> gerar1825SEMRNS(int[] str) throws URISyntaxException, IOException, LotoException {
-//		FileWriter arquivo1525 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\16_25-2042975\\16_25_SEMRNS.csv");
+//		FileWriter arquivo1525 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\18_25-480700\\18_25_SEMRNS.csv");
 //		PrintWriter gravarArquivo1525 = new PrintWriter(arquivo1525);
 		
 		RNS0105 rns0105 = new RNS0105();
@@ -2478,7 +2478,7 @@ public class Combinacoes1825 {
 	 * @throws LotoException
 	 */
 	public List<String> gerar1825RNP08() throws URISyntaxException, IOException, LotoException {
-//		FileWriter arquivoRNP08 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\16_25-2042975\\16_25-RNP08.csv");
+//		FileWriter arquivoRNP08 = new FileWriter("C:\\sicodes\\facil-quinze\\src\\main\\resources\\combinacoes\\18_25-480700\\18_25-RNP08.csv");
 //		PrintWriter gravarArquivoRNP08 = new PrintWriter(arquivoRNP08);
 		int cont = 0;
 		List<String> lista1525 = new ArrayList<String>();
