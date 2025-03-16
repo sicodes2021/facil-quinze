@@ -57,14 +57,14 @@ public class PrincipalRNP08_SEIS {
 
 		System.out.println("");
 		List<String> listaCombinacoesRNP08_SEM_RNS = principal.gerar1625RNP08_SEM_RNS(str);
-//		List<String> listaSeisRPN08_SEM_RNS = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP08_SEM_RNS, "listaCombinacoesRNP08_SEM_RNS");
+		List<String> listaSeisRPN08_SEM_RNS = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP08_SEM_RNS, "listaCombinacoesRNP08_SEM_RNS");
 //		List<String> listaSaiu15RPN08_SEM_RNS = principal.retirarSaiu15RNP08(listaSeisRPN08_SEM_RNS);
 //		List<String> listaSaiu14RNP08_SEM_RNS = principal.retirarSaiu14RNP08(listaSaiu15RPN08_SEM_RNS);
 //		
 //		List<String> listaCombinacoesSaiuQuinzeDez = combinacoes1525.gerarSaiuQuinzeDez(strSaiu);
 //		List<String> listaComparadas = principal.compararListas(listaSaiu14RNP08_SEM_RNS, listaCombinacoesSaiuQuinzeDez);
 //		
-		resultado1625maissaiu.resultado1625MAISSAIU(listaCombinacoesRNP08_SEM_RNS, "rnp08\\listaCombinacoesRNP08_SEM_RNS");
+		resultado1625maissaiu.resultado1625MAISSAIU(listaSeisRPN08_SEM_RNS, "rnp08\\listaCombinacoesRNP08_SEM_RNS");
 //		acertei.resultadoHoje(listaSeisRPN08_SEM_RNS);
 		
 		

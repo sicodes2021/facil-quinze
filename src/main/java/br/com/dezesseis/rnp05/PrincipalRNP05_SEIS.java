@@ -58,8 +58,9 @@ public class PrincipalRNP05_SEIS {
 		System.out.println("");
 		List<String> listaCombinacoesRNP05_SEM_RNS = principal.gerar1625RNP05_SEM_RNS(str);
 		List<String> listaSeisRPN05_SEM_RNS = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP05_SEM_RNS, "listaSeisRPN05_SEM_RNS");
-//		resultado1625maissaiu.resultado1625MAISSAIU(listaSeisRPN05_SEM_RNS, "rnp05\\listaSeisRPN05_SEM_RNS");
-		acertei.resultadoHoje(listaCombinacoesRNP05_SEM_RNS);
+		
+		resultado1625maissaiu.resultado1625MAISSAIU(listaSeisRPN05_SEM_RNS, "rnp05\\listaSeisRPN05_SEM_RNS");
+//		acertei.resultadoHoje(listaCombinacoesRNP05_SEM_RNS);
 		
 		
 //		System.out.println("");
