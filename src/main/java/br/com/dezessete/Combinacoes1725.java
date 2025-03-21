@@ -80,8 +80,8 @@ public class Combinacoes1725 {
 //		List<String> listaCombinacoesRNP04RNS2125 = combinacoes1525.gerar1525RNP04RNS2125();
 //		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP04RNS2125.size());
 		
-		combinacoes1525.gerar1625RNP05(str);
-		combinacoes1525.gerar1625RNP05SEMRNS(str);
+//		combinacoes1525.gerar1625RNP05(str);
+//		combinacoes1525.gerar1625RNP05SEMRNS(str);
 //		System.out.println("RNP05: " + listaCombinacoesRNP05.size());
 //		combinacoes1525.resultadoNumerosMenorQueDezRNP05();
 		
@@ -96,8 +96,8 @@ public class Combinacoes1725 {
 //		List<String> listaCombinacoesRNP05RNS2125 = combinacoes1525.gerar1525RNP05RNS2125();
 //		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP05RNS2125.size());
 		
-		combinacoes1525.gerar1625RNP06(str);
-		combinacoes1525.gerar1625RNP06SEMRNS(str);
+//		combinacoes1525.gerar1625RNP06(str);
+//		combinacoes1525.gerar1625RNP06SEMRNS(str);
 //		System.out.println("RNP06: " + listaCombinacoesRNP06.size());
 //		combinacoes1525.resultadoNumerosMenorQueDezRNP06();
 		
@@ -112,8 +112,8 @@ public class Combinacoes1725 {
 //		List<String> listaCombinacoesRNP06RNS2125 = combinacoes1525.gerar1525RNP06RNS2125();
 //		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP06RNS2125.size());
 		
-		combinacoes1525.gerar1625RNP07(str);
-		combinacoes1525.gerar1625RNP07SEMRNS(str);
+//		combinacoes1525.gerar1625RNP07(str);
+//		combinacoes1525.gerar1625RNP07SEMRNS(str);
 //		combinacoes1525.resultadoNumerosMenorQueDezRNP07();
 		
 //		combinacoes1525.gerar1625RNP07RNS0105();
@@ -127,13 +127,13 @@ public class Combinacoes1725 {
 //		List<String> listaCombinacoesRNP07RNS2125 = combinacoes1525.gerar1525RNP07RNS2125();
 //		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP07RNS2125.size());
 		
-		combinacoes1525.gerar1625RNP08(str);
-		combinacoes1525.gerar1625RNP08SEMRNS(str);
+//		combinacoes1525.gerar1625RNP08(str);
+//		combinacoes1525.gerar1625RNP08SEMRNS(str);
 //		System.out.println("RNP08: " + listaCombinacoesRNP08.size());
 //		combinacoes1525.resultadoNumerosMenorQueDezRNP08();
 		
-		combinacoes1525.gerar1625RNP09(str);
-		combinacoes1525.gerar1625RNP09SEMRNS(str);
+//		combinacoes1525.gerar1625RNP09(str);
+//		combinacoes1525.gerar1625RNP09SEMRNS(str);
 //		System.out.println("RNP09: " + listaCombinacoesRNP09.size());
 //		combinacoes1525.gravarRNP09(listaCombinacoesRNP09);
 //		combinacoes1525.resultadoNumerosMenorQueDezRNP09();

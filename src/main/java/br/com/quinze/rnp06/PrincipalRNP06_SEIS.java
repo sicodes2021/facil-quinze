@@ -34,29 +34,29 @@ public class PrincipalRNP06_SEIS {
 		 * RNP06
 		 */
 		System.out.println("**************RPN06_SEIS****************************");
-		List<String> listaCombinacoesRNP06_RPN06 = principal.gerar1525RNP06();
+//		List<String> listaCombinacoesRNP06_RPN06 = principal.gerar1525RNP06();
 		List<String> listaCombinacoesRNP06_SEM_RNS = principal.gerar1525RNP06_SEM_RNS();
-		List<String> listaCombinacoesRNP06_RNS0105 = principal.gerar1525RNP06_RNS0105();
-		List<String> listaCombinacoesRNP06_RNS0610 = principal.gerar1525RNP06_RNS0610();
-		List<String> listaCombinacoesRNP06_RNS1115 = principal.gerar1525RNP06_RNS1115();
-		List<String> listaCombinacoesRNP06_RNS1620 = principal.gerar1525RNP06_RNS1620();
-		List<String> listaCombinacoesRNP06_RNS2125 = principal.gerar1525RNP06_RNS2125();
+//		List<String> listaCombinacoesRNP06_RNS0105 = principal.gerar1525RNP06_RNS0105();
+//		List<String> listaCombinacoesRNP06_RNS0610 = principal.gerar1525RNP06_RNS0610();
+//		List<String> listaCombinacoesRNP06_RNS1115 = principal.gerar1525RNP06_RNS1115();
+//		List<String> listaCombinacoesRNP06_RNS1620 = principal.gerar1525RNP06_RNS1620();
+//		List<String> listaCombinacoesRNP06_RNS2125 = principal.gerar1525RNP06_RNS2125();
 
 		
-		List<String> listaSeisRPN06 = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP06_RPN06);
-		System.out.println("listaSeisRPN06: " + listaSeisRPN06.size());
+//		List<String> listaSeisRPN06 = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP06_RPN06);
+//		System.out.println("listaSeisRPN06: " + listaSeisRPN06.size());
 		List<String> listaSeisRPN06_SEM_RNS = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP06_SEM_RNS);
 		System.out.println("listaSeisRPN06_SEM_RNS: " + listaSeisRPN06_SEM_RNS.size());
-		List<String> listaSeisRPN06_RNS0105 = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP06_RNS0105);
-		System.out.println("listaSeisRPN06_RNS0105: " + listaSeisRPN06_RNS0105.size());
-		List<String> listaSeisRPN06_RNS0610 = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP06_RNS0610);
-		System.out.println("listaSeisRPN06_RNS0610: " + listaSeisRPN06_RNS0610.size());
-		List<String> listaSeisRPN06_RNS1115 = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP06_RNS1115);
-		System.out.println("listaSeisRPN06_RNS1115: " + listaSeisRPN06_RNS1115.size());
-		List<String> listaSeisRPN06_RNS1620 = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP06_RNS1620);
-		System.out.println("listaSeisRPN06_RNS1620: " + listaSeisRPN06_RNS1620.size());
-		List<String> listaSeisRPN06_RNS2125 = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP06_RNS2125);
-		System.out.println("listaSeisRPN06_RNS2125: " + listaSeisRPN06_RNS2125.size());
+//		List<String> listaSeisRPN06_RNS0105 = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP06_RNS0105);
+//		System.out.println("listaSeisRPN06_RNS0105: " + listaSeisRPN06_RNS0105.size());
+//		List<String> listaSeisRPN06_RNS0610 = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP06_RNS0610);
+//		System.out.println("listaSeisRPN06_RNS0610: " + listaSeisRPN06_RNS0610.size());
+//		List<String> listaSeisRPN06_RNS1115 = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP06_RNS1115);
+//		System.out.println("listaSeisRPN06_RNS1115: " + listaSeisRPN06_RNS1115.size());
+//		List<String> listaSeisRPN06_RNS1620 = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP06_RNS1620);
+//		System.out.println("listaSeisRPN06_RNS1620: " + listaSeisRPN06_RNS1620.size());
+//		List<String> listaSeisRPN06_RNS2125 = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP06_RNS2125);
+//		System.out.println("listaSeisRPN06_RNS2125: " + listaSeisRPN06_RNS2125.size());
 		
 
 		
@@ -376,13 +376,16 @@ public class PrincipalRNP06_SEIS {
 	}
 	
 	public void gravarRandomFechamento(List<String> lista) throws URISyntaxException, IOException, LotoException {
-		FileWriter arqSaiu = new FileWriter(
-				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\rnp06\\PrincipalRNP06_SEIS\\RandomRNP06_SEIS_Fechamento.csv");
-		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
+//		FileWriter arqSaiu = new FileWriter(
+//				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\rnp06\\PrincipalRNP06_SEIS\\RandomRNP06_SEIS_Fechamento.csv");
+//		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
 		
 		List<String[]> listaNumeros = new ArrayList<String[]>();
-		for (int i = 0; i < 3; i++) {
-			String lista15Random = this.getRandomElement(lista);
+		String lista15Random = null;
+		for (int i = 0; i < 1; i++) {
+			for (int r = 0; r < 3344; r++) {
+				lista15Random = this.getRandomElement(lista);
+			}
 			String[] linha15Random = lista15Random.split(",");
 			listaNumeros.add(linha15Random);
 		}
@@ -393,10 +396,11 @@ public class PrincipalRNP06_SEIS {
 					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
 					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
 					+ linha1525[13] + "," + linha1525[14];
-			gravarArqSaiu.printf("%s%n", listaNova);
+			System.out.println(listaNova);
+//			gravarArqSaiu.printf("%s%n", listaNova);
 		}
-		arqSaiu.close();
-		gravarArqSaiu.close();
+//		arqSaiu.close();
+//		gravarArqSaiu.close();
 	}
 	
 	public void gravarRandomNaoFechamento(List<String> lista) throws URISyntaxException, IOException, LotoException {

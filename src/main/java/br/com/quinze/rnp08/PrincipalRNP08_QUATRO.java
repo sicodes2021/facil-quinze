@@ -69,7 +69,7 @@ public class PrincipalRNP08_QUATRO {
 		System.out.println("Lista Retirar Saiu 15: " + listaSaiu15RNP08.size());
 
 		List<String> listaSaiu14RNP08 = principal.retirarSaiu14RNP08(listaSaiu15RNP08);
-		principal.gravarRetirarSaiu14RNP08(listaSaiu14RNP08);
+//		principal.gravarRetirarSaiu14RNP08(listaSaiu14RNP08);
 		System.out.println("Lista Retirar Saiu 14: " + listaSaiu14RNP08.size());
 		
 //		List<String> listaSaiu13RNP08 = principal.retirarSaiu13RNP08(listaSaiu14RNP08);
@@ -84,8 +84,8 @@ public class PrincipalRNP08_QUATRO {
 //		List<String> listaFinalVinteTres = principal.resultadoNumerosFinalVinteTres(listaSaiu14RNP08);
 //		System.out.println("listaFinalVinteTres: " + listaFinalVinteTres.size());
 		
-		List<String> listaFinalVinteQuatro = principal.resultadoNumerosFinalVinteQuatro(listaSaiu14RNP08);
-		System.out.println("listaFinalVinteQuatro: " + listaFinalVinteQuatro.size());
+//		List<String> listaFinalVinteQuatro = principal.resultadoNumerosFinalVinteQuatro(listaSaiu14RNP08);
+//		System.out.println("listaFinalVinteQuatro: " + listaFinalVinteQuatro.size());
 		
 //		List<String> listaFinalVinteCinco = principal.resultadoNumerosFinalVinteCinco(listaSaiu14RNP08);
 //		System.out.println("listaFinalVinteCinco: " + listaFinalVinteCinco.size());
@@ -94,13 +94,13 @@ public class PrincipalRNP08_QUATRO {
 		/**
 		 * Fechamento para ganhar!!!
 		 */
-		List<String> fechamentoUm = principal.fechamento1(listaFinalVinteQuatro);
-		List<String> fechamentoDois = principal.fechamento2(fechamentoUm);
-		List<String> fechamentoTres = principal.fechamento3(fechamentoDois);
-		List<String> fechamentoQuatro = principal.fechamento4(fechamentoTres);
-		List<String> fechamentoCinco = principal.fechamento5(fechamentoQuatro);
-		principal.gravarFechamento(fechamentoCinco);
-//		principal.gravarRandomFechamento(listaFechamentoRNP08);
+//		List<String> fechamentoUm = principal.fechamento1(listaFinalVinteQuatro);
+//		List<String> fechamentoDois = principal.fechamento2(fechamentoUm);
+//		List<String> fechamentoTres = principal.fechamento3(fechamentoDois);
+//		List<String> fechamentoQuatro = principal.fechamento4(fechamentoTres);
+		List<String> fechamentoCinco = principal.fechamento5(listaSaiu14RNP08);
+//		principal.gravarFechamento(fechamentoCinco);
+		principal.gravarRandomFechamento(fechamentoCinco);
 		System.out.println("Fechamento: " + fechamentoCinco.size());
 
 	}
@@ -1024,14 +1024,16 @@ public class PrincipalRNP08_QUATRO {
 	}
 	
 	public void gravarRandomFechamento(List<String> lista) throws URISyntaxException, IOException, LotoException {
-		FileWriter arqSaiu = new FileWriter(
-				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\rnp08\\PrincipalRNP08_QUATRO\\RandomRNP05_QUATRO_10_Fechamento.csv");
-		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
+//		FileWriter arqSaiu = new FileWriter(
+//				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\rnp08\\PrincipalRNP08_QUATRO\\RandomRNP05_QUATRO_10_Fechamento.csv");
+//		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
 		
 		List<String[]> listaNumeros = new ArrayList<String[]>();
-		
-		for (int i = 0; i < 10; i++) {
-			String lista15Random = this.getRandomElement(lista);
+		String lista15Random = null;
+		for (int i = 0; i < 1; i++) {
+			for (int r = 0; r < 3344; r++) {
+				lista15Random = this.getRandomElement(lista);
+			}
 			String[] linha15Random = lista15Random.split(",");
 			listaNumeros.add(linha15Random);
 		}
@@ -1042,10 +1044,11 @@ public class PrincipalRNP08_QUATRO {
 					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
 					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
 					+ linha1525[13] + "," + linha1525[14];
-			gravarArqSaiu.printf("%s%n", listaNova);
+			System.out.println(listaNova);
+//			gravarArqSaiu.printf("%s%n", listaNova);
 		}
-		arqSaiu.close();
-		gravarArqSaiu.close();
+//		arqSaiu.close();
+//		gravarArqSaiu.close();
 	}
 	
 	public void gravarRandomNaoFechamento(List<String> lista) throws URISyntaxException, IOException, LotoException {

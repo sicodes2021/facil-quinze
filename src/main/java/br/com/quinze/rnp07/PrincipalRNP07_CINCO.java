@@ -81,10 +81,10 @@ public class PrincipalRNP07_CINCO {
 		/**
 		 * Fechamento para ganhar!!!
 		 */
-//		List<String> listaFechamentoRNP07 = principal.fechamento(listaFinalVinteCinco);
-////		principal.gravarFechamento(listaFechamentoRNP07);
-//		principal.gravarRandomFechamento(listaFechamentoRNP07);
-//		System.out.println("Fechamento: " + listaFechamentoRNP07.size());
+		List<String> listaFechamentoRNP07 = principal.fechamento(listaSaiu14RNP07);
+//		principal.gravarFechamento(listaFechamentoRNP07);
+		principal.gravarRandomFechamento(listaFechamentoRNP07);
+		System.out.println("Fechamento: " + listaFechamentoRNP07.size());
 
 	}
 
@@ -545,13 +545,16 @@ public class PrincipalRNP07_CINCO {
 	}
 	
 	public void gravarRandomFechamento(List<String> lista) throws URISyntaxException, IOException, LotoException {
-		FileWriter arqSaiu = new FileWriter(
-				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\rnp07\\PrincipalRNP07_CINCO\\RandomRNP07_CINCO_10_Fechamento.csv");
-		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
+//		FileWriter arqSaiu = new FileWriter(
+//				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\rnp07\\PrincipalRNP07_CINCO\\RandomRNP07_CINCO_10_Fechamento.csv");
+//		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
 
 		List<String[]> listaNumeros = new ArrayList<String[]>();
-		for (int i = 0; i < 10; i++) {
-			String lista15Random = this.getRandomElement(lista);
+		String lista15Random = null;
+		for (int i = 0; i < 1; i++) {
+			for (int r = 0; r < 3344; r++) {
+				lista15Random = this.getRandomElement(lista);
+			}
 			String[] linha15Random = lista15Random.split(",");
 			listaNumeros.add(linha15Random);
 		}
@@ -562,10 +565,11 @@ public class PrincipalRNP07_CINCO {
 					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
 					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
 					+ linha1525[13] + "," + linha1525[14];
-			gravarArqSaiu.printf("%s%n", listaNova);
+			System.out.println(listaNova);
+//			gravarArqSaiu.printf("%s%n", listaNova);
 		}
-		arqSaiu.close();
-		gravarArqSaiu.close();
+//		arqSaiu.close();
+//		gravarArqSaiu.close();
 	}
 
 	public void gravarRandomNaoFechamento(List<String> lista) throws URISyntaxException, IOException, LotoException {

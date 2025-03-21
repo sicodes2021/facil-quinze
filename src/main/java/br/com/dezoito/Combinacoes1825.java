@@ -42,7 +42,7 @@ public class Combinacoes1825 {
 		Combinacoes1825 combinacoes1525 = new Combinacoes1825();
 		combinacoes1525.gerar1825(str);
 //		combinacoes1525.gerar1825_Num25(str);
-//		combinacoes1525.gerar1825SEMRNS(str);
+		combinacoes1525.gerar1825SEMRNS(str);
 //		combinacoes1525.gerar1825SEMRNS_Num25(str);
 //		combinacoes1525.gerar1825RNP05_09(str);
 		
@@ -126,11 +126,11 @@ public class Combinacoes1825 {
 //		List<String> listaCombinacoesRNP07RNS2125 = combinacoes1525.gerar1525RNP07RNS2125();
 //		System.out.println("RNP04RNS0105: " + listaCombinacoesRNP07RNS2125.size());
 		
-		combinacoes1525.gerar1825RNP08(str);
-		List<String> listaNova = combinacoes1525.gerar1825RNP08SEMRNS(str);
+//		combinacoes1525.gerar1825RNP08(str);
+//		List<String> listaNova = combinacoes1525.gerar1825RNP08SEMRNS(str);
 //		System.out.println("RNP08: " + listaCombinacoesRNP08.size());
 //		combinacoes1525.resultadoNumerosMenorQueDezRNP08();
-		combinacoes1525.resultadoNumerosMenorQueDezRNP08Seis(listaNova);
+//		combinacoes1525.resultadoNumerosMenorQueDezRNP08Seis(listaNova);
 		
 //		combinacoes1525.gerar1825RNP09();
 //		combinacoes1525.gerar1825RNP09SEMRNS();

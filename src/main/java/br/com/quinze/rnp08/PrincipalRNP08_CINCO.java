@@ -70,7 +70,7 @@ public class PrincipalRNP08_CINCO {
 
 		List<String> listaSaiu14RNP08 = principal.retirarSaiu14RNP08(listaSaiu15RNP08);
 //		principal.gravarRetirarSaiu14RNP08(listaSaiu14RNP08);
-		principal.gravarRandom(listaSaiu14RNP08);
+//		principal.gravarRandom(listaSaiu14RNP08);
 		System.out.println("Lista Retirar Saiu 14: " + listaSaiu14RNP08.size());
 		
 		
@@ -81,10 +81,10 @@ public class PrincipalRNP08_CINCO {
 		/**
 		 * Fechamento para ganhar!!!
 		 */
-//		List<String> listaFechamentoRNP08 = principal.fechamento(listaFinalVinteCinco);
+		List<String> listaFechamentoRNP08 = principal.fechamento(listaSaiu14RNP08);
 //		principal.gravarFechamento(listaFechamentoRNP08);
-//		principal.gravarRandomFechamento(listaFechamentoRNP08);
-//		System.out.println("Fechamento: " + listaFechamentoRNP08.size());
+		principal.gravarRandomFechamento(listaFechamentoRNP08);
+		System.out.println("Fechamento: " + listaFechamentoRNP08.size());
 
 	}
 
@@ -545,13 +545,16 @@ public class PrincipalRNP08_CINCO {
 	
 	
 	public void gravarRandomFechamento(List<String> lista) throws URISyntaxException, IOException, LotoException {
-		FileWriter arqSaiu = new FileWriter(
-				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\rnp08\\PrincipalRNP08_CINCO\\RandomRNP08_CINCO_10_Fechamento.csv");
-		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
+//		FileWriter arqSaiu = new FileWriter(
+//				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\rnp08\\PrincipalRNP08_CINCO\\RandomRNP08_CINCO_10_Fechamento.csv");
+//		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
 		
 		List<String[]> listaNumeros = new ArrayList<String[]>();
-		for (int i = 0; i < 10; i++) {
-			String lista15Random = this.getRandomElement(lista);
+		String lista15Random = null;
+		for (int i = 0; i < 1; i++) {
+			for (int r = 0; r < 3344; r++) {
+				lista15Random = this.getRandomElement(lista);
+			}
 			String[] linha15Random = lista15Random.split(",");
 			listaNumeros.add(linha15Random);
 		}
@@ -562,10 +565,11 @@ public class PrincipalRNP08_CINCO {
 					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
 					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
 					+ linha1525[13] + "," + linha1525[14];
-			gravarArqSaiu.printf("%s%n", listaNova);
+			System.out.println(listaNova);
+//			gravarArqSaiu.printf("%s%n", listaNova);
 		}
-		arqSaiu.close();
-		gravarArqSaiu.close();
+//		arqSaiu.close();
+//		gravarArqSaiu.close();
 	}
 	
 	public void gravarRandomNaoFechamento(List<String> lista) throws URISyntaxException, IOException, LotoException {

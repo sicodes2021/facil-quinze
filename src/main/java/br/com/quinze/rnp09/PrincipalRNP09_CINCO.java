@@ -70,12 +70,12 @@ public class PrincipalRNP09_CINCO {
 
 		List<String> listaSaiu14RNP09 = principal.retirarSaiu14RNP09(listaSaiu15RNP09);
 		// principal.gravarRetirarSaiu14RNP09(listaSaiu14RNP09);
-		principal.gravarRandom(listaSaiu14RNP09);
+//		principal.gravarRandom(listaSaiu14RNP09);
 		System.out.println("Lista Retirar Saiu 14: " + listaSaiu14RNP09.size());
 
-//		List<String> listaFechamentoRNP09 = principal.fechamento(listaSaiu14RNP09);
-//		principal.gravarFechamento(listaFechamentoRNP09);
-//		System.out.println("Fechamento: " + listaFechamentoRNP09.size());
+		List<String> listaFechamentoRNP09 = principal.fechamento(listaSaiu14RNP09);
+		principal.gravarRandom(listaFechamentoRNP09);
+		System.out.println("Fechamento: " + listaFechamentoRNP09.size());
 
 	}
 
@@ -363,14 +363,14 @@ public class PrincipalRNP09_CINCO {
 	}
 	
 	public void gravarRandom(List<String> lista) throws URISyntaxException, IOException, LotoException {
-		FileWriter arqSaiu = new FileWriter(
-				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\rnp09\\PrincipalRNP09_CINCO\\RandomRNP09_CINCO_con3036.csv");
-		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
+//		FileWriter arqSaiu = new FileWriter(
+//				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\rnp09\\PrincipalRNP09_CINCO\\RandomRNP09_CINCO_con3036.csv");
+//		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
 		
 		List<String[]> listaNumeros = new ArrayList<String[]>();
 		String lista15Random = null;
-		for (int i = 0; i < 3; i++) {
-			for (int r = 0; r < 3036; r++) {
+		for (int i = 0; i < 1; i++) {
+			for (int r = 0; r < 3344; r++) {
 				lista15Random = this.getRandomElement(lista);
 			}
 			String[] linha15Random = lista15Random.split(",");
@@ -383,10 +383,11 @@ public class PrincipalRNP09_CINCO {
 					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
 					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
 					+ linha1525[13] + "," + linha1525[14];
-			gravarArqSaiu.printf("%s%n", listaNova);
+			System.out.println(listaNova);
+//			gravarArqSaiu.printf("%s%n", listaNova);
 		}
-		arqSaiu.close();
-		gravarArqSaiu.close();
+//		arqSaiu.close();
+//		gravarArqSaiu.close();
 	}
 	
 	
