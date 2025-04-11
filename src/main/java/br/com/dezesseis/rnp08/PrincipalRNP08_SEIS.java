@@ -27,6 +27,7 @@ import br.com.regras.sequencia.RNS0610;
 import br.com.regras.sequencia.RNS1115;
 import br.com.regras.sequencia.RNS1620;
 import br.com.regras.sequencia.RNS2125;
+import br.com.regras.sequencia.RNSRetirar;
 
 
 public class PrincipalRNP08_SEIS {
@@ -38,7 +39,7 @@ public class PrincipalRNP08_SEIS {
 		IAcertei acertei = new IAcertei();
 		
 		
-		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 		int[] strNaoSaiu = { 3, 4, 8, 12, 14, 15, 17, 19, 22, 25 };
 		int[] strSaiu = { 1, 2, 5, 6, 7, 9, 10, 11, 13, 16, 18, 20, 21, 23, 24 };
 
@@ -64,7 +65,7 @@ public class PrincipalRNP08_SEIS {
 //		List<String> listaCombinacoesSaiuQuinzeDez = combinacoes1525.gerarSaiuQuinzeDez(strSaiu);
 //		List<String> listaComparadas = principal.compararListas(listaSaiu14RNP08_SEM_RNS, listaCombinacoesSaiuQuinzeDez);
 //		
-		resultado1625maissaiu.resultado1625MAISSAIU(listaSeisRPN08_SEM_RNS, "rnp08\\listaCombinacoesRNP08_SEM_RNS");
+//		resultado1625maissaiu.resultado1625MAISSAIU(listaSeisRPN08_SEM_RNS, "rnp08\\listaCombinacoesRNP08_SEM_RNS");
 //		acertei.resultadoHoje(listaSeisRPN08_SEM_RNS);
 		
 		
@@ -106,13 +107,21 @@ public class PrincipalRNP08_SEIS {
 		
 //		List<String> listaComparadas = principal.compararListas(listaSaiu14RNP08, listaCombinacoesSaiuQuinzeDez);
 		
+		int[] strTres1 = { 1, 2, 3 };
+		List<String> retirarSequenciaTresOuMais1 = principal.retirarSequenciaTres(listaSeisRPN08_SEM_RNS, strTres1);
+		
+		int[] strTres2 = { 7, 8, 9 };
+		List<String> retirarSequenciaTresOuMais2 = principal.retirarSequenciaTres(retirarSequenciaTresOuMais1, strTres2);
+		
+		int[] strTres3 = { 13, 14, 15, 16 };
+		List<String> retirarSequenciaTresOuMais3 = principal.retirarSequenciaQuatro(retirarSequenciaTresOuMais2, strTres3);
 		
 		/**
 		 * Fechamento para ganhar!!!
 		 */
-//		List<String> listaFechamentoRNP08 = principal.fechamento(listaComparadas);
+		List<String> listaFechamentoRNP08 = principal.fechamento(retirarSequenciaTresOuMais3);
 //		principal.gravarFechamento(listaFechamentoRNP08);
-//		principal.gravarRandom(listaFechamentoRNP08);
+		principal.gravarRandom(listaFechamentoRNP08);
 		
 		/**
 		 * Mais saiu
@@ -516,14 +525,14 @@ public class PrincipalRNP08_SEIS {
 	}
 
 	public void gravarRandom(List<String> lista) throws URISyntaxException, IOException, LotoException {
-		FileWriter arqSaiu = new FileWriter(
-				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\RNP08\\PrincipalRNP08_SEIS\\RandomRNP08_SEIS_con3100.csv");
-		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
+//		FileWriter arqSaiu = new FileWriter(
+//				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\RNP08\\PrincipalRNP08_SEIS\\RandomRNP08_SEIS_con3100.csv");
+//		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
 
 		List<String[]> listaNumeros = new ArrayList<String[]>();
 		String lista15Random = null;
 		for (int i = 0; i < 1; i++) {
-			for (int r = 0; r < 3100; r++) {
+			for (int r = 0; r < 1985; r++) {
 				lista15Random = this.getRandomElement(lista);
 			}
 			String[] linha15Random = lista15Random.split(",");
@@ -536,10 +545,11 @@ public class PrincipalRNP08_SEIS {
 					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
 					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
 					+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
-			gravarArqSaiu.printf("%s%n", listaNova);
+			System.out.println(listaNova);
+//			gravarArqSaiu.printf("%s%n", listaNova);
 		}
-		arqSaiu.close();
-		gravarArqSaiu.close();
+//		arqSaiu.close();
+//		gravarArqSaiu.close();
 	}
 
 	public List<String> resultadoNumerosFinalVinteUm(List<String> listaRNP08)
@@ -1507,6 +1517,60 @@ public class PrincipalRNP08_SEIS {
 		}
 
 		return retorno;
+	}
+	
+	public List<String> retirarSequenciaTres(List<String> listaCombinacoesRNP05, int[] str)
+			throws URISyntaxException, IOException, LotoException {
+		
+		RNSRetirar rnsRetirar = new RNSRetirar();
+		List<String> listaRNP05 = new ArrayList<String>();
+		for (String lista15 : listaCombinacoesRNP05) {
+			String lista = null;
+			String[] linha15 = lista15.split(",");
+
+			int[] linha1525 = new int[linha15.length];
+			for (int i = 0; i < linha15.length; i++) {
+				linha1525[i] = Integer.parseInt(String.valueOf(linha15[i]));
+			}
+
+			if (!rnsRetirar.aplicarRetirarTres(linha1525, str)) {
+				lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
+						+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
+						+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
+						+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
+				listaRNP05.add(lista);
+			}
+		}
+
+		System.out.println("Lista retirar Sequencia Tres ou Mais: " + listaRNP05.size());
+		return listaRNP05;
+	}
+	
+	public List<String> retirarSequenciaQuatro(List<String> listaCombinacoesRNP05, int[] str)
+			throws URISyntaxException, IOException, LotoException {
+		
+		RNSRetirar rnsRetirar = new RNSRetirar();
+		List<String> listaRNP05 = new ArrayList<String>();
+		for (String lista15 : listaCombinacoesRNP05) {
+			String lista = null;
+			String[] linha15 = lista15.split(",");
+
+			int[] linha1525 = new int[linha15.length];
+			for (int i = 0; i < linha15.length; i++) {
+				linha1525[i] = Integer.parseInt(String.valueOf(linha15[i]));
+			}
+
+			if (!rnsRetirar.aplicarRetirarQuatro(linha1525, str)) {
+				lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
+						+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
+						+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
+						+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
+				listaRNP05.add(lista);
+			}
+		}
+
+		System.out.println("Lista retirar Sequencia Tres ou Mais: " + listaRNP05.size());
+		return listaRNP05;
 	}
 
 }

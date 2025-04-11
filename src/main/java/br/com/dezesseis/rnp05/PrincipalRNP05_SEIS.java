@@ -28,6 +28,7 @@ import br.com.regras.sequencia.RNS0610;
 import br.com.regras.sequencia.RNS1115;
 import br.com.regras.sequencia.RNS1620;
 import br.com.regras.sequencia.RNS2125;
+import br.com.regras.sequencia.RNSRetirar;
 
 
 public class PrincipalRNP05_SEIS {
@@ -55,11 +56,22 @@ public class PrincipalRNP05_SEIS {
 		List<String> listaSeisRPN05 = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP05, "listaSeisRPN05");
 //		resultado1625maissaiu.resultado1625MAISSAIU(listaSeisRPN05, "rnp05\\listaSeisRPN05");
 		
+		
 		System.out.println("");
 		List<String> listaCombinacoesRNP05_SEM_RNS = principal.gerar1625RNP05_SEM_RNS(str);
 		List<String> listaSeisRPN05_SEM_RNS = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP05_SEM_RNS, "listaSeisRPN05_SEM_RNS");
 		
-		resultado1625maissaiu.resultado1625MAISSAIU(listaSeisRPN05_SEM_RNS, "rnp05\\listaSeisRPN05_SEM_RNS");
+		int[] strTres1 = { 12, 13, 14 };
+		List<String> retirarSequenciaTresOuMais1 = principal.retirarSequenciaTresOuMais(listaSeisRPN05_SEM_RNS, strTres1);
+		
+		int[] strTres2 = { 16, 17, 18 };
+		List<String> retirarSequenciaTresOuMais2 = principal.retirarSequenciaTresOuMais(retirarSequenciaTresOuMais1, strTres2);
+		
+		int[] strTres3 = { 23, 24, 25 };
+		List<String> retirarSequenciaTresOuMais3 = principal.retirarSequenciaTresOuMais(retirarSequenciaTresOuMais2, strTres3);
+		
+		
+//		resultado1625maissaiu.resultado1625MAISSAIU(listaSeisRPN05_SEM_RNS, "rnp05\\listaSeisRPN05_SEM_RNS");
 //		acertei.resultadoHoje(listaCombinacoesRNP05_SEM_RNS);
 		
 		
@@ -1441,6 +1453,33 @@ public class PrincipalRNP05_SEIS {
 
 		System.out.println("TOTAL DE LINHAS NO ARQUIVO 16_25-RNP05_RNS2125: " + lista1525.size());
 		return lista1525;
+	}
+	
+	public List<String> retirarSequenciaTresOuMais(List<String> listaCombinacoesRNP05, int[] str)
+			throws URISyntaxException, IOException, LotoException {
+		
+		RNSRetirar rnsRetirar = new RNSRetirar();
+		List<String> listaRNP05 = new ArrayList<String>();
+		for (String lista15 : listaCombinacoesRNP05) {
+			String lista = null;
+			String[] linha15 = lista15.split(",");
+
+			int[] linha1525 = new int[linha15.length];
+			for (int i = 0; i < linha15.length; i++) {
+				linha1525[i] = Integer.parseInt(String.valueOf(linha15[i]));
+			}
+
+			if (!rnsRetirar.aplicarRetirarTres(linha1525, str)) {
+				lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
+						+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
+						+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
+						+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
+				listaRNP05.add(lista);
+			}
+		}
+
+		System.out.println("Lista retirar Sequencia Tres ou Mais: " + listaRNP05.size());
+		return listaRNP05;
 	}
 
 }

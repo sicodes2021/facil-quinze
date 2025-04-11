@@ -29,6 +29,7 @@ import br.com.regras.sequencia.RNS0610;
 import br.com.regras.sequencia.RNS1115;
 import br.com.regras.sequencia.RNS1620;
 import br.com.regras.sequencia.RNS2125;
+import br.com.regras.sequencia.RNSRetirar;
 
 
 
@@ -54,7 +55,7 @@ public class PrincipalRNP06_SEIS {
 		System.out.println("");
 		List<String> listaCombinacoesRNP06_SEM_RNS = principal.gerar1625RNP06_SEM_RNS(str);
 		List<String> listaSeisRPN06_SEM_RNS = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP06_SEM_RNS, "listaSeisRPN06_SEM_RNS");
-		resultado1625maissaiu.resultado1625MAISSAIU(listaCombinacoesRNP06_SEM_RNS, "rnp06\\listaCombinacoesRNP06_SEM_RNS");
+//		resultado1625maissaiu.resultado1625MAISSAIU(listaCombinacoesRNP06_SEM_RNS, "rnp06\\listaCombinacoesRNP06_SEM_RNS");
 //		acertei.resultadoHoje(listaSeisRPN06_SEM_RNS);
 
 //		System.out.println("");
@@ -84,13 +85,23 @@ public class PrincipalRNP06_SEIS {
 //		System.out.println("Lista Retirar Saiu 13: " + listaSaiu13RNP05.size());
 
 		
+		int[] strTres1 = { 1, 2, 3 };
+		List<String> retirarSequenciaTresOuMais1 = principal.retirarSequenciaTres(listaSeisRPN06_SEM_RNS, strTres1);
+		
+		int[] strTres2 = { 7, 8, 9 };
+		List<String> retirarSequenciaTresOuMais2 = principal.retirarSequenciaTres(retirarSequenciaTresOuMais1, strTres2);
+		
+		int[] strTres3 = { 13, 14, 15, 16 };
+		List<String> retirarSequenciaTresOuMais3 = principal.retirarSequenciaQuatro(retirarSequenciaTresOuMais2, strTres3);
+		
+		
 		
 		/**
 		 * Fechamento para ganhar!!!
 		 */
-//		List<String> listaFechamentoRNP06 = principal.fechamento(listaSaiu14RNP05);
+		List<String> listaFechamentoRNP06 = principal.fechamento(retirarSequenciaTresOuMais3);
 //		principal.gravarFechamento(listaFechamentoRNP06);
-//		principal.gravarRandom(listaFechamentoRNP06);
+		principal.gravarRandom(listaFechamentoRNP06);
 //		System.out.println("Fechamento: " + listaFechamentoRNP06.size());
 	}
 
@@ -455,14 +466,14 @@ public class PrincipalRNP06_SEIS {
 	}
 
 	public void gravarRandom(List<String> lista) throws URISyntaxException, IOException, LotoException {
-		FileWriter arqSaiu = new FileWriter(
-				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\RNP06\\PrincipalRNP06_SEIS\\RandomRNP06_SEIS_con3100.csv");
-		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
+//		FileWriter arqSaiu = new FileWriter(
+//				"C:\\sicodes\\facil-quinze\\src\\main\\resources\\RNP06\\PrincipalRNP06_SEIS\\RandomRNP06_SEIS_con3100.csv");
+//		PrintWriter gravarArqSaiu = new PrintWriter(arqSaiu);
 
 		List<String[]> listaNumeros = new ArrayList<String[]>();
 		String lista15Random = null;
 		for (int i = 0; i < 1; i++) {
-			for (int r = 0; r < 3100; r++) {
+			for (int r = 0; r < 1985; r++) {
 				lista15Random = this.getRandomElement(lista);
 			}
 			String[] linha15Random = lista15Random.split(",");
@@ -475,10 +486,11 @@ public class PrincipalRNP06_SEIS {
 					+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
 					+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
 					+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
-			gravarArqSaiu.printf("%s%n", listaNova);
+			System.out.println(listaNova);
+//			gravarArqSaiu.printf("%s%n", listaNova);
 		}
-		arqSaiu.close();
-		gravarArqSaiu.close();
+//		arqSaiu.close();
+//		gravarArqSaiu.close();
 	}
 
 	public List<String> resultadoNumerosFinalVinteUm(List<String> listaRNP05)
@@ -1365,6 +1377,60 @@ public class PrincipalRNP06_SEIS {
 		System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP05_RNS2125: " + lista1525.size() + " - "
 				+ listaSaiu15RPN05.size() + " => Saiu: " + saiu);
 		return lista1525;
+	}
+	
+	public List<String> retirarSequenciaTres(List<String> listaCombinacoesRNP05, int[] str)
+			throws URISyntaxException, IOException, LotoException {
+		
+		RNSRetirar rnsRetirar = new RNSRetirar();
+		List<String> listaRNP05 = new ArrayList<String>();
+		for (String lista15 : listaCombinacoesRNP05) {
+			String lista = null;
+			String[] linha15 = lista15.split(",");
+
+			int[] linha1525 = new int[linha15.length];
+			for (int i = 0; i < linha15.length; i++) {
+				linha1525[i] = Integer.parseInt(String.valueOf(linha15[i]));
+			}
+
+			if (!rnsRetirar.aplicarRetirarTres(linha1525, str)) {
+				lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
+						+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
+						+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
+						+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
+				listaRNP05.add(lista);
+			}
+		}
+
+		System.out.println("Lista retirar Sequencia Tres ou Mais: " + listaRNP05.size());
+		return listaRNP05;
+	}
+	
+	public List<String> retirarSequenciaQuatro(List<String> listaCombinacoesRNP05, int[] str)
+			throws URISyntaxException, IOException, LotoException {
+		
+		RNSRetirar rnsRetirar = new RNSRetirar();
+		List<String> listaRNP05 = new ArrayList<String>();
+		for (String lista15 : listaCombinacoesRNP05) {
+			String lista = null;
+			String[] linha15 = lista15.split(",");
+
+			int[] linha1525 = new int[linha15.length];
+			for (int i = 0; i < linha15.length; i++) {
+				linha1525[i] = Integer.parseInt(String.valueOf(linha15[i]));
+			}
+
+			if (!rnsRetirar.aplicarRetirarQuatro(linha1525, str)) {
+				lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
+						+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
+						+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
+						+ linha1525[13] + "," + linha1525[14] + "," + linha1525[15];
+				listaRNP05.add(lista);
+			}
+		}
+
+		System.out.println("Lista retirar Sequencia Tres ou Mais: " + listaRNP05.size());
+		return listaRNP05;
 	}
 
 }
