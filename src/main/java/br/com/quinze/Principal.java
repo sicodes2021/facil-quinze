@@ -31,27 +31,27 @@ public class Principal {
 
 	public static void main(String[] args) throws URISyntaxException, IOException, LotoException {
 		Principal principal = new Principal();
-		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25 };
 
 
 		System.out.println("**************RPN05****************************");
 		System.out.println("");
 		List<String> RPN05_CINCO_NUM_SORTE = principal.buscarRPN05_CINCO_NUM_SORTE(str);
-		List<String> RPN05_SEIS_NUM_SORTE = principal.buscarRPN05_SEIS_NUM_SORTE(str);
+//		List<String> RPN05_SEIS_NUM_SORTE = principal.buscarRPN05_SEIS_NUM_SORTE(str);
 		
 		System.out.println("**************RPN06****************************");
 		System.out.println("");
-		List<String> RPN06_CINCO_NUM_SORTE = principal.buscarRPN06_CINCO_NUM_SORTE(str);
-		List<String> RPN06_SEIS_NUM_SORTE = principal.buscarRPN06_SEIS_NUM_SORTE(str);
+//		List<String> RPN06_CINCO_NUM_SORTE = principal.buscarRPN06_CINCO_NUM_SORTE(str);
+//		List<String> RPN06_SEIS_NUM_SORTE = principal.buscarRPN06_SEIS_NUM_SORTE(str);
 		
 		/*********************************************************************
 		 * RNP07
 		 */
 		System.out.println("**************RPN07****************************");
 		System.out.println("");
-		List<String> RPN07_QUATRO_NUM_SORTE = principal.buscarRPN07_QUATRO_NUM_SORTE(str);
+//		List<String> RPN07_QUATRO_NUM_SORTE = principal.buscarRPN07_QUATRO_NUM_SORTE(str);
 		List<String> RPN07_CINCO_NUM_SORTE = principal.buscarRPN07_CINCO_NUM_SORTE(str);
-		List<String> RPN07_SEIS_NUM_SORTE = principal.buscarRPN07_SEIS_NUM_SORTE(str);
+//		List<String> RPN07_SEIS_NUM_SORTE = principal.buscarRPN07_SEIS_NUM_SORTE(str);
 		
 		
 		/**********************************************************************
@@ -59,9 +59,9 @@ public class Principal {
 		 */
 		System.out.println("**************RPN08****************************");
 		System.out.println("");
-		List<String> RPN08_QUATRO_NUM_SORTE = principal.buscarRPN08_QUATRO_NUM_SORTE(str);
-		List<String> RPN08_CINCO_NUM_SORTE = principal.buscarRPN08_CINCO_NUM_SORTE(str);
-		List<String> RPN08_SEIS_NUM_SORTE = principal.buscarRPN08_SEIS_NUM_SORTE(str);
+//		List<String> RPN08_QUATRO_NUM_SORTE = principal.buscarRPN08_QUATRO_NUM_SORTE(str);
+//		List<String> RPN08_CINCO_NUM_SORTE = principal.buscarRPN08_CINCO_NUM_SORTE(str);
+//		List<String> RPN08_SEIS_NUM_SORTE = principal.buscarRPN08_SEIS_NUM_SORTE(str);
 		
 		
 		/**********************************************************************
@@ -69,9 +69,9 @@ public class Principal {
 		 */
 		System.out.println("**************RPN09****************************");
 		System.out.println("");
-		List<String> RPN09_QUATRO_NUM_SORTE = principal.buscarRPN09_QUATRO_NUM_SORTE(str);
-		List<String> RPN09_CINCO_NUM_SORTE = principal.buscarRPN09_CINCO_NUM_SORTE(str);
-		List<String> RPN09_SEIS_NUM_SORTE = principal.buscarRPN09_SEIS_NUM_SORTE(str);
+//		List<String> RPN09_QUATRO_NUM_SORTE = principal.buscarRPN09_QUATRO_NUM_SORTE(str);
+//		List<String> RPN09_CINCO_NUM_SORTE = principal.buscarRPN09_CINCO_NUM_SORTE(str);
+//		List<String> RPN09_SEIS_NUM_SORTE = principal.buscarRPN09_SEIS_NUM_SORTE(str);
 	}
 	
 	/**
