@@ -30,13 +30,13 @@ public class PrincipalRNP05_CINCO {
 
 	public static void main(String[] args) throws URISyntaxException, IOException, LotoException {
 		PrincipalRNP05_CINCO principal = new PrincipalRNP05_CINCO();
-		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25 };
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 
 		/*********************************************************************
 		 * RNP05
 		 */
 		System.out.println("**************RPN05_CINCO****************************");
-		List<String> listaCombinacoesRNP05_RPN05 = principal.gerar1525RNP05(str);
+//		List<String> listaCombinacoesRNP05_RPN05 = principal.gerar1525RNP05(str);
 		
 //		System.out.println("");
 //		List<String> listaCombinacoesRNP05_SEM_RNS = principal.gerar1525RNP05_SEM_RNS(str);
@@ -84,9 +84,9 @@ public class PrincipalRNP05_CINCO {
 //				+ listaCombinacoesRNP05_RNS1115_RNS2125.size());
 //		System.out.println("TOTAL_RNS1115: " + total_rns1115);
 //		
-//		System.out.println("");
-//		System.out.println("");
-//		List<String> listaCombinacoesRNP05_RNS1620 = principal.gerar1525RNP05_RNS1620(str);
+		System.out.println("");
+		System.out.println("");
+		List<String> listaCombinacoesRNP05_RNS1620 = principal.gerar1525RNP05_RNS1620(str);
 //		List<String> listaCombinacoesRNP05_RNS1620_RNS2125 = principal.gerar1525RNP05_RNS1620_RNS2125(str);
 //		Integer total_rns1620 = (listaCombinacoesRNP05_RNS1620.size() 
 //				+ listaCombinacoesRNP05_RNS1620_RNS2125.size());
@@ -125,9 +125,9 @@ public class PrincipalRNP05_CINCO {
 		/**
 		 * Retirar o que ja foi premiado!!!
 		 */
-//		List<String> listaSaiu15RPN05 = principal.retirarSaiu15RNP05(listaCincoRPN05_SEM_RNS);
+		List<String> listaSaiu15RPN05 = principal.retirarSaiu15RNP05(listaCombinacoesRNP05_RNS1620);
 		//principal.gravarRetirarSaiu15RNP05(listaSaiu15RPN05);
-//		System.out.println("Lista Retirar Saiu 15: " + listaSaiu15RPN05.size());
+		System.out.println("Lista Retirar Saiu 15: " + listaSaiu15RPN05.size());
 
 //		List<String> listaSaiu14RNP05 = principal.retirarSaiu14RNP05(listaSaiu15RPN05);
 //		principal.gravarRetirarSaiu14RNP05(listaSaiu14RNP05);
@@ -145,9 +145,9 @@ public class PrincipalRNP05_CINCO {
 		/**
 		 * Fechamento para ganhar!!!
 		 */
-//		List<String> listaFechamentoRNP05 = principal.fechamento(listaSaiu14RNP05);
-//		principal.gravarRandom(listaFechamentoRNP05);
-//		System.out.println("Fechamento: " + listaFechamentoRNP05.size());
+		List<String> listaFechamentoRNP05 = principal.fechamento(listaSaiu15RPN05);
+		principal.gravarRandom(listaFechamentoRNP05);
+		System.out.println("Fechamento: " + listaFechamentoRNP05.size());
 	}
 
 	public List<String> resultadoNumerosMenorQueDezCINCO(List<String> listaCombinacoesRNP05, String nomeLista)
@@ -714,9 +714,7 @@ public class PrincipalRNP05_CINCO {
 				}
 			}
 			
-			List<String> listaSaiu15RPN05 = this.retirarSaiu15RNP05(lista1525);
-			Integer saiu = (lista1525.size() - listaSaiu15RPN05.size());
-			System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP05_RNS0105: " + lista1525.size() + " - " + listaSaiu15RPN05.size() + " => Saiu: " + saiu);
+			System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP05_RNS0105: " + lista1525.size());
 			return lista1525;
 		}
 		
@@ -1190,7 +1188,6 @@ public class PrincipalRNP05_CINCO {
 		 */
 		public List<String> gerar1525RNP05_RNS1620(int[] str) throws URISyntaxException, IOException, LotoException {
 			List<String> lista1525 = new ArrayList<String>();
-//			int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 			int[] saida;
 			Combinacoes comb1 = new Combinacoes(str, 15);
 			RNP05 rnp05 = new RNP05();
@@ -1221,9 +1218,7 @@ public class PrincipalRNP05_CINCO {
 				}
 			}
 			
-			List<String> listaSaiu15RPN05 = this.retirarSaiu15RNP05(lista1525);
-			Integer saiu = (lista1525.size() - listaSaiu15RPN05.size());
-			System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP05_RNS1620: " + lista1525.size() + " - " + listaSaiu15RPN05.size() + " => Saiu: " + saiu);
+			System.out.println("TOTAL DE LINHAS NO ARQUIVO 15_25-RNP05_RNS1620: " + lista1525.size());
 			return lista1525;
 		}
 		

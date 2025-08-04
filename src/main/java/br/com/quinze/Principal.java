@@ -31,37 +31,43 @@ public class Principal {
 
 	public static void main(String[] args) throws URISyntaxException, IOException, LotoException {
 		Principal principal = new Principal();
-		int[] str = { 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25 };
+		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 
 
-		System.out.println("**************RPN05****************************");
-		System.out.println("");
-		List<String> RPN05_CINCO_NUM_SORTE = principal.buscarRPN05_CINCO_NUM_SORTE(str);
-//		List<String> RPN05_SEIS_NUM_SORTE = principal.buscarRPN05_SEIS_NUM_SORTE(str);
-		
-		System.out.println("**************RPN06****************************");
-		System.out.println("");
-//		List<String> RPN06_CINCO_NUM_SORTE = principal.buscarRPN06_CINCO_NUM_SORTE(str);
-//		List<String> RPN06_SEIS_NUM_SORTE = principal.buscarRPN06_SEIS_NUM_SORTE(str);
-		
-		/*********************************************************************
-		 * RNP07
-		 */
-		System.out.println("**************RPN07****************************");
-		System.out.println("");
-//		List<String> RPN07_QUATRO_NUM_SORTE = principal.buscarRPN07_QUATRO_NUM_SORTE(str);
-		List<String> RPN07_CINCO_NUM_SORTE = principal.buscarRPN07_CINCO_NUM_SORTE(str);
-//		List<String> RPN07_SEIS_NUM_SORTE = principal.buscarRPN07_SEIS_NUM_SORTE(str);
-		
-		
-		/**********************************************************************
-		 * RPN08
-		 */
-		System.out.println("**************RPN08****************************");
-		System.out.println("");
-//		List<String> RPN08_QUATRO_NUM_SORTE = principal.buscarRPN08_QUATRO_NUM_SORTE(str);
-//		List<String> RPN08_CINCO_NUM_SORTE = principal.buscarRPN08_CINCO_NUM_SORTE(str);
-//		List<String> RPN08_SEIS_NUM_SORTE = principal.buscarRPN08_SEIS_NUM_SORTE(str);
+//		System.out.println("**************RPN05****************************");
+//		System.out.println("");
+//		principal.buscarRPN05_QUATRO_NUM_SORTE(str);
+		principal.buscarRPN05_CINCO_NUM_SORTE(str);
+//		principal.buscarRPN05_SEIS_NUM_SORTE(str);
+//		principal.buscarRPN05_SETE_NUM_SORTE(str);
+//		
+//		System.out.println("**************RPN06****************************");
+//		System.out.println("");
+//		principal.buscarRPN06_QUATRO_NUM_SORTE(str);
+		principal.buscarRPN06_CINCO_NUM_SORTE(str);
+//		principal.buscarRPN06_SEIS_NUM_SORTE(str);
+//		principal.buscarRPN06_SETE_NUM_SORTE(str);
+//		
+//		/*********************************************************************
+//		 * RNP07
+//		 */
+//		System.out.println("**************RPN07****************************");
+//		System.out.println("");
+//		principal.buscarRPN07_QUATRO_NUM_SORTE(str);
+		principal.buscarRPN07_CINCO_NUM_SORTE(str);
+//		principal.buscarRPN07_SEIS_NUM_SORTE(str);
+//		principal.buscarRPN07_SETE_NUM_SORTE(str);
+//		
+//		
+//		/**********************************************************************
+//		 * RPN08
+//		 */
+//		System.out.println("**************RPN08****************************");
+//		System.out.println("");
+//		principal.buscarRPN08_QUATRO_NUM_SORTE(str);
+		principal.buscarRPN08_CINCO_NUM_SORTE(str);
+//		principal.buscarRPN08_SEIS_NUM_SORTE(str);
+//		principal.buscarRPN08_SETE_NUM_SORTE(str);
 		
 		
 		/**********************************************************************
@@ -69,9 +75,10 @@ public class Principal {
 		 */
 		System.out.println("**************RPN09****************************");
 		System.out.println("");
-//		List<String> RPN09_QUATRO_NUM_SORTE = principal.buscarRPN09_QUATRO_NUM_SORTE(str);
-//		List<String> RPN09_CINCO_NUM_SORTE = principal.buscarRPN09_CINCO_NUM_SORTE(str);
-//		List<String> RPN09_SEIS_NUM_SORTE = principal.buscarRPN09_SEIS_NUM_SORTE(str);
+//		principal.buscarRPN09_QUATRO_NUM_SORTE(str);
+		principal.buscarRPN09_CINCO_NUM_SORTE(str);
+//		principal.buscarRPN09_SEIS_NUM_SORTE(str);
+//		principal.buscarRPN09_SETE_NUM_SORTE(str);
 	}
 	
 	/**
@@ -292,6 +299,23 @@ public class Principal {
 
 		return lista1525;
 	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial
+	 * rnp05_sem_rns
+	 * 
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> buscarRPN05_QUATRO_NUM_SORTE(int[] str) throws URISyntaxException, IOException, LotoException {
+		List<String> lista1525RNP05_SEM_RNS = this.gerar1525RNP05_SEM_RNS(str);
+		List<String> listaQuatroRPN05_SEM_RNS = this.resultadoNumerosMenorQueDezQUATRO(lista1525RNP05_SEM_RNS, "listaQuatroRPN05_SEM_RNS");
+		List<String> listaSaiu15RPN05 = this.retirarSaiu15RNP05(listaQuatroRPN05_SEM_RNS);
+		List<String> listaSaiu14RNP05 = this.retirarSaiu14RNP05(listaSaiu15RPN05);
+		List<String> listaFechamentoRNP05 = this.fechamento(listaSaiu14RNP05);
+		List<String> listaRandom = this.gravarRandom(listaFechamentoRNP05);
+		return listaRandom;
+	}
 
 	/**
 	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial
@@ -334,6 +358,41 @@ public class Principal {
 	 * @return
 	 * @throws LotoException
 	 */
+	public List<String> buscarRPN05_SETE_NUM_SORTE(int[] str) throws URISyntaxException, IOException, LotoException {
+		List<String> lista1525RNP05_SEM_RNS = this.gerar1525RNP05_SEM_RNS(str);
+		List<String> listaSeteRPN05_SEM_RNS = this.resultadoNumerosMenorQueDezSETE(lista1525RNP05_SEM_RNS, "listaSeteRPN05_SEM_RNS");
+		List<String> listaSaiu15RPN05 = this.retirarSaiu15RNP05(listaSeteRPN05_SEM_RNS);
+		List<String> listaSaiu14RNP05 = this.retirarSaiu14RNP05(listaSaiu15RPN05);
+		List<String> listaFechamentoRNP05 = this.fechamento(listaSaiu14RNP05);
+		List<String> listaRandom = this.gravarRandom(listaFechamentoRNP05);
+		return listaRandom;
+	}
+	
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial
+	 * rnp05_sem_rns
+	 * 
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> buscarRPN06_QUATRO_NUM_SORTE(int[] str) throws URISyntaxException, IOException, LotoException {
+		List<String> lista1525RNP06_SEM_RNS = this.gerar1525RNP06_SEM_RNS(str);
+		List<String> listaQuatroRPN06_SEM_RNS = this.resultadoNumerosMenorQueDezQUATRO(lista1525RNP06_SEM_RNS, "listaQuatroRPN06_SEM_RNS");
+		List<String> listaSaiu15RPN06 = this.retirarSaiu15RNP05(listaQuatroRPN06_SEM_RNS);
+		List<String> listaSaiu14RNP06 = this.retirarSaiu14RNP05(listaSaiu15RPN06);
+		List<String> listaFechamentoRNP06 = this.fechamento(listaSaiu14RNP06);
+		List<String> listaRandom = this.gravarRandom(listaFechamentoRNP06);
+		return listaRandom;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial
+	 * rnp05_sem_rns
+	 * 
+	 * @return
+	 * @throws LotoException
+	 */
 	public List<String> buscarRPN06_CINCO_NUM_SORTE(int[] str) throws URISyntaxException, IOException, LotoException {
 		List<String> lista1525RNP06_SEM_RNS = this.gerar1525RNP06_SEM_RNS(str);
 		List<String> listaCincoRPN06_SEM_RNS = this.resultadoNumerosMenorQueDezCINCO(lista1525RNP06_SEM_RNS, "listaCincoRPN06_SEM_RNS");
@@ -355,6 +414,23 @@ public class Principal {
 		List<String> lista1525RNP06_SEM_RNS = this.gerar1525RNP06_SEM_RNS(str);
 		List<String> listaCincoRPN06_SEM_RNS = this.resultadoNumerosMenorQueDezSEIS(lista1525RNP06_SEM_RNS, "listaSeisRPN06_SEM_RNS");
 		List<String> listaSaiu15RPN06 = this.retirarSaiu15RNP05(listaCincoRPN06_SEM_RNS);
+		List<String> listaSaiu14RNP06 = this.retirarSaiu14RNP05(listaSaiu15RPN06);
+		List<String> listaFechamentoRNP06 = this.fechamento(listaSaiu14RNP06);
+		List<String> listaRandom = this.gravarRandom(listaFechamentoRNP06);
+		return listaRandom;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial
+	 * rnp05_sem_rns
+	 * 
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> buscarRPN06_SETE_NUM_SORTE(int[] str) throws URISyntaxException, IOException, LotoException {
+		List<String> lista1525RNP06_SEM_RNS = this.gerar1525RNP06_SEM_RNS(str);
+		List<String> listaSeteRPN06_SEM_RNS = this.resultadoNumerosMenorQueDezSETE(lista1525RNP06_SEM_RNS, "listaSeteRPN06_SEM_RNS");
+		List<String> listaSaiu15RPN06 = this.retirarSaiu15RNP05(listaSeteRPN06_SEM_RNS);
 		List<String> listaSaiu14RNP06 = this.retirarSaiu14RNP05(listaSaiu15RPN06);
 		List<String> listaFechamentoRNP06 = this.fechamento(listaSaiu14RNP06);
 		List<String> listaRandom = this.gravarRandom(listaFechamentoRNP06);
@@ -419,6 +495,23 @@ public class Principal {
 	 * @return
 	 * @throws LotoException
 	 */
+	public List<String> buscarRPN07_SETE_NUM_SORTE(int[] str) throws URISyntaxException, IOException, LotoException {
+		List<String> lista1525RNP07_SEM_RNS = this.gerar1525RNP07_SEM_RNS(str);
+		List<String> listaSeteRPN07_SEM_RNS = this.resultadoNumerosMenorQueDezSETE(lista1525RNP07_SEM_RNS, "listaSeteRPN07_SEM_RNS");
+		List<String> listaSaiu15RPN07 = this.retirarSaiu15RNP05(listaSeteRPN07_SEM_RNS);
+		List<String> listaSaiu14RNP07 = this.retirarSaiu14RNP05(listaSaiu15RPN07);
+		List<String> listaFechamentoRNP07 = this.fechamento(listaSaiu14RNP07);
+		List<String> listaRandom = this.gravarRandom(listaFechamentoRNP07);
+		return listaRandom;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial
+	 * rnp05_sem_rns
+	 * 
+	 * @return
+	 * @throws LotoException
+	 */
 	public List<String> buscarRPN08_QUATRO_NUM_SORTE(int[] str) throws URISyntaxException, IOException, LotoException {
 		List<String> lista1525RNP08_SEM_RNS = this.gerar1525RNP08_SEM_RNS(str);
 		List<String> listaQuatroRPN08_SEM_RNS = this.resultadoNumerosMenorQueDezQUATRO(lista1525RNP08_SEM_RNS, "listaQuatroRPN08_SEM_RNS");
@@ -470,6 +563,23 @@ public class Principal {
 	 * @return
 	 * @throws LotoException
 	 */
+	public List<String> buscarRPN08_SETE_NUM_SORTE(int[] str) throws URISyntaxException, IOException, LotoException {
+		List<String> lista1525RNP08_SEM_RNS = this.gerar1525RNP08_SEM_RNS(str);
+		List<String> listaSeteRPN08_SEM_RNS = this.resultadoNumerosMenorQueDezSETE(lista1525RNP08_SEM_RNS, "listaSeteRPN08_SEM_RNS");
+		List<String> listaSaiu15RPN08 = this.retirarSaiu15RNP05(listaSeteRPN08_SEM_RNS);
+		List<String> listaSaiu14RNP08 = this.retirarSaiu14RNP05(listaSaiu15RPN08);
+		List<String> listaFechamentoRNP08 = this.fechamento(listaSaiu14RNP08);
+		List<String> listaRandom = this.gravarRandom(listaFechamentoRNP08);
+		return listaRandom;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial
+	 * rnp05_sem_rns
+	 * 
+	 * @return
+	 * @throws LotoException
+	 */
 	public List<String> buscarRPN09_QUATRO_NUM_SORTE(int[] str) throws URISyntaxException, IOException, LotoException {
 		List<String> lista1525RNP09_SEM_RNS = this.gerar1525RNP09_SEM_RNS(str);
 		List<String> listaQuatroRPN09_SEM_RNS = this.resultadoNumerosMenorQueDezQUATRO(lista1525RNP09_SEM_RNS, "listaQuatroRPN09_SEM_RNS");
@@ -491,8 +601,8 @@ public class Principal {
 		List<String> lista1525RNP09_SEM_RNS = this.gerar1525RNP09_SEM_RNS(str);
 		List<String> listaCincoRPN09_SEM_RNS = this.resultadoNumerosMenorQueDezCINCO(lista1525RNP09_SEM_RNS, "listaCincoRPN09_SEM_RNS");
 		List<String> listaSaiu15RPN09 = this.retirarSaiu15RNP05(listaCincoRPN09_SEM_RNS);
-		List<String> listaSaiu14RNP09 = this.retirarSaiu14RNP05(listaSaiu15RPN09);
-		List<String> listaFechamentoRNP09 = this.fechamento(listaSaiu14RNP09);
+//		List<String> listaSaiu14RNP09 = this.retirarSaiu14RNP05(listaSaiu15RPN09);
+		List<String> listaFechamentoRNP09 = this.fechamento(listaSaiu15RPN09);
 		List<String> listaRandom = this.gravarRandom(listaFechamentoRNP09);
 		return listaRandom;
 	}
@@ -508,8 +618,25 @@ public class Principal {
 		List<String> lista1525RNP09_SEM_RNS = this.gerar1525RNP09_SEM_RNS(str);
 		List<String> listaSeisRPN09_SEM_RNS = this.resultadoNumerosMenorQueDezSEIS(lista1525RNP09_SEM_RNS, "listaSeisRPN09_SEM_RNS");
 		List<String> listaSaiu15RPN09 = this.retirarSaiu15RNP05(listaSeisRPN09_SEM_RNS);
-		List<String> listaSaiu14RNP09 = this.retirarSaiu14RNP05(listaSaiu15RPN09);
-		List<String> listaFechamentoRNP09 = this.fechamento(listaSaiu14RNP09);
+//		List<String> listaSaiu14RNP09 = this.retirarSaiu14RNP05(listaSaiu15RPN09);
+		List<String> listaFechamentoRNP09 = this.fechamento(listaSaiu15RPN09);
+		List<String> listaRandom = this.gravarRandom(listaFechamentoRNP09);
+		return listaRandom;
+	}
+	
+	/**
+	 * Metodo responsavel por gerar as combinacoes 1525 com a regra negocial
+	 * rnp05_sem_rns
+	 * 
+	 * @return
+	 * @throws LotoException
+	 */
+	public List<String> buscarRPN09_SETE_NUM_SORTE(int[] str) throws URISyntaxException, IOException, LotoException {
+		List<String> lista1525RNP09_SEM_RNS = this.gerar1525RNP09_SEM_RNS(str);
+		List<String> listaSeteRPN09_SEM_RNS = this.resultadoNumerosMenorQueDezSETE(lista1525RNP09_SEM_RNS, "listaSeteRPN09_SEM_RNS");
+		List<String> listaSaiu15RPN09 = this.retirarSaiu15RNP05(listaSeteRPN09_SEM_RNS);
+//		List<String> listaSaiu14RNP09 = this.retirarSaiu14RNP05(listaSaiu15RPN09);
+		List<String> listaFechamentoRNP09 = this.fechamento(listaSaiu15RPN09);
 		List<String> listaRandom = this.gravarRandom(listaFechamentoRNP09);
 		return listaRandom;
 	}
@@ -615,6 +742,40 @@ public class Principal {
 		System.out.println(nomeLista + ": " + listaResultado.size());
 		return listaResultado;
 	}
+	
+	public List<String> resultadoNumerosMenorQueDezSETE(List<String> listaCombinacoesRNP05, String nomeLista)
+			throws URISyntaxException, IOException, LotoException {
+
+		List<String> listaResultado = new ArrayList<String>();
+
+		for (String lista15 : listaCombinacoesRNP05) {
+			int contlinha = 0;
+			String lista = null;
+			String[] linha15 = lista15.split(",");
+
+			int[] linha1525 = new int[linha15.length];
+			for (int i = 0; i < linha15.length; i++) {
+				linha1525[i] = Integer.parseInt(String.valueOf(linha15[i]));
+			}
+
+			for (int i = 0; i < linha1525.length; i++) {
+				if (linha1525[i] < NumeroEnum.DEZ.getValor()) {
+					contlinha++;
+				}
+			}
+
+			if (contlinha == NumeroEnum.SETE.getValor()) {
+				lista = linha1525[0] + "," + linha1525[1] + "," + linha1525[2] + "," + linha1525[3] + "," + linha1525[4]
+						+ "," + linha1525[5] + "," + linha1525[6] + "," + linha1525[7] + "," + linha1525[8] + ","
+						+ linha1525[9] + "," + linha1525[10] + "," + linha1525[11] + "," + linha1525[12] + ","
+						+ linha1525[13] + "," + linha1525[14];
+				listaResultado.add(lista);
+			}
+		}
+
+		System.out.println(nomeLista + ": " + listaResultado.size());
+		return listaResultado;
+	}
 
 	public List<String> retirarSaiu15RNP05(List<String> listaCombinacoesRNP05)
 			throws URISyntaxException, IOException, LotoException {
@@ -645,7 +806,7 @@ public class Principal {
 	public boolean resultadoRNP0515(int[] linha1525) throws URISyntaxException, NumberFormatException, IOException {
 		boolean retorno = false;
 		int contador = 0;
-		URL resultado = Principal.class.getClassLoader().getResource("\\resultado\\ResultadoRNP05.csv");
+		URL resultado = Principal.class.getClassLoader().getResource("resultado.csv");
 		if (Objects.nonNull(resultado)) {
 			Path caminho = Paths.get(resultado.toURI());
 			CSVReader csvReader = new CSVReader(new FileReader(caminho.toFile()), ',');

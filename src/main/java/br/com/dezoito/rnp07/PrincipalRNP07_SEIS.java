@@ -112,9 +112,9 @@ public class PrincipalRNP07_SEIS {
 		
 		
 		
-//		System.out.println("");
-//		System.out.println("");
-//		List<String> listaCombinacoesRNP07_RNS1620 = principal.gerar1525RNP07_RNS1620();
+		System.out.println("");
+		System.out.println("");
+		List<String> listaCombinacoesRNP07_RNS1620 = principal.gerar1525RNP07_RNS1620();
 //		List<String> listaCincoRNP07_RNS1620 = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP07_RNS1620, "listaCincoRNP07_RNS1620");
 //		List<String> listaCombinacoesRNP07_RNS1620_RNS2125 = principal.gerar1525RNP07_RNS1620_RNS2125();
 //		List<String> listaCincoRNP07_RNS1620_RNS2125 = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP07_RNS1620_RNS2125, "listaCincoRNP07_RNS1620_RNS2125");

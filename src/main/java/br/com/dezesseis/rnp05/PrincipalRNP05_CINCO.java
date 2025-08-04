@@ -74,9 +74,9 @@ public class PrincipalRNP05_CINCO {
 //				+ listaCombinacoesRNP05_RNS1115_RNS2125.size());
 //		System.out.println("TOTAL_RNS1115: " + total_rns1115);
 //		
-//		System.out.println("");
-//		System.out.println("");
-//		List<String> listaCombinacoesRNP05_RNS1620 = principal.gerar1525RNP05_RNS1620();
+		System.out.println("");
+		System.out.println("");
+		List<String> listaCombinacoesRNP05_RNS1620 = principal.gerar1525RNP05_RNS1620();
 //		List<String> listaCombinacoesRNP05_RNS1620_RNS2125 = principal.gerar1525RNP05_RNS1620_RNS2125();
 //		Integer total_rns1620 = (listaCombinacoesRNP05_RNS1620.size() 
 //				+ listaCombinacoesRNP05_RNS1620_RNS2125.size());
