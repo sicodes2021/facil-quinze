@@ -33,19 +33,19 @@ public class PrincipalRNS_RPN7 {
 		/*********************************************************************
 		 * RNP07
 		 */
-		System.out.println("**************RPN07-RNS0105****************************");
-		principal.buscarRPN05_CINCO_NUM_SORTE(str);
-		principal.buscarRPN05_SEIS_NUM_SORTE(str);
-		principal.buscarRPN05_SETE_NUM_SORTE(str);
-		System.out.println("");
-		System.out.println("");
-		System.out.println("**************RPN07-RNS0610****************************");
-		principal.buscarRPN05_RNS0610_QUATRO_NUM_SORTE(str);
-		principal.buscarRPN05_RNS0610_CINCO_NUM_SORTE(str);
-		principal.buscarRPN05_RNS0610_SEIS_NUM_SORTE(str);
-		principal.buscarRPN05_RNS0610_SETE_NUM_SORTE(str);
-		System.out.println("");
-		System.out.println("");
+//		System.out.println("**************RPN07-RNS0105****************************");
+//		principal.buscarRPN05_CINCO_NUM_SORTE(str);
+//		principal.buscarRPN05_SEIS_NUM_SORTE(str);
+//		principal.buscarRPN05_SETE_NUM_SORTE(str);
+//		System.out.println("");
+//		System.out.println("");
+//		System.out.println("**************RPN07-RNS0610****************************");
+//		principal.buscarRPN05_RNS0610_QUATRO_NUM_SORTE(str);
+//		principal.buscarRPN05_RNS0610_CINCO_NUM_SORTE(str);
+//		principal.buscarRPN05_RNS0610_SEIS_NUM_SORTE(str);
+//		principal.buscarRPN05_RNS0610_SETE_NUM_SORTE(str);
+//		System.out.println("");
+//		System.out.println("");
 //		System.out.println("**************RPN07-RNS1115****************************");
 //		principal.buscarRPN05_RNS1115_QUATRO_NUM_SORTE(str);
 //		principal.buscarRPN05_RNS1115_CINCO_NUM_SORTE(str);
@@ -60,11 +60,11 @@ public class PrincipalRNS_RPN7 {
 		principal.buscarRPN05_RNS1620_SETE_NUM_SORTE(str);
 		System.out.println("");
 		System.out.println("");
-		System.out.println("**************RPN07-RNS2125****************************");
-		principal.buscarRPN05_RNS2125_QUATRO_NUM_SORTE(str);
-		principal.buscarRPN05_RNS2125_CINCO_NUM_SORTE(str);
-		principal.buscarRPN05_RNS2125_SEIS_NUM_SORTE(str);
-		principal.buscarRPN05_RNS2125_SETE_NUM_SORTE(str);
+//		System.out.println("**************RPN07-RNS2125****************************");
+//		principal.buscarRPN05_RNS2125_QUATRO_NUM_SORTE(str);
+//		principal.buscarRPN05_RNS2125_CINCO_NUM_SORTE(str);
+//		principal.buscarRPN05_RNS2125_SEIS_NUM_SORTE(str);
+//		principal.buscarRPN05_RNS2125_SETE_NUM_SORTE(str);
 		
 
 	}

@@ -33,52 +33,41 @@ public class Principal {
 		Principal principal = new Principal();
 		int[] str = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
 
-
-//		System.out.println("**************RPN05****************************");
-//		System.out.println("");
-//		principal.buscarRPN05_QUATRO_NUM_SORTE(str);
+		System.out.println("**************RPN05****************************");
+		System.out.println("");
+		principal.buscarRPN05_QUATRO_NUM_SORTE(str);
 		principal.buscarRPN05_CINCO_NUM_SORTE(str);
-//		principal.buscarRPN05_SEIS_NUM_SORTE(str);
-//		principal.buscarRPN05_SETE_NUM_SORTE(str);
-//		
-//		System.out.println("**************RPN06****************************");
-//		System.out.println("");
-//		principal.buscarRPN06_QUATRO_NUM_SORTE(str);
+		principal.buscarRPN05_SEIS_NUM_SORTE(str);
+		principal.buscarRPN05_SETE_NUM_SORTE(str);
+		
+		System.out.println("**************RPN06****************************");
+		System.out.println("");
+		principal.buscarRPN06_QUATRO_NUM_SORTE(str);
 		principal.buscarRPN06_CINCO_NUM_SORTE(str);
-//		principal.buscarRPN06_SEIS_NUM_SORTE(str);
-//		principal.buscarRPN06_SETE_NUM_SORTE(str);
-//		
-//		/*********************************************************************
-//		 * RNP07
-//		 */
-//		System.out.println("**************RPN07****************************");
-//		System.out.println("");
-//		principal.buscarRPN07_QUATRO_NUM_SORTE(str);
+		principal.buscarRPN06_SEIS_NUM_SORTE(str);
+		principal.buscarRPN06_SETE_NUM_SORTE(str);
+		
+		System.out.println("**************RPN07****************************");
+		System.out.println("");
+		principal.buscarRPN07_QUATRO_NUM_SORTE(str);
 		principal.buscarRPN07_CINCO_NUM_SORTE(str);
-//		principal.buscarRPN07_SEIS_NUM_SORTE(str);
-//		principal.buscarRPN07_SETE_NUM_SORTE(str);
-//		
-//		
-//		/**********************************************************************
-//		 * RPN08
-//		 */
-//		System.out.println("**************RPN08****************************");
-//		System.out.println("");
-//		principal.buscarRPN08_QUATRO_NUM_SORTE(str);
+		principal.buscarRPN07_SEIS_NUM_SORTE(str);
+		principal.buscarRPN07_SETE_NUM_SORTE(str);
+		
+		System.out.println("**************RPN08****************************");
+		System.out.println("");
+		principal.buscarRPN08_QUATRO_NUM_SORTE(str);
 		principal.buscarRPN08_CINCO_NUM_SORTE(str);
-//		principal.buscarRPN08_SEIS_NUM_SORTE(str);
-//		principal.buscarRPN08_SETE_NUM_SORTE(str);
+		principal.buscarRPN08_SEIS_NUM_SORTE(str);
+		principal.buscarRPN08_SETE_NUM_SORTE(str);
 		
-		
-		/**********************************************************************
-		 * RPN09
-		 */
 		System.out.println("**************RPN09****************************");
 		System.out.println("");
-//		principal.buscarRPN09_QUATRO_NUM_SORTE(str);
+		principal.buscarRPN09_QUATRO_NUM_SORTE(str);
 		principal.buscarRPN09_CINCO_NUM_SORTE(str);
-//		principal.buscarRPN09_SEIS_NUM_SORTE(str);
-//		principal.buscarRPN09_SETE_NUM_SORTE(str);
+		principal.buscarRPN09_SEIS_NUM_SORTE(str);
+		principal.buscarRPN09_SETE_NUM_SORTE(str);
+		
 	}
 	
 	/**
@@ -601,8 +590,8 @@ public class Principal {
 		List<String> lista1525RNP09_SEM_RNS = this.gerar1525RNP09_SEM_RNS(str);
 		List<String> listaCincoRPN09_SEM_RNS = this.resultadoNumerosMenorQueDezCINCO(lista1525RNP09_SEM_RNS, "listaCincoRPN09_SEM_RNS");
 		List<String> listaSaiu15RPN09 = this.retirarSaiu15RNP05(listaCincoRPN09_SEM_RNS);
-//		List<String> listaSaiu14RNP09 = this.retirarSaiu14RNP05(listaSaiu15RPN09);
-		List<String> listaFechamentoRNP09 = this.fechamento(listaSaiu15RPN09);
+		List<String> listaSaiu14RNP09 = this.retirarSaiu14RNP05(listaSaiu15RPN09);
+		List<String> listaFechamentoRNP09 = this.fechamento(listaSaiu14RNP09);
 		List<String> listaRandom = this.gravarRandom(listaFechamentoRNP09);
 		return listaRandom;
 	}
@@ -618,8 +607,8 @@ public class Principal {
 		List<String> lista1525RNP09_SEM_RNS = this.gerar1525RNP09_SEM_RNS(str);
 		List<String> listaSeisRPN09_SEM_RNS = this.resultadoNumerosMenorQueDezSEIS(lista1525RNP09_SEM_RNS, "listaSeisRPN09_SEM_RNS");
 		List<String> listaSaiu15RPN09 = this.retirarSaiu15RNP05(listaSeisRPN09_SEM_RNS);
-//		List<String> listaSaiu14RNP09 = this.retirarSaiu14RNP05(listaSaiu15RPN09);
-		List<String> listaFechamentoRNP09 = this.fechamento(listaSaiu15RPN09);
+		List<String> listaSaiu14RNP09 = this.retirarSaiu14RNP05(listaSaiu15RPN09);
+		List<String> listaFechamentoRNP09 = this.fechamento(listaSaiu14RNP09);
 		List<String> listaRandom = this.gravarRandom(listaFechamentoRNP09);
 		return listaRandom;
 	}
@@ -635,8 +624,8 @@ public class Principal {
 		List<String> lista1525RNP09_SEM_RNS = this.gerar1525RNP09_SEM_RNS(str);
 		List<String> listaSeteRPN09_SEM_RNS = this.resultadoNumerosMenorQueDezSETE(lista1525RNP09_SEM_RNS, "listaSeteRPN09_SEM_RNS");
 		List<String> listaSaiu15RPN09 = this.retirarSaiu15RNP05(listaSeteRPN09_SEM_RNS);
-//		List<String> listaSaiu14RNP09 = this.retirarSaiu14RNP05(listaSaiu15RPN09);
-		List<String> listaFechamentoRNP09 = this.fechamento(listaSaiu15RPN09);
+		List<String> listaSaiu14RNP09 = this.retirarSaiu14RNP05(listaSaiu15RPN09);
+		List<String> listaFechamentoRNP09 = this.fechamento(listaSaiu14RNP09);
 		List<String> listaRandom = this.gravarRandom(listaFechamentoRNP09);
 		return listaRandom;
 	}

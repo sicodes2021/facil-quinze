@@ -48,9 +48,9 @@ public class PrincipalRNP06_SEIS {
 		/*********************************************************************
 		 * RNP06
 		 */
-		System.out.println("**************RPN06_SEIS_16****************************");
-		List<String> listaCombinacoesRNP06 = principal.gerar1625RNP06(str);
-		List<String> listaSeisRNP06 = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP06, "listaSeisRNP06");
+//		System.out.println("**************RPN06_SEIS_16****************************");
+//		List<String> listaCombinacoesRNP06 = principal.gerar1625RNP06(str);
+//		List<String> listaSeisRNP06 = principal.resultadoNumerosMenorQueDezSEIS(listaCombinacoesRNP06, "listaSeisRNP06");
 
 		System.out.println("");
 		List<String> listaCombinacoesRNP06_SEM_RNS = principal.gerar1625RNP06_SEM_RNS(str);
